@@ -8,6 +8,7 @@
 class game {
  public:
   sf::RenderWindow* Window;
+  sf::Texture texture;
 
   game();
   void run();

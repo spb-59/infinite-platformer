@@ -2,6 +2,7 @@
 #include "game.h"
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 #include "Entity.h"
 #include "Player.h"
@@ -10,13 +11,16 @@
 game::game() {
   Window = new sf::RenderWindow(sf::VideoMode(800, 800),
                                 "Game");  // making game window
+  if (!texture.loadFromFile("tex/skelly.png")) {
+    std::cout << "Failed to load";
+  }
 }
 
 void game::run() {
   // object creations and generations here
   platform p1(100.0f, 100.0f, sf::Vector2f(50.0f, 50.0f));
-  Entity e1(sf::Vector2f(100.0f, 100.0f), 100.0f, 250.0f);
-  Player pl1(sf::Vector2f(10.0f, 10.0f), 10.0f, 10.0f);
+  Entity e1(sf::Vector2f(1.0f, 1.0f), 100.0f, 250.0f, texture);
+  Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, texture);
 
   while (Window->isOpen()) {
     sf::Event event;

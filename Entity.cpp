@@ -4,15 +4,11 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-Entity::Entity(sf::Vector2f size, float x, float y) {
+Entity::Entity(sf::Vector2f size, float x, float y, sf::Texture texture) {
   entity.setPosition(x, y);
-  entity.setSize(size);
-  entity.setFillColor(sf::Color::Blue);
+  entity.setTexture(texture);
 }
 
-void Entity::render(sf::RenderWindow* window) {
-  std::cout << "Rendering\n";
-  window->draw(entity);
-}
+void Entity::render(sf::RenderWindow* window) { window->draw(entity); }
 
 Entity::~Entity() {}
