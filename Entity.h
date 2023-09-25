@@ -8,7 +8,7 @@ class Entity {
   sf::Sprite entity;
 
  public:
-  Entity(sf::Vector2f size, float x, float y,sf::Texture texture);
+  Entity(sf::Vector2f size, float x, float y,sf::Texture* texture);
   void render(sf::RenderWindow* window);
   virtual void movement(sf::Event event){};
 
