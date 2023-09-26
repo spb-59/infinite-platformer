@@ -10,6 +10,8 @@ class platform {
 
  public:
   platform(float x, float y, sf::Vector2f(size));
+  platform();
+  void setDimensions(float x, float y, sf::Vector2f(size));
   void render(sf::RenderWindow* window);
 
   ~platform();

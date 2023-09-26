@@ -32,4 +32,6 @@ void Player::movement(sf::Event event) {
   }
 }
 
+sf::Vector2f Player::get_position() { return entity.getPosition(); }
+
 Player::~Player() {}
