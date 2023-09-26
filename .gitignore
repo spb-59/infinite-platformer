@@ -30,7 +30,6 @@
 *.exe
 *.out
 *.app
+.DS_Store
 
-#mac 
-.DS_Store 
-.vscode/
+run-1-1
