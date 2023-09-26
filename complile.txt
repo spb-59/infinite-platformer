@@ -1,1 +1,4 @@
-g++ test1.cpp -lsfml-graphics -lsfml-window -lsfml-system -Wpedantic
+g++ main-1-1.cpp -lsfml-graphics -lsfml-window -lsfml-system -Wpedantic
+
+Khanh's (DO NOT RUN): 
+g++ main-1-1.cpp Entity.cpp game.cpp platform.cpp Player.cpp -I/opt/homebrew/Cellar/sfml/2.6.0/include -o program -L//opt/homebrew/Cellar/sfml/2.6.0/lib -lsfml-graphics -lsfml-window -lsfml-system
