@@ -12,6 +12,7 @@ class Generation {
   Generation();
 
   void makeTerrain(std::vector<platform> &boxes, sf::Vector2f center);
+  void makeInfinite(std::vector<platform> &boxes, sf::Vector2f center);
 
   ~Generation();
 };

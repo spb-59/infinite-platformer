@@ -15,10 +15,10 @@ void platform::setDimensions(float x, float y, sf::Vector2f size) {
   box.setPosition(x, y);
   box.setSize(size);
   box.setFillColor(sf::Color::Green);
-
-  std::cout << box.getPosition().x;
 }
 
 void platform::render(sf::RenderWindow* window) { window->draw(box); }
+
+float platform::get_Xcord() { return box.getPosition().x; }
 
 platform::~platform() {}

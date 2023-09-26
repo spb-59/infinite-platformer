@@ -13,6 +13,7 @@ class platform {
   platform();
   void setDimensions(float x, float y, sf::Vector2f(size));
   void render(sf::RenderWindow* window);
+  float get_Xcord();
 
   ~platform();
 };

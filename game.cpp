@@ -27,8 +27,8 @@ void game::run() {
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
   std::vector<platform> blocks(100);
-
   Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
+
   while (Window->isOpen()) {
     sf::Event event;
 
@@ -40,7 +40,9 @@ void game::run() {
     pl1.movement(event);
 
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.01f;
+    cameraPosition.x += 10.10f;
+
+    Gen.makeInfinite(blocks, sf::Vector2f(0.0f, 0.0f));
 
     // Update the view's center to follow the player
     view.setCenter(cameraPosition);
