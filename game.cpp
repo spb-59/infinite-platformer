@@ -26,7 +26,7 @@ void game::run() {
   Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &texture);
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
-  std::vector<platform> blocks(100);
+  std::vector<platform> blocks(10);
   Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
 
   while (Window->isOpen()) {
@@ -37,10 +37,11 @@ void game::run() {
     }
 
     Window->clear();
+    Gen.optimize(blocks, view.getCenter());
     pl1.movement(event);
 
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 10.10f;
+    cameraPosition.x += 0.1f;
 
     Gen.makeInfinite(blocks, sf::Vector2f(0.0f, 0.0f));
 
