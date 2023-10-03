@@ -37,7 +37,7 @@ void game::run() {
     }
 
     Window->clear();
-    Gen.optimize(blocks, view.getCenter());
+
     pl1.movement(event);
 
     sf::Vector2f cameraPosition = view.getCenter();
