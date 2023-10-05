@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-#include "Object.h"
+#include "Object.hpp"
 
 class Obstacle : public Object {
  protected:

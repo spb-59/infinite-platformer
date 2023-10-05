@@ -7,7 +7,5 @@ class LavaPit : public Obstacle {
   int size;
 
  public:
-  LavaPit(float x_cord, float y_cord, sf::Vector2f size, bool isDeadly,
-          int size);
-  int get_size();
+  LavaPit(float x_cord, float y_cord, sf::Vector2f size);
 };
