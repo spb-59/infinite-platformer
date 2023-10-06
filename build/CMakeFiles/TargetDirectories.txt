@@ -1,0 +1,3 @@
+/Users/khanhnguyen/UNI/S2_2023/OOP/oop-project/build/CMakeFiles/program.dir
+/Users/khanhnguyen/UNI/S2_2023/OOP/oop-project/build/CMakeFiles/edit_cache.dir
+/Users/khanhnguyen/UNI/S2_2023/OOP/oop-project/build/CMakeFiles/rebuild_cache.dir
