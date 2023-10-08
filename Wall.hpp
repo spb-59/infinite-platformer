@@ -2,10 +2,9 @@
 
 #include "Entity.hpp"
 
-class Worm : public Entity {
+class Wall : public Entity {
  public:
-  Worm(float x_cord, float y_cord, sf::Vector2f size, sf::Vector2f speed,
-       int size);
+  Wall(float x_cord, float y_cord, sf::Vector2f size, sf::Vector2f speed);
   void setSpeed(sf::Vector2f speed);
   sf::Vector2f getSpeed();
 };

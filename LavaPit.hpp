@@ -1,6 +1,8 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
 
-#include "Obstacle.h"
+#include "Obstacle.hpp"
 
 class LavaPit : public Obstacle {
  private:
