@@ -6,9 +6,10 @@
 
 class Platform : public Obstacle {
  private:
-  int size;
+  sf::Texture localTexture;
 
  public:
-  Platform(float x_cord, float y_cord, sf::Vector2f size, bool isDeadly);
-  int get_size();
+  Platform();
+  Platform(float x_cord, float y_cord, sf::Vector2f size);
+ 
 };

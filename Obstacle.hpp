@@ -9,6 +9,7 @@ class Obstacle : public Object {
   bool isDeadly;
 
  public:
+  Obstacle();
   Obstacle(float x_cord, float y_cord, sf::Vector2f size);
   bool get_isDeadly();
 };

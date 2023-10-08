@@ -22,10 +22,10 @@ void Game::run() {
   // object creations and generations here
   Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
   std::cout << "Entity Created";
-  Player pl1(100.0f, 250.0f, sf::Vector2f(10.0f, 10.0f));
+  Player pl1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
-  std::vector<Object*> blocks(10);
+  std::vector<Object*> blocks(10, nullptr);
   std::cout << "Vector Created";
 
   Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
@@ -45,7 +45,7 @@ void Game::run() {
     sf::Vector2f cameraPosition = view.getCenter();
     cameraPosition.x += 0.1f;
 
-    Gen.makeInfinite(blocks, sf::Vector2f(0.0f, 0.0f));
+    // Gen.makeInfinite(blocks, sf::Vector2f(0.0f, 0.0f));
 
     // Update the view's center to follow the player
     view.setCenter(cameraPosition);
@@ -55,10 +55,13 @@ void Game::run() {
 
     // all rendering logic here
 
-    for (Object* p : blocks) {
-      p->render(Window);
+    for (Object*& p : blocks) {
+      if (p) {  // Check if the pointer is valid (not null)
+        p->render(Window);
+      } else {
+        std::cout << "Error ";
+      }
     }
-
     e1.render(Window);
     pl1.render(Window);
 

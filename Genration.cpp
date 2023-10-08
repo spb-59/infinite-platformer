@@ -7,19 +7,21 @@
 
 #include "Generation.hpp"
 #include "Object.hpp"
+#include "Platform.hpp"
 
 Generation::Generation() {}
 
-void Generation::makeTerrain(std::vector<Object*> boxes, sf::Vector2f center) {
+void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   float add = 0.0f;
 
-  for (Object* p : boxes) {
-    p = new Object();
+  std::cout << "Start";
+  for (Object*& p : boxes) {
+    p = new Platform();
   }
 
-  for (Object* p : boxes) {
+  for (Object*& p : boxes) {
     p->set_position(100.0f + add, base_y_cord);
-    p->set_size(sf::Vector2f(100.0f, 100.0f));
+    p->set_size(sf::Vector2f(1.0f, 1.0f));
     add += 100.0f;
   }
 }
