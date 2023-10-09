@@ -25,6 +25,10 @@ void Object::set_position(float x_cord, float y_cord) {
   obj.setPosition(x_cord, y_cord);
 }
 
+sf::FloatRect Object::getHitBox() { return obj.getGlobalBounds(); }
+
 void Object::render(sf::RenderWindow* window) { window->draw(obj); }
+
+bool Object::get_isDeadly() { return false; }
 
 Object::~Object() {}

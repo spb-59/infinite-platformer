@@ -35,11 +35,11 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
   //           << "\n"
   //           << center.x << "  \n";
 
-  if (boxes.size() < 20 || boxes.back()->get_x_cord() - 1000.0f <= center.x) {
+  if (boxes.size() < 20 || boxes.back()->get_x_cord() - 750.0f <= center.x) {
     float add = 50.0f;
 
     int rand = generate(x);
-    std::cout << rand << "  \n";
+    // std::cout << rand << "  \n";
 
     switch (rand) {
       case 0:
@@ -62,6 +62,7 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
         break;
     }
   }
+  std::cout << boxes.size() << " \n";
 }
 
 int Generation::generate(float x_cord) {
@@ -74,16 +75,13 @@ int Generation::generate(float x_cord) {
 }
 
 void Generation::optimize(std::vector<Object*>& boxes, sf::Vector2f center) {
-  for (auto it = boxes.begin(); it != boxes.end(); /* No increment here */) {
-    Object* p = *it;  // Get the pointer from the iterator
-    if (p->get_x_cord() < center.x - 1000.0f) {
+  for (Object*& p : boxes) {
+    if (p->get_x_cord() < center.x - 750.0f) {
       delete p;
-      it = boxes.erase(
-          it);  // Remove the pointer from the vector and update the iterator
-    } else {
-      ++it;  // Move to the next element in the vector
+      p = nullptr;
     }
   }
+  boxes.erase(std::remove(boxes.begin(), boxes.end(), nullptr), boxes.end());
 }
 
 Generation::~Generation() {}

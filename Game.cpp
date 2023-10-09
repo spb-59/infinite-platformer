@@ -5,12 +5,16 @@
 #include <iostream>
 #include <vector>
 
+#include "Collision.hpp"
 #include "Entity.hpp"
 #include "Generation.hpp"
 #include "Obstacle.hpp"
 #include "Player.hpp"
+#include "physics.hpp"
 
 Generation Gen;
+physics phy(0.3f);
+Collision col;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -41,6 +45,10 @@ void Game::run() {
     Window->clear();
 
     pl1.movement(event);
+
+    phy.addGravity(pl1);
+
+    col.detect_collision(blocks, pl1);
 
     sf::Vector2f cameraPosition = view.getCenter();
     cameraPosition.x += 0.1f;

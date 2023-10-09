@@ -18,6 +18,8 @@ class Object {
   float get_y_cord();
   void set_size(sf::Vector2f size);
   void set_position(float x_cord, float y_cord);
+  sf::FloatRect getHitBox();
   void render(sf::RenderWindow* window);
+  virtual bool get_isDeadly();
   ~Object();
 };
