@@ -12,4 +12,5 @@ class Obstacle : public Object {
   Obstacle();
   Obstacle(float x_cord, float y_cord, sf::Vector2f size);
   bool get_isDeadly();
+  ~Obstacle();
 };

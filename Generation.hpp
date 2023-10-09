@@ -16,8 +16,8 @@ class Generation {
   Generation();
 
   void makeTerrain(std::vector<Object *> &boxes, sf::Vector2f center);
-  void makeInfinite(std::vector<Object *> boxes, sf::Vector2f center);
-  float generate(float x_cord);
+  void makeInfinite(std::vector<Object *> &boxes, sf::Vector2f center);
+  int generate(float x_cord);
   void optimize(std::vector<Object *> &boxes, sf::Vector2f center);
 
   ~Generation();

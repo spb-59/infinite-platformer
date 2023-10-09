@@ -45,7 +45,8 @@ void Game::run() {
     sf::Vector2f cameraPosition = view.getCenter();
     cameraPosition.x += 0.1f;
 
-    // Gen.makeInfinite(blocks, sf::Vector2f(0.0f, 0.0f));
+    Gen.optimize(blocks, view.getCenter());
+    Gen.makeInfinite(blocks, view.getCenter());
 
     // Update the view's center to follow the player
     view.setCenter(cameraPosition);

@@ -9,3 +9,5 @@ Obstacle::Obstacle(float x_cord, float y_cord, sf::Vector2f size)
 Obstacle::Obstacle() : Obstacle(0.0f, 0.0f, sf::Vector2f(1.0f, 1.0f)) {}
 
 bool Obstacle::get_isDeadly() { return isDeadly; }
+
+Obstacle::~Obstacle() {}

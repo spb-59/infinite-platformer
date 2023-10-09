@@ -19,4 +19,5 @@ class Object {
   void set_size(sf::Vector2f size);
   void set_position(float x_cord, float y_cord);
   void render(sf::RenderWindow* window);
+  ~Object();
 };

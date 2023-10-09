@@ -11,5 +11,5 @@ class Platform : public Obstacle {
  public:
   Platform();
   Platform(float x_cord, float y_cord, sf::Vector2f size);
- 
+  ~Platform();
 };

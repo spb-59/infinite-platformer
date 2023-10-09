@@ -26,3 +26,5 @@ void Object::set_position(float x_cord, float y_cord) {
 }
 
 void Object::render(sf::RenderWindow* window) { window->draw(obj); }
+
+Object::~Object() {}
