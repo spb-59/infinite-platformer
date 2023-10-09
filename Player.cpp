@@ -3,13 +3,15 @@
 #include <SFML/Graphics.hpp>
 
 #include "Entity.h"
+#include "Animation.h"
 
-Player::Player(sf::Vector2f size, float x, float y, sf::Texture* texture)
-    : Entity(size, x, y, texture) {}
+Player::Player(sf::Vector2f size, float x, float y, sf::Texture* texture, sf::IntRect crop)
+    : Entity(size, x, y, texture) {
+    }
 
 
 void Player::movement(sf::Event event) {
- 
+  currDist = 0; 
 
   switch (event.type) {
     case sf::Event::KeyPressed:
@@ -17,29 +19,33 @@ void Player::movement(sf::Event event) {
       switch (event.key.code) {
         case sf::Keyboard::Up:
         // jump mech
-        timeElapsed = clock.restart(); 
-        
-        if (timeElapsed.asSeconds() < 2) {
-          break;
-        } else {
-          entity.move(0.0f, -50.0f);
-          break;  
-        }
-          break;
+        timeElapsed = clock.restart();
+
+          if (timeElapsed.asSeconds() < 2) {
+            break;
+          } else {
+            entity.move(0.0f, -50.0f);
+           
+            break;  
+          }
+
         case sf::Keyboard::Down:
           entity.move(0.0f, 0.50f);
           break;
         case sf::Keyboard::Left:
           entity.move(-0.50f, 0.0f);
           break;
+
         case sf::Keyboard::Right:
+
           entity.move(0.50f, 0.0f);
           break;
+
         default:
           break;
       }
       break;
-    default:
+  default:
       break;
   }
 

@@ -10,6 +10,7 @@ class game {
   sf::RenderWindow* Window;
   sf::Texture texture;
   sf::Texture background;
+  sf::Texture playerTex; 
 
   game();
   void run();
