@@ -1,0 +1,1 @@
+. "/home/spb/oop-project/catch2/conanrunenv-release-x86_64.sh"

@@ -1,0 +1,1 @@
+. "/home/spb/oop-project/catch2/deactivate_conanrunenv-release-x86_64.sh"

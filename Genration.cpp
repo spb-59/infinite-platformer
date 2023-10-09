@@ -50,7 +50,7 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
 
       case 1:
         boxes.push_back(
-            new LavaPit(x + add, base_y_cord - 100, sf::Vector2f(1.0f, 1.0f)));
+            new LavaPit(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
         break;
 
       case 2:
