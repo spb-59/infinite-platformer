@@ -2,6 +2,7 @@
 #include "game.h"
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/Rect.hpp>
 #include <iostream>
 
 #include "Entity.h"
@@ -12,19 +13,34 @@ game::game() {
   Window = new sf::RenderWindow(sf::VideoMode(800, 800),
                                 "Game");  // making game window
   background.loadFromFile("tex/background.png");
-  // sf::Sprite bg(background);
+  if (!background.loadFromFile("tex/background.png")) { // error message
+    std::cout << "Failed to load" << std::endl;
+  }
+  
+  playerTex.loadFromFile("tex/playersheet.png");
+  if (!playerTex.loadFromFile("tex/playersheet.png")) { // error message
+    std::cout << "Failed to load" << std::endl;
+  }
 
-  if (texture.loadFromFile("tex/yipppe.png")) {
-    std::cout << "Failed to load";
+
+  //playerTex.setTextureRect(sf::IntRect(0,0,50,50));
+
+  if (!texture.loadFromFile("tex/yipppe.png")) {
+    std::cout << "Failed to load" << std::endl;
   }
 }
 
 void game::run() {
+
   // object creations and generations here
   platform p1(100.0f, 100.0f, sf::Vector2f(50.0f, 50.0f));
   Entity e1(sf::Vector2f(1.0f, 1.0f), 100.0f, 250.0f, &texture);
-  Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &texture);
+  Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &playerTex, sf::IntRect(0,0,50,50));
   Entity bg(sf::Vector2f(1.0f, 1.0f), 0.0f, 0.0f, &background);
+
+  sf::IntRect crop(0,0,10,10);
+
+  pl1.setTextureRect(crop);
 
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
