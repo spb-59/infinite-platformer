@@ -10,10 +10,16 @@ class Game {
  protected:
   sf::RenderWindow window;
   Gamestate state;
+  sf::Texture texture;
+  sf::Texture background;
 
  public:
   Game();
+  ~Game();
   void run();
+  sf::RenderWindow& getWindow();
+  Gamestate getState();
+  void setState(Gamestate);
 };
 
 #endif
