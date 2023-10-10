@@ -17,16 +17,19 @@ void Entity::movement(sf::Event event) {
       // Handle specific key events for movement
       switch (event.key.code) {
         case sf::Keyboard::Up:
-          speed.y = -1.0f;
+          if (can_jump) {
+            can_jump = false;
+            speed.y = -100.0f;
+          }
           break;
         // case sf::Keyboard::Down:
         //   speed.y = 0.50f;
         //  break;
         case sf::Keyboard::Left:
-          speed.x = -0.10f;
+          speed.x = -0.30f;
           break;
         case sf::Keyboard::Right:
-          speed.x = 0.10f;
+          speed.x = 0.30f;
           break;
         default:
           break;
@@ -34,11 +37,12 @@ void Entity::movement(sf::Event event) {
       break;
     case sf::Event::KeyReleased:
       // Stop movement when the key is released
+
       switch (event.key.code) {
         case sf::Keyboard::Up:
+          can_jump = true;
           speed.y -= 0.0f;
           break;
-
         case sf::Keyboard::Left:
         case sf::Keyboard::Right:
           speed.x = 0;

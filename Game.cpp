@@ -13,7 +13,7 @@
 #include "physics.hpp"
 
 Generation Gen;
-physics phy(0.1f);
+physics phy(0.5f);
 Collision col;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
