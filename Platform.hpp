@@ -4,12 +4,14 @@
 
 #include "Obstacle.hpp"
 
-class Platform : public Obstacle {
+class Platform {
  private:
-  sf::Texture localTexture;
+  sf::RectangleShape body;
 
  public:
-  Platform();
-  Platform(float x_cord, float y_cord, sf::Vector2f size);
+  Platform(sf::Texture* texture, sf::Vector2f size, sf::Vector2f position);
   ~Platform();
+
+  void draw(sf::RenderWindow& window) { window.draw(body); }
+  Collider getCollider() { return Collider(body); }
 };
