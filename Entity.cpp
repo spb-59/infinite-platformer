@@ -17,10 +17,7 @@ void Entity::movement(sf::Event event) {
       // Handle specific key events for movement
       switch (event.key.code) {
         case sf::Keyboard::Up:
-          if (can_jump) {
-            can_jump = false;
-            speed.y = -100.0f;
-          }
+          speed.y = -0.30f;
           break;
         // case sf::Keyboard::Down:
         //   speed.y = 0.50f;

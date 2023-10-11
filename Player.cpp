@@ -5,3 +5,7 @@ Player::Player(float x_cord, float y_cord, sf::Vector2f size)
   LocalTexture.loadFromFile("./left1.png");
   obj.setTexture(LocalTexture);
 }
+
+void Player::set_position_(float x_cord, float y_cord) {
+  obj.setPosition(x_cord, y_cord);
+}

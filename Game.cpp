@@ -26,7 +26,7 @@ void Game::run() {
   // object creations and generations here
   Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
   std::cout << "Entity Created";
-  Player pl1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
+  Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
   std::vector<Object*> blocks(10, nullptr);

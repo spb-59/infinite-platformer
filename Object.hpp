@@ -14,6 +14,7 @@ class Object {
   Object(float x_cord, float y_cord, sf::Vector2f size);
   Object();
   sf::Vector2f get_size();
+  sf::Vector2f get_position();
   float get_x_cord();
   float get_y_cord();
   void set_size(sf::Vector2f size);
