@@ -61,36 +61,41 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
         // Colliding on the x-axis (sides).
         if (playerHitBox.left + playerHitBox.width < objectHitBox.left) {
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().x));
+          player.canMove = false;
 
           // Collided on the left side of the object, push player to the right.
           float newX = objectHitBox.left - playerHitBox.width;
           player.set_position(newX, player.get_y_cord());
-          // player.setSpeed(sf::Vector2f(0.1f, player.getSpeed().y));
+          player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
         } else {
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().x));
+          player.canMove = false;
 
           // Collided on the right side of the object, push player to the left.
           float newX = objectHitBox.left + objectHitBox.width;
           player.set_position(newX, player.get_y_cord());
-          // player.setSpeed(sf::Vector2f(-0.1f, player.getSpeed().y));
+          player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
         }
       } else {
         // Colliding on the y-axis (top or bottom).
-        if (playerHitBox.top + playerHitBox.height < objectHitBox.top) {
-          player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
-
-          // Collided on the top of the object, push player down.
-          float newY = objectHitBox.top - playerHitBox.height;
-          player.set_position(player.get_x_cord(), newY);
-          // player.setSpeed(sf::Vector2f(player.getSpeed().x, -0.5f));
-        } else {
+        if (playerHitBox.top = objectHitBox.top + objectHitBox.height) {
           // Collided on the bottom of the object, push player up.
+
           float newY = objectHitBox.top + objectHitBox.height;
           player.set_position(player.get_x_cord(), newY);
+          player.canMove = false;
 
           player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
           std::cout << player.get_x_cord() << std::endl;
           std::cout << player.get_y_cord() << std::endl;
+
+        } else {
+          player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
+          // player.canMove = false;
+
+          // Collided on the top of the object, push player down.
+          float newY = objectHitBox.top - playerHitBox.height;
+          player.set_position(player.get_x_cord(), newY);
         }
       }
     }
@@ -98,6 +103,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
 
   // Update the player's position based on the modified x and y values.
   player.set_position(playerX, playerY);
+  player.canMove = true;
 
   // Apply gravity using the physics class.
 
