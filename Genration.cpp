@@ -62,7 +62,7 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
         break;
     }
   }
-  std::cout << boxes.size() << " \n";
+  // std::cout << boxes.size() << " \n";
 }
 
 int Generation::generate(float x_cord) {

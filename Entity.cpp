@@ -12,20 +12,20 @@ Entity::Entity(float x_cord, float y_cord, sf::Vector2f size)
 }
 
 void Entity::movement(sf::Event event) {
-  std::cout << speed.y << " ";
+  // std::cout << x_cord_ << " ";
   if (canMove) {
     switch (event.type) {
       case sf::Event::KeyPressed:
         // Handle specific key events for movement
         switch (event.key.code) {
           case sf::Keyboard::Up:
-            if (can_jump) {
-              can_jump = false;
-              speed.y = -120.0f;
-              break;
-            } else {
-              break;
-            }
+            // if (can_jump) {
+            // can_jump = false;
+            speed.y = -0.30f;
+            break;
+            // } else {
+            //   break;
+            // }
           // case sf::Keyboard::Down:
           //   speed.y = 0.50f;
           //  break;

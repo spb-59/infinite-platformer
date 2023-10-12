@@ -20,10 +20,15 @@ float Object::get_x_cord() { return obj.getPosition().x; }
 float Object::get_y_cord() { return obj.getPosition().y; }
 
 void Object::set_size(sf::Vector2f size) { obj.setScale(size); }
+void Object::set_y_cord(float x_cord) { x_cord_ = x_cord; };
+void Object::set_x_cord(float y_cord) { y_cord_ = y_cord; };
 
 void Object::set_position(float x_cord, float y_cord) {
   obj.setPosition(x_cord, y_cord);
 }
+void Object::move_position(float x_cord, float y_cord) {
+  obj.move(x_cord, y_cord);
+};
 
 sf::FloatRect Object::getHitBox() { return obj.getGlobalBounds(); }
 

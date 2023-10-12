@@ -27,6 +27,8 @@
 Collision::Collision() {}
 
 bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
+  physics phy(0.5f);
+
   bool collisionDetected = false;
 
   // Get player x and y positions.
@@ -34,16 +36,22 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
   float playerY = player.get_y_cord();
 
   // Get player hitbox once to avoid repeated calls.
-  sf::FloatRect playerHitBox = player.getHitBox();
   sf::FloatRect nextPos;
+  sf::RectangleShape nextPlayerPos;
+  nextPlayerPos.setSize(sf::Vector2f(51.f, 51.f));
+  nextPlayerPos.setFillColor(sf::Color ::Green);
 
   // Iterate through each object in the boxes vector.
   for (Object*& p : boxes) {
+    sf::FloatRect playerHitBox = player.getHitBox();
     sf::FloatRect objectHitBox = p->getHitBox();
 
     nextPos = playerHitBox;
     nextPos.left += player.getSpeed().x;
     nextPos.top += player.getSpeed().y;
+    float newX =
+        player.get_x_cord();  // Initialize to the player's current position.
+    float newY = player.get_y_cord();
 
     if (objectHitBox.intersects(nextPos)) {
       collisionDetected = true;
@@ -52,60 +60,105 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
       float dx =
           std::min(playerHitBox.left + playerHitBox.width - objectHitBox.left,
                    objectHitBox.left + objectHitBox.width - playerHitBox.left);
-      float dy =
-          std::min(playerHitBox.top + playerHitBox.height - objectHitBox.top,
-                   objectHitBox.top + objectHitBox.height - playerHitBox.top);
+      float dy = std::min(
+          player.get_y_cord() + playerHitBox.height - objectHitBox.top,
+          objectHitBox.top + objectHitBox.height - player.get_y_cord());
 
       // Check if the player is above the object (touching its top side).
       if (dx < dy) {
-        // Colliding on the x-axis (sides).
-        if (playerHitBox.left + playerHitBox.width < objectHitBox.left) {
-          player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().x));
-          player.canMove = false;
+        // Colliding on right of the platform
+        std::cout << playerHitBox.left;
+        // if (playerHitBox.left + playerHitBox.width < objectHitBox.left) {
+        if (playerHitBox.left < objectHitBox.left &&
+            playerHitBox.left + playerHitBox.width <
+                objectHitBox.left + objectHitBox.width &&
+            playerHitBox.top < objectHitBox.top + objectHitBox.height &&
+            objectHitBox.top < playerHitBox.top + playerHitBox.height) {
+          std::cout << std::endl << "collided left: " << std::endl;
 
-          // Collided on the left side of the object, push player to the right.
-          float newX = objectHitBox.left - playerHitBox.width;
-          player.set_position(newX, player.get_y_cord());
+          // Colliding on left of the platform
+          newX = objectHitBox.left - playerHitBox.width;
+          newY = player.get_y_cord();
+
+          std::cout << "initial x: " << player.get_x_cord() << std::endl;
+          std::cout << "initial y: " << player.get_y_cord() << std::endl;
+
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
-        } else {
-          player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().x));
-          player.canMove = false;
 
-          // Collided on the right side of the object, push player to the left.
-          float newX = objectHitBox.left + objectHitBox.width;
-          player.set_position(newX, player.get_y_cord());
+          // Collided on the right side of the object, push player to the
+          player.set_position(newX, newY);
+          std::cout << "altered x: " << newX << std::endl;
+          std::cout << "altered y: " << newY << std::endl;
+
+          std::cout << "final x: " << player.get_x_cord() << std::endl;
+          std::cout << "final y: " << player.get_y_cord() << std::endl;
+        } else if (playerHitBox.left > objectHitBox.left &&
+                   playerHitBox.left + playerHitBox.width >
+                       objectHitBox.left + objectHitBox.width &&
+                   playerHitBox.top < objectHitBox.top + objectHitBox.height &&
+                   objectHitBox.top < playerHitBox.top + playerHitBox.height) {
+          std::cout << std::endl << "collided right: " << std::endl;
+          // Colliding on left of the platform
+          newX = objectHitBox.left + playerHitBox.width;
+          newY = player.get_y_cord();
+
+          std::cout << "initial x: " << player.get_x_cord() << std::endl;
+          std::cout << "initial y: " << player.get_y_cord() << std::endl;
+
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
+
+          // Collided on the right side of the object, push player to the
+          player.set_position(newX, newY);
+          std::cout << "altered x: " << newX << std::endl;
+          std::cout << "altered y: " << newY << std::endl;
+
+          std::cout << "final x: " << player.get_x_cord() << std::endl;
+          std::cout << "final y: " << player.get_y_cord() << std::endl;
         }
-      } else {
-        // Colliding on the y-axis (top or bottom).
-        if (playerHitBox.top = objectHitBox.top + objectHitBox.height) {
-          // Collided on the bottom of the object, push player up.
+      } else if (playerHitBox.top < objectHitBox.top &&
+                 playerHitBox.top + playerHitBox.height <
+                     objectHitBox.top + objectHitBox.height &&
+                 playerHitBox.left < objectHitBox.left + objectHitBox.width &&
+                 objectHitBox.left < playerHitBox.left + playerHitBox.width) {
+        player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
+        std::cout << std::endl << "collided top: " << std::endl;
 
-          float newY = objectHitBox.top + objectHitBox.height;
-          player.set_position(player.get_x_cord(), newY);
-          player.canMove = false;
+        newX = player.get_x_cord();
 
-          player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
-          std::cout << player.get_x_cord() << std::endl;
-          std::cout << player.get_y_cord() << std::endl;
+        newY = objectHitBox.top - playerHitBox.height;
+        // player.set_position(newX, newY);
+      } else if (playerHitBox.top > objectHitBox.top &&
+                 playerHitBox.top + playerHitBox.height >
+                     objectHitBox.top + objectHitBox.height &&
+                 playerHitBox.left < objectHitBox.left + objectHitBox.width &&
+                 objectHitBox.left < playerHitBox.left + playerHitBox.width) {
+        std::cout << std::endl << "collided bottom: " << std::endl;
 
-        } else {
-          player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
-          // player.canMove = false;
+        // Collided on the bottom of the object, push player up.
+        newX = player.get_x_cord();
 
-          // Collided on the top of the object, push player down.
-          float newY = objectHitBox.top - playerHitBox.height;
-          player.set_position(player.get_x_cord(), newY);
-        }
+        newY = objectHitBox.top + playerHitBox.height + 10;
+        player.set_position(newX, newY);
+
+        // player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
+        std::cout << player.get_x_cord() << std::endl;
+        std::cout << player.get_y_cord() << std::endl;
       }
     }
   }
+  // if (collisionDetected) {
+  //   player.set_position(newX, newY);
+  //   std::cout << "altered x: " << newX << std::endl;
+  //   std::cout << "altered y: " << player.get_y_cord() << std::endl;
 
-  // Update the player's position based on the modified x and y values.
-  player.set_position(playerX, playerY);
-  player.canMove = true;
+  //   // player.set_x_cord(newX);
+  // player.set_position(player.get_x_cord(), player.get_y_cord());
 
-  // Apply gravity using the physics class.
+  // player.move_position(player.get_x_cord(), player.get_y_cord());
+  //   std::cout << "final x: " << player.get_x_cord() << std::endl;
+  //   std::cout << "final y: " << player.get_y_cord() << std::endl;
 
   return collisionDetected;
 }
+
+// Apply gravity using the physics class.
