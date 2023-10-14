@@ -9,4 +9,6 @@ Platform::Platform(float x_cord, float y_cord, sf::Vector2f size)
 
 Platform::Platform() : Platform(0.0f, 0.0f, sf::Vector2f(0.0f, 0.0f)) {}
 
+std::string Platform::get_type() { return "PLATFORM"; }
+
 Platform::~Platform() {}

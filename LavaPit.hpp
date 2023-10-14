@@ -11,5 +11,8 @@ class LavaPit : public Obstacle {
  public:
   LavaPit(float x_cord, float y_cord, sf::Vector2f size);
   LavaPit();
+
+  std::string get_type();
+
   ~LavaPit();
 };

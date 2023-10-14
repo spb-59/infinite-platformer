@@ -11,6 +11,8 @@ class Generation {
   std::vector<double> probabilities;
   int event;
   float base_y_cord = 500.0f;
+  float max_Yjump;
+  float max_Xjump;
 
  public:
   Generation();

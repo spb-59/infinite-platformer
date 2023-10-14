@@ -24,8 +24,7 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 
 void Game::run() {
   // object creations and generations here
-  Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
-  std::cout << "Entity Created";
+
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
@@ -71,7 +70,7 @@ void Game::run() {
         std::cout << "Error ";
       }
     }
-    e1.render(Window);
+
     pl1.render(Window);
 
     Window->display();

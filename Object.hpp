@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 class Object {
  protected:
@@ -26,5 +27,8 @@ class Object {
   sf::FloatRect getHitBox();
   void render(sf::RenderWindow* window);
   virtual bool get_isDeadly();
+
+  virtual std::string get_type();
+
   ~Object();
 };
