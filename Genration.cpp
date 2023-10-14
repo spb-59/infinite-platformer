@@ -128,4 +128,25 @@ void Generation::optimize(std::vector<Object*>& boxes, sf::Vector2f center) {
   boxes.erase(std::remove(boxes.begin(), boxes.end(), nullptr), boxes.end());
 }
 
+void Generation::applyRules(std::vector<Object*>& boxes) {
+  int size = boxes.size() - 1;
+
+  if (boxes[size]->get_isDeadly() && boxes[size - 1]->get_isDeadly() &&
+      boxes[size - 2]->get_isDeadly() && boxes[size - 4]->get_isDeadly()) {
+    float x = boxes.back()->get_x_cord();
+    float add = 50.0f;
+
+    boxes.push_back(
+        new Platform(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+    boxes.push_back(
+        new Platform(x + add * 2, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+    boxes.push_back(
+        new Platform(x + add * 3, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+    boxes.push_back(
+        new Platform(x + add * 4, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+    std::cout << "IMPOSSIBLE DETECTED \n";
+  }
+}
+
 Generation::~Generation() {}

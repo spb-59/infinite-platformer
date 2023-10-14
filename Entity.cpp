@@ -30,10 +30,10 @@ void Entity::movement(sf::Event event) {
           //   speed.y = 0.50f;
           //  break;
           case sf::Keyboard::Left:
-            speed.x = -0.30f;
+            speed.x = -0.70f;
             break;
           case sf::Keyboard::Right:
-            speed.x = 0.30f;
+            speed.x = 0.70f;
             break;
           default:
             break;
