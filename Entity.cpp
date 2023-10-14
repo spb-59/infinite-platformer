@@ -10,6 +10,7 @@ Entity::Entity(float x_cord, float y_cord, sf::Vector2f size)
 }
 
 void Entity::movement(sf::Event event) {
+  obj.move(0.05f, 0.0f);
   std::cout << speed.y << " ";
 
   switch (event.type) {
@@ -19,17 +20,17 @@ void Entity::movement(sf::Event event) {
         case sf::Keyboard::Up:
           if (can_jump) {
             can_jump = false;
-            speed.y = -100.0f;
+            speed.y = -140.0f;
           }
           break;
         // case sf::Keyboard::Down:
         //   speed.y = 0.50f;
         //  break;
         case sf::Keyboard::Left:
-          speed.x = -0.30f;
+          speed.x = -0.030f;
           break;
         case sf::Keyboard::Right:
-          speed.x = 0.30f;
+          speed.x = 0.050f;
           break;
         default:
           break;

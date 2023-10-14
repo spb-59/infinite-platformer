@@ -10,6 +10,7 @@
 #include "Generation.hpp"
 #include "Obstacle.hpp"
 #include "Player.hpp"
+#include "Wall.hpp"
 #include "physics.hpp"
 
 Generation Gen;
@@ -24,6 +25,7 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 
 void Game::run() {
   // object creations and generations here
+  Wall w1(-950.0f, 0.0f, sf::Vector2f(20.0f, 20.0f), sf::Vector2f(3.0f, 0.0f));
   Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
   std::cout << "Entity Created";
   Player pl1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
@@ -45,13 +47,15 @@ void Game::run() {
     Window->clear();
 
     pl1.movement(event);
+    w1.wallMovement();
 
     phy.addGravity(pl1);
 
     col.detect_collision(blocks, pl1);
+    col.detect_collision(w1, pl1);
 
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.0f;
+    cameraPosition.x += 0.05f;
 
     Gen.optimize(blocks, view.getCenter());
     Gen.makeInfinite(blocks, view.getCenter());
@@ -73,6 +77,7 @@ void Game::run() {
     }
     e1.render(Window);
     pl1.render(Window);
+    w1.render(Window);
 
     Window->display();
   }
