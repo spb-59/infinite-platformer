@@ -5,6 +5,7 @@
 
 #include "Collision.hpp"
 #include "Entity.hpp"
+#include "EntityTest.hpp"
 #include "Game.hpp"
 #include "Generation.hpp"
 #include "Obstacle.hpp"

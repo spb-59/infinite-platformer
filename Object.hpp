@@ -27,8 +27,7 @@ class Object {
   sf::FloatRect getHitBox();
   void render(sf::RenderWindow* window);
   virtual bool get_isDeadly();
-
-  virtual std::string get_type();
+  virtual std::string get_type() = 0;
 
   ~Object();
 };

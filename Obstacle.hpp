@@ -13,7 +13,7 @@ class Obstacle : public Object {
   Obstacle(float x_cord, float y_cord, sf::Vector2f size);
   bool get_isDeadly();
 
-  virtual std::string get_type();
+  virtual std::string get_type() = 0;
 
   ~Obstacle();
 };

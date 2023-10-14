@@ -67,3 +67,5 @@ void Entity::movement(sf::Event event) {
 
 void Entity::setSpeed(sf::Vector2f speed_) { speed = speed_; }
 sf::Vector2f Entity::getSpeed() { return speed; }
+
+std::string Entity::get_type() { return " "; }

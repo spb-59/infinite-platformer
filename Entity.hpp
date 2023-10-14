@@ -17,4 +17,5 @@ class Entity : public Object {
   void movement(sf::Event event);
   void setSpeed(sf::Vector2f speed);
   sf::Vector2f getSpeed();
+  std::string get_type();
 };

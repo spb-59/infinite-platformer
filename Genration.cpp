@@ -9,8 +9,9 @@
 #include "LavaPit.hpp"
 #include "Object.hpp"
 #include "Platform.hpp"
+#include "Spikes.hpp"
 
-Generation::Generation() { probabilities = {0.7, 0.2, 0.1}; }
+Generation::Generation() { probabilities = {0.4, 0.3, 0.2, 0.1}; }
 
 void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   float add = 0.0f;
@@ -29,40 +30,83 @@ void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
 
 void Generation::makeInfinite(std::vector<Object*>& boxes,
                               sf::Vector2f center) {
+  // getting x coordinate of last object
+
   float x = boxes.back()->get_x_cord();
 
-  // std::cout << boxes.back()->get_x_cord() << " "
-  //           << "\n"
-  //           << center.x << "  \n";
-
+  // condtion to limit the number of boxes rendered
   if (boxes.size() < 20 || boxes.back()->get_x_cord() - 750.0f <= center.x) {
-    float add = 50.0f;
+    float add = 50.0f;  // float to add to the x coord
 
-    int rand = generate(x);
-    // std::cout << rand << "  \n";
+    int rand =
+        generate(x);  // function returns 0,1,2 generate objects accordingly
 
     switch (rand) {
       case 0:
-        boxes.push_back(
-            new Platform(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+        if (platformCounter <= 1) {
+          boxes.push_back(
+              new Platform(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+          boxes.push_back(
+              new Platform(x + add * 2, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+          boxes.push_back(
+              new Platform(x + add * 3, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+          boxes.push_back(
+              new Platform(x + add * 4, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+          platformCounter++;
+          lavaCounter = 0;
+          spikeCounter = 0;
+        }
 
         break;
 
       case 1:
-        boxes.push_back(
-            new LavaPit(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+        if (lavaCounter <= 1 && !(boxes.back()->get_type() == "SPIKES")) {
+          boxes.push_back(
+              new LavaPit(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+          boxes.push_back(
+              new LavaPit(x + add * 2, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+
+          platformCounter = 0;
+          spikeCounter = 0;
+          lavaCounter++;
+        }
+        // else {
+        //   boxes.push_back(
+        //       new Platform(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+        //   boxes.push_back(
+        //       new Spikes(x + add, base_y_cord - 50,
+        //       sf::Vector2f(1.0f, 1.0f)));
+
+        //   spikeCounter++;
+        //   lavaCounter = 0;
+        //   platformCounter = 0;
+        // }
+
         break;
 
       case 2:
-        boxes.push_back(
-            new Platform(x + add, base_y_cord - 200, sf::Vector2f(1.0f, 1.0f)));
+
+        if (spikeCounter <= 1 && !(boxes.back()->get_type() == "LAVA")) {
+          boxes.push_back(
+              new Platform(x + add, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
+          boxes.push_back(
+              new Spikes(x + add, base_y_cord - 50, sf::Vector2f(1.0f, 1.0f)));
+
+          spikeCounter++;
+          lavaCounter = 0;
+          platformCounter = 0;
+        }
+
         break;
 
       default:
         break;
     }
   }
-  // std::cout << boxes.size() << " \n";
 }
 
 int Generation::generate(float x_cord) {

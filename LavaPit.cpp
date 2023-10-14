@@ -9,6 +9,6 @@ LavaPit::LavaPit(float x_cord, float y_cord, sf::Vector2f size)
 
 LavaPit::LavaPit() : LavaPit(0.0f, 0.0f, sf::Vector2f(0.0f, 0.0f)) {}
 
-std::string LavaPit::get_type() { return "PLATFORM"; }
+std::string LavaPit::get_type() { return "LAVA"; }
 
 LavaPit::~LavaPit() {}

@@ -12,6 +12,4 @@ Obstacle::Obstacle() : Obstacle(0.0f, 0.0f, sf::Vector2f(1.0f, 1.0f)) {}
 
 bool Obstacle::get_isDeadly() { return isDeadly; }
 
-std::string Obstacle::get_type() { return " "; }
-
 Obstacle::~Obstacle() {}

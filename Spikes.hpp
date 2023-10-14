@@ -7,8 +7,12 @@
 
 class Spikes : public Obstacle {
  private:
-  int size;
+  sf::Texture localTexture;
 
  public:
   Spikes(float x_cord, float y_cord, sf::Vector2f size);
+  Spikes();
+
+  std::string get_type();
+  ~Spikes();
 };
