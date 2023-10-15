@@ -22,9 +22,10 @@ Menu::Menu(sf::Vector2f(float x, float y)) {
     options[1]->setSize(30);
 
     selectedOptionID = 0; 
-    menu_tex.loadFromFile("tempButton.png");
-    menu_bg.setTexture(menu_tex);
-    menu_bg.setScale(sf::Vector2f(100,100));
+    menuState = MAIN_MENU;
+    texture.loadFromFile("tempButton.png");
+    sprite.setTexture(texture);
+    sprite.setScale(sf::Vector2f(100,100));
 
 
 //     options[2].setFont(font);
@@ -42,7 +43,16 @@ void Menu::handleEvents() {
             menu_window.close(); 
         } 
         
-        menu_window.clear();
+        for (size_t i=0; i < buttons.size(); i++) {
+            if (buttons[i].mouseIsOver(menu_window)) {
+                selectedOptionID=i;
+                buttons[i].setColour(sf::Color::Cyan);
+            }
+
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                
+            }
+        }
     }
 
     for (int i =0; i < buttons.size(); i++) {
@@ -75,3 +85,58 @@ while (menu_window.isOpen()){
 
 Menu::~Menu() {}
 
+
+
+void Menu::handleEvents() {
+    sf::Event event;
+    while (menu_window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
+            menu_window.close();
+        }
+
+        for (size_t i = 0; i < buttons.size(); i++) {
+            if (buttons[i].mouseIsOver(menu_window)) {
+                selectedOptionID = i;
+                buttons[i].setColour(sf::Color::Cyan);
+
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    if (menuState == MAIN_MENU) {
+                        if (selectedOptionID == PLAY) {
+                            // Start the game
+                            menuState = NEXT;  // Transition to the next state (e.g., gameplay)
+                        } else if (selectedOptionID == OPTIONS) {
+                            // Go to options menu
+                            menuState = OPTIONS;
+                        } else if (selectedOptionID == EXIT) {
+                            // Exit the game
+                            menuState = OUT;  // Transition to exit
+                        }
+                    } else if (menuState == OPTIONS) {
+                        // Handle options menu
+                        // Add your options menu logic here
+                    }
+                }
+            } else {
+                buttons[i].setColour(sf::Color::White);
+            }
+        }
+    }
+}
+
+void Menu::run(sf::RenderWindow &menu_window) {
+    while (menu_window.isOpen()) {
+        handleEvents();
+        menu_window.clear();
+
+        // Draw the menu buttons
+        for (Button& button : buttons) {
+            button.draw(menu_window);
+        }
+
+        menu_window.display();
+
+        if (menuState == NEXT || menuState == OUT) {
+            menu_window.close();
+        }
+    }
+}

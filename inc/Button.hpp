@@ -13,7 +13,7 @@ protected:
 
 
 public:
-    Button(std::string option, int fontSize);
+    Button(std::string optionName, int fontSize);
     Button();
 
     void setPosition(const sf::Vector2f &position);

@@ -12,10 +12,13 @@
 #include "Player.hpp"
 #include "physics.hpp"
 #include "Menu.hpp"
+#include "Button.hpp"
+#include "Menu.hpp"
 
 Generation Gen;
 physics phy(0.5f);
 Collision col;
+Menu menu;
 
 
 
@@ -26,8 +29,6 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
-
-
 
   // object creations and generations here
   Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
