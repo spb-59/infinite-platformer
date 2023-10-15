@@ -41,17 +41,32 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
     float add_y = 0;
     int rand1 = 0;
 
-    std::vector<double> prob = {0.5, 0.5};
+    std::vector<double> prob = {0.9, 0.1};
     rand1 = generate(prob);
 
-    if (event > 30) {
-      std::cout << "THIS RAN\n";
-      if (rand1 == 0) {
-        std::cout << "Value changed ";
-        add_y = 100.0f;
-      }
+    bool changed = true;
 
-      event = 0;
+    if (event > 30) {
+      if (event < 60 && changed) {
+        std::cout << "THIS RAN\n";
+
+        std::cout << "Value changed ";
+        // Seed the random number generator with the current time
+        std::mt19937_64 rng(std::time(0));
+
+        // Define a range for the random number (200 to 400)
+        std::uniform_real_distribution<float> dist(-200.0, 200.0);
+
+        // Generate a random float number within the specified range
+        float randomValue = dist(rng);
+
+        add_y = randomValue;
+      } else if (event > 60) {
+        changed = false;
+        event = 0;
+      } else {
+        changed = true;
+      }
     }
 
     event++;

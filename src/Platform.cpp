@@ -3,7 +3,7 @@
 Platform::Platform(float x_cord, float y_cord, sf::Vector2f size)
     : Obstacle(x_cord, y_cord, size) {
   isDeadly = false;
-  localTexture.loadFromFile("./platform.png");
+  localTexture.loadFromFile("./resources/platform.png");
   obj.setTexture(localTexture);
 }
 

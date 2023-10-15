@@ -8,7 +8,7 @@ Object::Object(float x_cord, float y_cord, sf::Vector2f size)
     : x_cord_(x_cord), y_cord_(y_cord), size_(size) {
   obj.setPosition(x_cord, y_cord);
   obj.setScale(size_);
-  global_texture.loadFromFile("./textures1.png");
+  //   global_texture.loadFromFile("./resources/textures1.png");
 }
 
 Object::Object() : Object(1.0f, 1.0f, sf::Vector2f(1.0, 1.0)) {}
@@ -28,7 +28,7 @@ void Object::set_position(float x_cord, float y_cord) {
 }
 void Object::move_position(float x_cord, float y_cord) {
   obj.move(x_cord, y_cord);
-};
+}
 
 sf::FloatRect Object::getHitBox() { return obj.getGlobalBounds(); }
 

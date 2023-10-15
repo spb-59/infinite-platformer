@@ -30,7 +30,7 @@ class Object {
   virtual bool get_isDeadly();
   virtual std::string get_type() = 0;
 
-  ~Object();
+  virtual ~Object();
 };
 
 #endif
