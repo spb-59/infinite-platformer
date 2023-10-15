@@ -30,7 +30,7 @@ others = [file_name for file_name in cpp_files if file_name not in mains]
 
 
 starter = "g++ "
-ender = " " + " ".join(others) + "-std=c++11 -lsfml-graphics -lsfml-window -lsfml-system -Wpedantic -o "
+ender = " " + " ".join(others) + " -std=c++11 -lsfml-graphics -lsfml-window -lsfml-system -Wpedantic -o "
 
 for file_name in mains:
     command  = starter + file_name + ender + exe_name(file_name)
