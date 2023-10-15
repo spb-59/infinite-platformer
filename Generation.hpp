@@ -9,8 +9,9 @@
 class Generation {
  private:
   std::vector<double> probabilities;
-  int event;
-  const float base_y_cord = 500.0f;
+  int event = 100;
+
+  float base_y_cord = 500.0f;
   const float max_Yjump = 10.0f;
   const float max_Xjump = 20.0f;
   int platformCounter = 0;
@@ -22,7 +23,10 @@ class Generation {
 
   void makeTerrain(std::vector<Object *> &boxes, sf::Vector2f center);
   void makeInfinite(std::vector<Object *> &boxes, sf::Vector2f center);
-  int generate(float x_cord);
+  void generateTerrain(std::vector<Object *> &boxes, float x, int rand,
+                       float add_y);
+  int generate(std::vector<double> probabilities);
+
   void optimize(std::vector<Object *> &boxes, sf::Vector2f center);
 
   void applyRules(std::vector<Object *> &boxes);
