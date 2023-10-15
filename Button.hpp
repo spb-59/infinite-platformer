@@ -7,7 +7,6 @@
 class Button
 {
 protected:
-    sf::RenderWindow button_window;
     sf::Text text; 
     sf::Font font;
     int maxOptions;
@@ -22,9 +21,9 @@ public:
     void setName(std::string name);
     void setFont();
     void setSize(const int size);
-    void showSelected(sf::RenderWindow &); // pass menu window
+    bool mouseIsOver(sf::RenderWindow &); // pass menu window 
 
-    void render(sf::RenderWindow button_window); 
+    void draw(sf::RenderWindow button_window); 
     ~Button();
 };
 

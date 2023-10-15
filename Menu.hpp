@@ -10,11 +10,11 @@ enum MenuState { MAIN_MENU =0, PLAY = 1, OPTIONS=2, EXIT = 3, NEXT = 4, GAME_OVE
 class Menu
 {
 protected:
-    sf::RenderWindow* menu_window; 
+    sf::RenderWindow menu_window; 
     sf::Sprite menu_bg; 
     sf::Texture menu_tex;
     sf::Font font; 
-    Button* options[4]; 
+    std::vector<Button> buttons; 
 
     int selectedOptionID;
 
@@ -24,6 +24,8 @@ protected:
 public:
     Menu(); 
     Menu(sf::Vector2f(float x, float y));
+    void handleEvents();
+
 
     void run(sf::RenderWindow &menu_window); 
 

@@ -55,21 +55,18 @@ void Button::setName(std::string name) {
     return;
 }
 
-void Button::showSelected(sf::RenderWindow &window) {
-    // get mouse position relative to window 
+bool Button::mouseIsOver(sf::RenderWindow & window) {
     sf::Vector2i mouse_pos1 = sf::Mouse::getPosition(window);
     
     sf::Vector2f mouse_pos = sf::Vector2f(mouse_pos1.x*1.0f, mouse_pos1.y*1.0f);
 
-
     if (text.getGlobalBounds().contains(mouse_pos)) {
-        text.setFillColor(sf::Color::Cyan);
+        return true; 
     } else {
-        text.setFillColor(sf::Color::White);
+        return false; 
     }
-    return;
 }
 
-void Button::render(sf::RenderWindow button_window) {
+void Button::draw (sf::RenderWindow button_window) {
     button_window.draw(text);
 }

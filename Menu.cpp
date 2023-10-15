@@ -34,7 +34,23 @@ Menu::Menu(sf::Vector2f(float x, float y)) {
 //     options[2].setCharacterSize(30);
 }
 
+void Menu::handleEvents() {
+    sf::Event event; 
 
+    while (menu_window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
+            menu_window.close(); 
+        } 
+        
+        menu_window.clear();
+    }
+
+    for (int i =0; i < buttons.size(); i++) {
+        if (buttons[i].mouseIsOver(menu_window) && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            buttons[i].getSelectedID();
+        }
+    }
+}
 
 void Menu::run(sf::RenderWindow &menu_window) {
 while (menu_window.isOpen()){
@@ -42,17 +58,19 @@ while (menu_window.isOpen()){
   while (menu_window.pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
       menu_window.close();
-    }
+        }
 
     menu_window.clear(); 
 
     for (int i = 0; i < 2; i++) {
-        menu_window.draw(options[i]);
+        menu_window.draw(buttons[i]);
     }
 
     menu_window.display();
-}
-}
+    }   
+    }
+
+    for ()
 }
 
 Menu::~Menu() {}
