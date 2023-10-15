@@ -1,30 +1,17 @@
-
 #include <SFML/Graphics.hpp>
+#include "Menu.hpp"
+#include "Button.hpp"
+
 #include <iostream>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Mouse Click Example");
+    sf::RenderWindow mainWindow(sf::VideoMode(1280, 720), "Game");
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
+    // Create an instance of the Menu class
+    Menu menu(sf::Vector2f(mainWindow.getSize().x, mainWindow.getSize().y));
 
-            if (event.type == sf::Event::MouseButtonPressed) {
-                if (event.mouseButton.button == sf::Mouse::Left) {
-                    // Left mouse button was clicked
-                    sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-                    std::cout << "Mouse clicked at position: " << mousePosition.x << ", " << mousePosition.y << std::endl;
-                }
-            }
-        }
-
-        window.clear(sf::Color::White);
-        // Draw your graphics here
-        window.display();
-    }
+    // Call the run function to start the menu loop
+    menu.run(mainWindow);
 
     return 0;
 }

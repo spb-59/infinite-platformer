@@ -23,7 +23,7 @@ protected:
     
 public:
     Menu(); 
-    Menu();
+    Menu(sf::Vector2f(float x, float y));
 
     void run(sf::RenderWindow &menu_window); 
 
