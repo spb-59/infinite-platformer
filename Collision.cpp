@@ -15,4 +15,5 @@ bool Collision::detect_collision(std::vector<Object *> &boxes, Player &player) {
     } else {
     }
   }
+  return true;
 }

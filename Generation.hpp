@@ -1,5 +1,5 @@
 #ifndef GENERATION_H
-#define GENRATION_H
+#define GENERATION_H
 
 #include <SFML/Graphics.hpp>
 #include <vector>

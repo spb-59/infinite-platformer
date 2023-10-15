@@ -9,7 +9,7 @@ class Entity : public Object {
  protected:
   sf::Vector2f speed;
   int size;
-  bool can_jump = true;
+  bool can_jump;
 
  public:
   Entity(float x_cord, float y_cord, sf::Vector2f size);

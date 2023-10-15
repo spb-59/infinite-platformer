@@ -1,7 +1,8 @@
 #include "Game.hpp"
+#include "Menu.hpp"
 
 int main(int argc, char const *argv[]) {
-  Game game(1280, 720, "oop-game");
+  Menu game(1280, 720);
   game.run();
 
   return 0;

@@ -11,10 +11,13 @@
 #include "Obstacle.hpp"
 #include "Player.hpp"
 #include "physics.hpp"
+#include "Menu.hpp"
 
 Generation Gen;
 physics phy(0.5f);
 Collision col;
+
+
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -23,6 +26,9 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+
+
+
   // object creations and generations here
   Entity e1(100.0f, 250.0f, sf::Vector2f(1.0f, 1.0f));
   std::cout << "Entity Created";
@@ -33,7 +39,7 @@ void Game::run() {
   std::cout << "Vector Created";
 
   Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
-  std::cout << "Vector intialied";
+  std::cout << "Vector intialised";
 
   while (Window->isOpen()) {
     sf::Event event;
@@ -76,6 +82,6 @@ void Game::run() {
 
     Window->display();
   }
-}
+ }
 
 Game::~Game() { delete Window; }
