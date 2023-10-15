@@ -1,18 +1,25 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#pragma once
+
 #include <SFML/Graphics.hpp>
 
-class Entity {
+#include "Object.hpp"
+
+class Entity : public Object {
  protected:
-  sf::Sprite entity;
+  sf::Vector2f speed;
+  int size;
+  bool can_jump = true;
 
  public:
-  Entity(sf::Vector2f size, float x, float y, sf::Texture* texture);
-  void render(sf::RenderWindow* window);
-  virtual void movement(sf::Event event){};
-
-  ~Entity();
+  bool canMove;
+  Entity(float x_cord, float y_cord, sf::Vector2f size);
+  void movement(sf::Event event);
+  void setSpeed(sf::Vector2f speed);
+  sf::Vector2f getSpeed();
+  std::string get_type();
 };
 
 #endif

@@ -1,72 +1,80 @@
+
 #include "../include/Game.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
-#include "../include/Animation.hpp"
+#include "../include/Colision.hpp"
 #include "../include/Entity.hpp"
-#include "../include/Menu.hpp"
+#include "../include/Generation.hpp"
+#include "../include/Obstacle.hpp"
+#include "../include/Physics.hpp"
 #include "../include/Player.hpp"
 
-Game::Game() {
-  window.create(sf::VideoMode(1280, 720), "Lava Run", sf::Style::Close);
-  window.setVerticalSyncEnabled(true);
-  window.setFramerateLimit(60);
-  background.loadFromFile("../resources/background.png");
-  // sf::Sprite bg(background);
+Generation Gen;
+Physics phy(0.3f);
+Collision col;
 
-  if (!(texture.loadFromFile("../resources/animation_yipee.png"))) {
-    std::cout << "Failed to load";
-  }
+Game::Game(int x_dimension, int y_dimension, const std::string title) {
+  Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
+                                "Game");  // making game window
+  std::cout << "Init Complete";
 }
 
-Game::~Game() { std::cout << "Game closed" << std::endl; }
-
-sf::RenderWindow& Game::getWindow() { return window; }
-
-Gamestate Game::getState() { return state; }
-
-void Game::setState(Gamestate state_) { this->state = state_; }
-
 void Game::run() {
-  // Animation properties
-  Animation animation(&texture, sf ::Vector2u(2, 2), 0.3f);
-  // sf::Vector2u textureSize = texture.getSize();
-  // textureSize.x /= 2;
-  // textureSize.y /= 2;
-  // pl1.setTextureRect(sf::IntRect(textureSize.x*))
+  // object creations and generations here
 
-  float deltaTime = 0.0f;
-  sf::Clock clock;
-  Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &texture);
-  Entity bg(sf::Vector2f(1.0f, 1.0f), 0.0f, 0.0f, &background);
-  sf::View view(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
-  while (window.isOpen()) {
-    deltaTime = clock.restart().asSeconds();
+  Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
+  sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
+
+  std::vector<Object*> blocks(10, nullptr);
+  std::cout << "Vector Created";
+
+  Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
+  std::cout << "Vector intialied";
+
+  while (Window->isOpen()) {
     sf::Event event;
 
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) window.close();
+    while (Window->pollEvent(event)) {
+      if (event.type == sf::Event::Closed) Window->close();
     }
 
-    window.clear();
+    Window->clear();
+
     pl1.movement(event);
 
-    // all rendering logic here
+    phy.addGravity(pl1);
+
+    col.detect_collision(blocks, pl1);
+
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.01f;
+    cameraPosition.x += 0.5f;
+
+    Gen.optimize(blocks, view.getCenter());
+    Gen.makeInfinite(blocks, view.getCenter());
 
     // Update the view's center to follow the player
     view.setCenter(cameraPosition);
 
     // Apply the view to the window
-    window.setView(view);
-    animation.update(0, deltaTime);
+    Window->setView(view);
 
-    // test render background
-    bg.render(&window);
-    pl1.render(&window);
+    // all rendering logic here
 
-    window.display();
+    for (Object*& p : blocks) {
+      if (p) {  // Check if the pointer is valid (not null)
+        p->render(Window);
+      } else {
+        std::cout << "Error ";
+      }
+    }
+
+    pl1.render(Window);
+
+    Window->display();
   }
 }
+
+Game::~Game() { delete Window; }

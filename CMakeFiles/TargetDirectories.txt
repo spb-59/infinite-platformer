@@ -1,0 +1,3 @@
+/home/spb/oop-project/CMakeFiles/program.dir
+/home/spb/oop-project/CMakeFiles/edit_cache.dir
+/home/spb/oop-project/CMakeFiles/rebuild_cache.dir

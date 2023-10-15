@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27.6)
+cmake_minimum_required(VERSION 3.25.1)
 
 project (lava_run)
 
@@ -22,7 +22,7 @@ set (SOURCE_FILES
 	src/Game.cpp
 	src/Gamestate.cpp
 	src/Generation.cpp
-	src/LavaPits.cpp
+	src/LavaPit.cpp
 	src/LavaWall.cpp
 	src/Menu.cpp
 	src/Object.cpp
@@ -31,7 +31,7 @@ set (SOURCE_FILES
 	src/Platform.cpp
 	src/Player.cpp
 	src/Rock.cpp
-	src/Spike.cpp
+	src/Spikes.cpp
 )
 
 set (HEADER_FILES
@@ -42,7 +42,7 @@ set (HEADER_FILES
 	include/Game.hpp
 	include/Gamestate.hpp
 	include/Generation.hpp
-	include/LavaPits.hpp
+	include/LavaPit.hpp
 	include/LavaWall.hpp
 	include/Menu.hpp
 	include/Object.hpp
@@ -51,7 +51,7 @@ set (HEADER_FILES
 	include/Platform.hpp
 	include/Player.hpp
 	include/Rock.hpp
-	include/Spike.hpp
+	include/Spikes.hpp
 )
 
 # Look for SFML and add it

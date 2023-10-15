@@ -1,15 +1,14 @@
-
 #include "../include/Platform.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-
-Platform::Platform(float x, float y, sf::Vector2f size) {
-  box.setPosition(x, y);
-  box.setSize(size);
-  box.setFillColor(sf::Color::Green);
+Platform::Platform(float x_cord, float y_cord, sf::Vector2f size)
+    : Obstacle(x_cord, y_cord, size) {
+  isDeadly = false;
+  localTexture.loadFromFile("./platform.png");
+  obj.setTexture(localTexture);
 }
 
-void Platform::render(sf::RenderWindow* window) { window->draw(box); }
+Platform::Platform() : Platform(0.0f, 0.0f, sf::Vector2f(0.0f, 0.0f)) {}
+
+std::string Platform::get_type() { return "PLATFORM"; }
 
 Platform::~Platform() {}

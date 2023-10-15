@@ -1,21 +1,19 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
 
-#include "Animation.hpp"
+
+#include <SFML/Graphics.hpp>
+
 #include "Entity.hpp"
 
 class Player : public Entity {
- private:
-  sf::Sprite player;
-  sf::Clock clock;
-  sf::Time timeElapsed;
-
  public:
-  Player(sf::Vector2f size, float x, float y, sf::Texture* texture);
+  Player(float x_cord, float y_cord, sf::Vector2f size);
+  void set_position_(float x_cord, float y_cord);
 
-  void movement(sf::Event);
-
-  ~Player();
+ private:
+  sf::Texture LocalTexture;
 };
+
 
 #endif

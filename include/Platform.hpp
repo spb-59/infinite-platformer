@@ -1,18 +1,22 @@
-#ifndef PLATFORM_H
-#define PLATFORM_H
+#ifndef PLATFORM_HPP
+#define PLATFORM_HPP
+
+#pragma once
 
 #include <SFML/Graphics.hpp>
-// class to make platforms in game
 
-class Platform {
+#include "Obstacle.hpp"
+
+class Platform : public Obstacle {
  private:
-  sf::RectangleShape box;
+  sf::Texture localTexture;
 
  public:
-  Platform(float x, float y, sf::Vector2f(size));
-  void render(sf::RenderWindow* window);
+  Platform();
+  Platform(float x_cord, float y_cord, sf::Vector2f size);
+
+  std::string get_type();
 
   ~Platform();
 };
-
 #endif

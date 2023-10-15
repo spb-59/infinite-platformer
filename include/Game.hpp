@@ -1,25 +1,26 @@
 #ifndef GAME_H
 #define GAME_H
 
+
+
 #include <SFML/Graphics.hpp>
 #include <string>
 
-#include "Gamestate.hpp"
-
 class Game {
- protected:
-  sf::RenderWindow window;
-  Gamestate state;
-  sf::Texture texture;
-  sf::Texture background;
+ private:
+  sf::RenderWindow* Window;
+
+  int x_dimension;
+  int y_dimension;
+  std::string title;
 
  public:
-  Game();
-  ~Game();
+  Game(int x_dimension, int y_dimension, const std::string title);
   void run();
-  sf::RenderWindow& getWindow();
-  Gamestate getState();
-  void setState(Gamestate);
+  int get_x_dimension() const;
+  int get_y_dimension() const;
+  std::string get_title() const;
+  ~Game();
 };
 
 #endif
