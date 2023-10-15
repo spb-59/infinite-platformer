@@ -1,5 +1,7 @@
 #include "Menu.h"
 
+#include <iostream>
+
 Menu::Menu() {
   window = new sf::RenderWindow();
   winclose = new sf::RectangleShape();
