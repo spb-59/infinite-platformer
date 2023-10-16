@@ -13,7 +13,7 @@
 #include "../include/Player.hpp"
 
 Generation Gen;
-Physics phy(0.3f);
+Physics phy(0.3);
 Collision col;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
@@ -50,7 +50,7 @@ void Game::run() {
     col.detect_collision(blocks, pl1);
 
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.3f;
+    cameraPosition.x += 0.2f;
 
     Gen.optimize(blocks, view.getCenter());
     Gen.makeInfinite(blocks, view.getCenter());

@@ -513,6 +513,30 @@ src/Rock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Rock.cpp.s
 .PHONY : src/Rock.cpp.s
 
+src/RockPlatform.o: src/RockPlatform.cpp.o
+.PHONY : src/RockPlatform.o
+
+# target to build an object file
+src/RockPlatform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/RockPlatform.cpp.o
+.PHONY : src/RockPlatform.cpp.o
+
+src/RockPlatform.i: src/RockPlatform.cpp.i
+.PHONY : src/RockPlatform.i
+
+# target to preprocess a source file
+src/RockPlatform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/RockPlatform.cpp.i
+.PHONY : src/RockPlatform.cpp.i
+
+src/RockPlatform.s: src/RockPlatform.cpp.s
+.PHONY : src/RockPlatform.s
+
+# target to generate assembly for a file
+src/RockPlatform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/RockPlatform.cpp.s
+.PHONY : src/RockPlatform.cpp.s
+
 src/Spikes.o: src/Spikes.cpp.o
 .PHONY : src/Spikes.o
 
@@ -618,6 +642,9 @@ help:
 	@echo "... src/Rock.o"
 	@echo "... src/Rock.i"
 	@echo "... src/Rock.s"
+	@echo "... src/RockPlatform.o"
+	@echo "... src/RockPlatform.i"
+	@echo "... src/RockPlatform.s"
 	@echo "... src/Spikes.o"
 	@echo "... src/Spikes.i"
 	@echo "... src/Spikes.s"

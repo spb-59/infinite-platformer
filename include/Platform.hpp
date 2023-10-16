@@ -1,8 +1,6 @@
 #ifndef PLATFORM_HPP
 #define PLATFORM_HPP
 
-#pragma once
-
 #include <SFML/Graphics.hpp>
 
 #include "Obstacle.hpp"

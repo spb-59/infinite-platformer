@@ -20,13 +20,14 @@ class Generation {
   int platformCounter = 0;
   int lavaCounter = 0;
   int spikeCounter = 0;
+  int rockCounter = 0;
 
  public:
   Generation();
 
   void makeTerrain(std::vector<Object *> &boxes, sf::Vector2f center);
   void makeInfinite(std::vector<Object *> &boxes, sf::Vector2f center);
-  void generateTerrain(std::vector<Object *> &boxes, int rand, float add_y);
+  void generateTerrain(std::vector<Object *> &boxes, float add_y);
   int generate(std::vector<double> probabilities);
 
   void transition(std::vector<Object *> &boxes, float randomValue, float add_y);

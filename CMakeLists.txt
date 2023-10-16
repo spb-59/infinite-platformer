@@ -32,6 +32,7 @@ set (SOURCE_FILES
 	src/Player.cpp
 	src/Rock.cpp
 	src/Spikes.cpp
+	src/RockPlatform.cpp
 )
 
 set (HEADER_FILES
@@ -52,6 +53,7 @@ set (HEADER_FILES
 	include/Player.hpp
 	include/Rock.hpp
 	include/Spikes.hpp
+	include/RockPlatform.hpp
 )
 
 # Look for SFML and add it

@@ -10,14 +10,15 @@
 #include "../include/LavaPit.hpp"
 #include "../include/Object.hpp"
 #include "../include/Platform.hpp"
+#include "../include/Rock.hpp"
+#include "../include/RockPlatform.hpp"
 #include "../include/Spikes.hpp"
 
-Generation::Generation() { probabilities = {0.4, 0.3, 0.2, 0.1}; }
+Generation::Generation() { probabilities = {0.4, 0.35, 0.2, 0.05}; }
 
 void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   float add_x = 0.0f;
 
-  std::cout << "Start";
   for (Object*& p : boxes) {
     p = new Platform();
   }
@@ -38,36 +39,6 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
   // condtion to limit the number of boxes rendered
   if (boxes.size() < 20 || boxes.back()->get_x_cord() - 750.0f <= center.x) {
     float add_x = 50.0f;  // float to add to the x cord
-
-    int rand1 = 0;
-
-    std::vector<double> prob = {0.9, 0.1};
-    rand1 = generate(prob);
-
-    // if (event > 30) {
-    //   if (event < 60 && changed) {
-    //     std::cout << "THIS RAN\n";
-
-    //     std::cout << "Value changed ";
-    //     // Seed the random number generator with the current time
-    //     std::mt19937_64 rng(std::time(0));
-
-    //     // Define a range for the random number (200 to 400)
-    //     std::uniform_real_distribution<float> dist(-200.0, 200.0);
-
-    //     // Generate a random float number within the specified range
-    //     float randomValue = dist(rng);
-
-    //     add_y = randomValue;
-    //     changed = false;
-    //   } else if (event > 60 || !(changed)) {
-    //     changed = false;
-    //     event = 0;
-    //   } else {
-    //     std::cout << "IT IS RUNNING";
-    //     changed = true;
-    //   }
-    // }
 
     if (event == 30 && event2 < 50) {
       std::cout << "Value changed ";
@@ -91,7 +62,7 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
     event++;
     event2++;
 
-    generateTerrain(boxes, rand1, add_y);
+    generateTerrain(boxes, add_y);
   }
 }
 
@@ -119,8 +90,7 @@ void Generation::transition(std::vector<Object*>& boxes, float randomValue_,
                                sf::Vector2f(1.0f, 1.0f)));
 }
 
-void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
-                                 float add_y) {
+void Generation::generateTerrain(std::vector<Object*>& boxes, float add_y) {
   float add_x = 50.0f;
 
   applyRules(boxes);
@@ -145,6 +115,7 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
         platformCounter++;
         lavaCounter = 0;
         spikeCounter = 0;
+        rockCounter = 0;
       }
 
       break;
@@ -160,6 +131,7 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
 
         platformCounter = 0;
         spikeCounter = 0;
+        rockCounter = 0;
         lavaCounter++;
       }
 
@@ -176,10 +148,31 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
         spikeCounter++;
         lavaCounter = 0;
         platformCounter = 0;
+        rockCounter = 0;
       }
 
       break;
 
+    case 3:
+      if (rockCounter < 1) {
+        boxes.push_back(new Platform(x + add_x, base_y_cord + add_y,
+                                     sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 2, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 3, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 4, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new Rock(x + add_x * 3, base_y_cord - 500.0f + add_y,
+                                 sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new Platform(x + add_x * 5, base_y_cord + add_y,
+                                     sf::Vector2f(1.0f, 1.0f)));
+
+        rockCounter++;
+        lavaCounter = 0;
+        platformCounter = 0;
+        spikeCounter = 0;
+      }
     default:
       break;
   }

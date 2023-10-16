@@ -24,6 +24,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spb/oop-project/src/Platform.cpp" "CMakeFiles/program.dir/src/Platform.cpp.o" "gcc" "CMakeFiles/program.dir/src/Platform.cpp.o.d"
   "/home/spb/oop-project/src/Player.cpp" "CMakeFiles/program.dir/src/Player.cpp.o" "gcc" "CMakeFiles/program.dir/src/Player.cpp.o.d"
   "/home/spb/oop-project/src/Rock.cpp" "CMakeFiles/program.dir/src/Rock.cpp.o" "gcc" "CMakeFiles/program.dir/src/Rock.cpp.o.d"
+  "/home/spb/oop-project/src/RockPlatform.cpp" "CMakeFiles/program.dir/src/RockPlatform.cpp.o" "gcc" "CMakeFiles/program.dir/src/RockPlatform.cpp.o.d"
   "/home/spb/oop-project/src/Spikes.cpp" "CMakeFiles/program.dir/src/Spikes.cpp.o" "gcc" "CMakeFiles/program.dir/src/Spikes.cpp.o.d"
   "/home/spb/oop-project/src/main.cpp" "CMakeFiles/program.dir/src/main.cpp.o" "gcc" "CMakeFiles/program.dir/src/main.cpp.o.d"
   )
