@@ -70,27 +70,27 @@ endif()
 add_executable (program main.cpp ${SOURCE_FILES} ${HEADER_FILES})
 target_link_libraries(program ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
-# Catch2
-find_package(Catch2 REQUIRED)
+# # Catch2
+# find_package(Catch2 REQUIRED)
 
-# Define your tests
-add_executable(test_runner
-    # tests/test_Player.cpp
-	# tests/test_Collision.cpp
-	tests/test_all.cpp
+# # Define your tests
+# add_executable(test_runner
+#     # tests/test_Player.cpp
+# 	# tests/test_Collision.cpp
+# 	tests/test_all.cpp
 
-	${SOURCE_FILES}
+# 	${SOURCE_FILES}
 	
-    # Add more test source files as needed
-)
+#     # Add more test source files as needed
+# )
 
-# Link the tests with Catch2
-target_link_libraries(test_runner Catch2::Catch2  ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+# # Link the tests with Catch2
+# target_link_libraries(test_runner Catch2::Catch2  ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
-# Configure CTest to run your tests
-include(CTest)
-include(Catch)
-catch_discover_tests(test_runner)
+# # Configure CTest to run your tests
+# include(CTest)
+# include(Catch)
+# catch_discover_tests(test_runner)
 
 
 

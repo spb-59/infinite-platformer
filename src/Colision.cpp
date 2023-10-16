@@ -4,14 +4,14 @@
 
 // Collision::Collision() {}
 
-// bool Collision::detect_collision(std::vector<Object *> &boxes, Player
+// bool Collision::detect_collision(//std::vector<Object *> &boxes, Player
 // &player) {
 //   // for (Object *&p : boxes) {
 //   //   if ((player.getHitBox()).intersects(p->getHitBox())) {
-//   //     std::cout << "collide" << std::endl;
+//   //     //std::cout << "collide" << //std::endl;
 //   //     player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
 //   //     if (p->get_isDeadly() == true) {
-//   //       std::cout << " GAME OVER";
+//   //       //std::cout << " GAME OVER";
 //   //     }
 
 //   //   } else {
@@ -30,6 +30,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
   Physics phy(0.5f);
 
   bool collisionDetected = false;
+  deadlyCollision = false;
 
   // Get player x and y positions.
   float playerX = player.get_x_cord();
@@ -55,6 +56,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
 
     if (objectHitBox.intersects(nextPos)) {
       collisionDetected = true;
+      if (p->get_isDeadly()) set_deadlyCollision();
 
       // Calculate the overlap on each side.
       float dx =
@@ -67,53 +69,53 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
       // Check if the player is above the object (touching its top side).
       if (dx < dy) {
         // Colliding on right of the platform
-        std::cout << playerHitBox.left;
+        // std::cout << playerHitBox.left;
         // if (playerHitBox.left + playerHitBox.width < objectHitBox.left) {
         if (playerHitBox.left < objectHitBox.left &&
             playerHitBox.left + playerHitBox.width <
                 objectHitBox.left + objectHitBox.width &&
             playerHitBox.top < objectHitBox.top + objectHitBox.height &&
             objectHitBox.top < playerHitBox.top + playerHitBox.height) {
-          std::cout << std::endl << "collided left: " << std::endl;
+          // std::cout << ////std::endl << "collided left: " << //std::endl;
 
           // Colliding on left of the platform
           newX = objectHitBox.left - playerHitBox.width;
           newY = player.get_y_cord();
 
-          std::cout << "initial x: " << player.get_x_cord() << std::endl;
-          std::cout << "initial y: " << player.get_y_cord() << std::endl;
+          // std::cout << "initial x: " << player.get_x_cord() << //std::endl;
+          // std::cout << "initial y: " << player.get_y_cord() << //std::endl;
 
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
 
           // Collided on the right side of the object, push player to the
           player.set_position(newX, newY);
-          std::cout << "altered x: " << newX << std::endl;
-          std::cout << "altered y: " << newY << std::endl;
+          // std::cout << "altered x: " << newX << //std::endl;
+          // std::cout << "altered y: " << newY << //std::endl;
 
-          std::cout << "final x: " << player.get_x_cord() << std::endl;
-          std::cout << "final y: " << player.get_y_cord() << std::endl;
+          // std::cout << "final x: " << player.get_x_cord() << //std::endl;
+          // std::cout << "final y: " << player.get_y_cord() << //std::endl;
         } else if (playerHitBox.left > objectHitBox.left &&
                    playerHitBox.left + playerHitBox.width >
                        objectHitBox.left + objectHitBox.width &&
                    playerHitBox.top < objectHitBox.top + objectHitBox.height &&
                    objectHitBox.top < playerHitBox.top + playerHitBox.height) {
-          std::cout << std::endl << "collided right: " << std::endl;
-          // Colliding on left of the platform
+          // std::cout << //std::endl << "collided right: " << //std::endl;
+          //  Colliding on left of the platform
           newX = objectHitBox.left + playerHitBox.width;
           newY = player.get_y_cord();
 
-          std::cout << "initial x: " << player.get_x_cord() << std::endl;
-          std::cout << "initial y: " << player.get_y_cord() << std::endl;
+          // std::cout << "initial x: " << player.get_x_cord() << //std::endl;
+          // std::cout << "initial y: " << player.get_y_cord() << //std::endl;
 
           player.setSpeed(sf::Vector2f(0.0f, player.getSpeed().y));
 
           // Collided on the right side of the object, push player to the
           player.set_position(newX, newY);
-          std::cout << "altered x: " << newX << std::endl;
-          std::cout << "altered y: " << newY << std::endl;
+          // std::cout << "altered x: " << newX << //std::endl;
+          // std::cout << "altered y: " << newY << //std::endl;
 
-          std::cout << "final x: " << player.get_x_cord() << std::endl;
-          std::cout << "final y: " << player.get_y_cord() << std::endl;
+          // std::cout << "final x: " << player.get_x_cord() << //std::endl;
+          // std::cout << "final y: " << player.get_y_cord() << //std::endl;
         }
       } else if (playerHitBox.top < objectHitBox.top &&
                  playerHitBox.top + playerHitBox.height <
@@ -121,7 +123,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
                  playerHitBox.left < objectHitBox.left + objectHitBox.width &&
                  objectHitBox.left < playerHitBox.left + playerHitBox.width) {
         player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
-        std::cout << std::endl << "collided top: " << std::endl;
+        // std::cout << //std::endl << "collided top: " << //std::endl;
 
         newX = player.get_x_cord();
 
@@ -132,7 +134,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
                      objectHitBox.top + objectHitBox.height &&
                  playerHitBox.left < objectHitBox.left + objectHitBox.width &&
                  objectHitBox.left < playerHitBox.left + playerHitBox.width) {
-        std::cout << std::endl << "collided bottom: " << std::endl;
+        // std::cout << //std::endl << "collided bottom: " << //std::endl;
 
         // Collided on the bottom of the object, push player up.
         newX = player.get_x_cord();
@@ -141,24 +143,26 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
         player.set_position(newX, newY);
 
         // player.setSpeed(sf::Vector2f(player.getSpeed().x, 0.0f));
-        std::cout << player.get_x_cord() << std::endl;
-        std::cout << player.get_y_cord() << std::endl;
+        // std::cout << player.get_x_cord() << //std::endl;
+        // std::cout << player.get_y_cord() << //std::endl;
       }
     }
   }
   // if (collisionDetected) {
   //   player.set_position(newX, newY);
-  //   std::cout << "altered x: " << newX << std::endl;
-  //   std::cout << "altered y: " << player.get_y_cord() << std::endl;
+  //   //std::cout << "altered x: " << newX << //std::endl;
+  //   //std::cout << "altered y: " << player.get_y_cord() << //std::endl;
 
   //   // player.set_x_cord(newX);
   // player.set_position(player.get_x_cord(), player.get_y_cord());
 
   // player.move_position(player.get_x_cord(), player.get_y_cord());
-  //   std::cout << "final x: " << player.get_x_cord() << std::endl;
-  //   std::cout << "final y: " << player.get_y_cord() << std::endl;
+  //   //std::cout << "final x: " << player.get_x_cord() << //std::endl;
+  //   //std::cout << "final y: " << player.get_y_cord() << //std::endl;
 
   return collisionDetected;
 }
 
-// Apply gravity using the physics class.
+void Collision::set_deadlyCollision() { deadlyCollision = true; }
+
+bool Collision::get_deadlyCollision() { return deadlyCollision; }

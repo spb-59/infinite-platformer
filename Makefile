@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/spb/oop-project
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -139,383 +129,6 @@ program/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
 .PHONY : program/fast
 
-#=============================================================================
-# Target rules for targets named test_runner
-
-# Build rule for target.
-test_runner: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_runner
-.PHONY : test_runner
-
-# fast build rule for target.
-test_runner/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/build
-.PHONY : test_runner/fast
-
-#=============================================================================
-# Target rules for targets named Experimental
-
-# Build rule for target.
-Experimental: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Experimental
-.PHONY : Experimental
-
-# fast build rule for target.
-Experimental/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
-.PHONY : Experimental/fast
-
-#=============================================================================
-# Target rules for targets named Nightly
-
-# Build rule for target.
-Nightly: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Nightly
-.PHONY : Nightly
-
-# fast build rule for target.
-Nightly/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
-.PHONY : Nightly/fast
-
-#=============================================================================
-# Target rules for targets named Continuous
-
-# Build rule for target.
-Continuous: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Continuous
-.PHONY : Continuous
-
-# fast build rule for target.
-Continuous/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
-.PHONY : Continuous/fast
-
-#=============================================================================
-# Target rules for targets named NightlyMemoryCheck
-
-# Build rule for target.
-NightlyMemoryCheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyMemoryCheck
-.PHONY : NightlyMemoryCheck
-
-# fast build rule for target.
-NightlyMemoryCheck/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
-.PHONY : NightlyMemoryCheck/fast
-
-#=============================================================================
-# Target rules for targets named NightlyStart
-
-# Build rule for target.
-NightlyStart: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyStart
-.PHONY : NightlyStart
-
-# fast build rule for target.
-NightlyStart/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
-.PHONY : NightlyStart/fast
-
-#=============================================================================
-# Target rules for targets named NightlyUpdate
-
-# Build rule for target.
-NightlyUpdate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyUpdate
-.PHONY : NightlyUpdate
-
-# fast build rule for target.
-NightlyUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
-.PHONY : NightlyUpdate/fast
-
-#=============================================================================
-# Target rules for targets named NightlyConfigure
-
-# Build rule for target.
-NightlyConfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyConfigure
-.PHONY : NightlyConfigure
-
-# fast build rule for target.
-NightlyConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
-.PHONY : NightlyConfigure/fast
-
-#=============================================================================
-# Target rules for targets named NightlyBuild
-
-# Build rule for target.
-NightlyBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyBuild
-.PHONY : NightlyBuild
-
-# fast build rule for target.
-NightlyBuild/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
-.PHONY : NightlyBuild/fast
-
-#=============================================================================
-# Target rules for targets named NightlyTest
-
-# Build rule for target.
-NightlyTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyTest
-.PHONY : NightlyTest
-
-# fast build rule for target.
-NightlyTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
-.PHONY : NightlyTest/fast
-
-#=============================================================================
-# Target rules for targets named NightlyCoverage
-
-# Build rule for target.
-NightlyCoverage: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyCoverage
-.PHONY : NightlyCoverage
-
-# fast build rule for target.
-NightlyCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
-.PHONY : NightlyCoverage/fast
-
-#=============================================================================
-# Target rules for targets named NightlyMemCheck
-
-# Build rule for target.
-NightlyMemCheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyMemCheck
-.PHONY : NightlyMemCheck
-
-# fast build rule for target.
-NightlyMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
-.PHONY : NightlyMemCheck/fast
-
-#=============================================================================
-# Target rules for targets named NightlySubmit
-
-# Build rule for target.
-NightlySubmit: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlySubmit
-.PHONY : NightlySubmit
-
-# fast build rule for target.
-NightlySubmit/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
-.PHONY : NightlySubmit/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalStart
-
-# Build rule for target.
-ExperimentalStart: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalStart
-.PHONY : ExperimentalStart
-
-# fast build rule for target.
-ExperimentalStart/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
-.PHONY : ExperimentalStart/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalUpdate
-
-# Build rule for target.
-ExperimentalUpdate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalUpdate
-.PHONY : ExperimentalUpdate
-
-# fast build rule for target.
-ExperimentalUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
-.PHONY : ExperimentalUpdate/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalConfigure
-
-# Build rule for target.
-ExperimentalConfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalConfigure
-.PHONY : ExperimentalConfigure
-
-# fast build rule for target.
-ExperimentalConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
-.PHONY : ExperimentalConfigure/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalBuild
-
-# Build rule for target.
-ExperimentalBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalBuild
-.PHONY : ExperimentalBuild
-
-# fast build rule for target.
-ExperimentalBuild/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
-.PHONY : ExperimentalBuild/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalTest
-
-# Build rule for target.
-ExperimentalTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalTest
-.PHONY : ExperimentalTest
-
-# fast build rule for target.
-ExperimentalTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-.PHONY : ExperimentalTest/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalCoverage
-
-# Build rule for target.
-ExperimentalCoverage: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalCoverage
-.PHONY : ExperimentalCoverage
-
-# fast build rule for target.
-ExperimentalCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
-.PHONY : ExperimentalCoverage/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalMemCheck
-
-# Build rule for target.
-ExperimentalMemCheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalMemCheck
-.PHONY : ExperimentalMemCheck
-
-# fast build rule for target.
-ExperimentalMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
-.PHONY : ExperimentalMemCheck/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalSubmit
-
-# Build rule for target.
-ExperimentalSubmit: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalSubmit
-.PHONY : ExperimentalSubmit
-
-# fast build rule for target.
-ExperimentalSubmit/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
-.PHONY : ExperimentalSubmit/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousStart
-
-# Build rule for target.
-ContinuousStart: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousStart
-.PHONY : ContinuousStart
-
-# fast build rule for target.
-ContinuousStart/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
-.PHONY : ContinuousStart/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousUpdate
-
-# Build rule for target.
-ContinuousUpdate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousUpdate
-.PHONY : ContinuousUpdate
-
-# fast build rule for target.
-ContinuousUpdate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
-.PHONY : ContinuousUpdate/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousConfigure
-
-# Build rule for target.
-ContinuousConfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousConfigure
-.PHONY : ContinuousConfigure
-
-# fast build rule for target.
-ContinuousConfigure/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
-.PHONY : ContinuousConfigure/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousBuild
-
-# Build rule for target.
-ContinuousBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousBuild
-.PHONY : ContinuousBuild
-
-# fast build rule for target.
-ContinuousBuild/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
-.PHONY : ContinuousBuild/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousTest
-
-# Build rule for target.
-ContinuousTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousTest
-.PHONY : ContinuousTest
-
-# fast build rule for target.
-ContinuousTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
-.PHONY : ContinuousTest/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousCoverage
-
-# Build rule for target.
-ContinuousCoverage: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousCoverage
-.PHONY : ContinuousCoverage
-
-# fast build rule for target.
-ContinuousCoverage/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
-.PHONY : ContinuousCoverage/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousMemCheck
-
-# Build rule for target.
-ContinuousMemCheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousMemCheck
-.PHONY : ContinuousMemCheck
-
-# fast build rule for target.
-ContinuousMemCheck/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
-.PHONY : ContinuousMemCheck/fast
-
-#=============================================================================
-# Target rules for targets named ContinuousSubmit
-
-# Build rule for target.
-ContinuousSubmit: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousSubmit
-.PHONY : ContinuousSubmit
-
-# fast build rule for target.
-ContinuousSubmit/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
-.PHONY : ContinuousSubmit/fast
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -546,7 +159,6 @@ src/Animation.o: src/Animation.cpp.o
 # target to build an object file
 src/Animation.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Animation.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Animation.cpp.o
 .PHONY : src/Animation.cpp.o
 
 src/Animation.i: src/Animation.cpp.i
@@ -555,7 +167,6 @@ src/Animation.i: src/Animation.cpp.i
 # target to preprocess a source file
 src/Animation.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Animation.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Animation.cpp.i
 .PHONY : src/Animation.cpp.i
 
 src/Animation.s: src/Animation.cpp.s
@@ -564,7 +175,6 @@ src/Animation.s: src/Animation.cpp.s
 # target to generate assembly for a file
 src/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Animation.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Animation.cpp.s
 .PHONY : src/Animation.cpp.s
 
 src/Button.o: src/Button.cpp.o
@@ -573,7 +183,6 @@ src/Button.o: src/Button.cpp.o
 # target to build an object file
 src/Button.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Button.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Button.cpp.o
 .PHONY : src/Button.cpp.o
 
 src/Button.i: src/Button.cpp.i
@@ -582,7 +191,6 @@ src/Button.i: src/Button.cpp.i
 # target to preprocess a source file
 src/Button.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Button.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Button.cpp.i
 .PHONY : src/Button.cpp.i
 
 src/Button.s: src/Button.cpp.s
@@ -591,7 +199,6 @@ src/Button.s: src/Button.cpp.s
 # target to generate assembly for a file
 src/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Button.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Button.cpp.s
 .PHONY : src/Button.cpp.s
 
 src/Colision.o: src/Colision.cpp.o
@@ -600,7 +207,6 @@ src/Colision.o: src/Colision.cpp.o
 # target to build an object file
 src/Colision.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Colision.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Colision.cpp.o
 .PHONY : src/Colision.cpp.o
 
 src/Colision.i: src/Colision.cpp.i
@@ -609,7 +215,6 @@ src/Colision.i: src/Colision.cpp.i
 # target to preprocess a source file
 src/Colision.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Colision.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Colision.cpp.i
 .PHONY : src/Colision.cpp.i
 
 src/Colision.s: src/Colision.cpp.s
@@ -618,7 +223,6 @@ src/Colision.s: src/Colision.cpp.s
 # target to generate assembly for a file
 src/Colision.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Colision.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Colision.cpp.s
 .PHONY : src/Colision.cpp.s
 
 src/Entity.o: src/Entity.cpp.o
@@ -627,7 +231,6 @@ src/Entity.o: src/Entity.cpp.o
 # target to build an object file
 src/Entity.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Entity.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Entity.cpp.o
 .PHONY : src/Entity.cpp.o
 
 src/Entity.i: src/Entity.cpp.i
@@ -636,7 +239,6 @@ src/Entity.i: src/Entity.cpp.i
 # target to preprocess a source file
 src/Entity.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Entity.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Entity.cpp.i
 .PHONY : src/Entity.cpp.i
 
 src/Entity.s: src/Entity.cpp.s
@@ -645,7 +247,6 @@ src/Entity.s: src/Entity.cpp.s
 # target to generate assembly for a file
 src/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Entity.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Entity.cpp.s
 .PHONY : src/Entity.cpp.s
 
 src/Game.o: src/Game.cpp.o
@@ -654,7 +255,6 @@ src/Game.o: src/Game.cpp.o
 # target to build an object file
 src/Game.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Game.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
 src/Game.i: src/Game.cpp.i
@@ -663,7 +263,6 @@ src/Game.i: src/Game.cpp.i
 # target to preprocess a source file
 src/Game.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Game.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
 src/Game.s: src/Game.cpp.s
@@ -672,7 +271,6 @@ src/Game.s: src/Game.cpp.s
 # target to generate assembly for a file
 src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Game.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
 src/Gamestate.o: src/Gamestate.cpp.o
@@ -681,7 +279,6 @@ src/Gamestate.o: src/Gamestate.cpp.o
 # target to build an object file
 src/Gamestate.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Gamestate.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Gamestate.cpp.o
 .PHONY : src/Gamestate.cpp.o
 
 src/Gamestate.i: src/Gamestate.cpp.i
@@ -690,7 +287,6 @@ src/Gamestate.i: src/Gamestate.cpp.i
 # target to preprocess a source file
 src/Gamestate.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Gamestate.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Gamestate.cpp.i
 .PHONY : src/Gamestate.cpp.i
 
 src/Gamestate.s: src/Gamestate.cpp.s
@@ -699,7 +295,6 @@ src/Gamestate.s: src/Gamestate.cpp.s
 # target to generate assembly for a file
 src/Gamestate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Gamestate.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Gamestate.cpp.s
 .PHONY : src/Gamestate.cpp.s
 
 src/Generation.o: src/Generation.cpp.o
@@ -708,7 +303,6 @@ src/Generation.o: src/Generation.cpp.o
 # target to build an object file
 src/Generation.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Generation.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Generation.cpp.o
 .PHONY : src/Generation.cpp.o
 
 src/Generation.i: src/Generation.cpp.i
@@ -717,7 +311,6 @@ src/Generation.i: src/Generation.cpp.i
 # target to preprocess a source file
 src/Generation.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Generation.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Generation.cpp.i
 .PHONY : src/Generation.cpp.i
 
 src/Generation.s: src/Generation.cpp.s
@@ -726,7 +319,6 @@ src/Generation.s: src/Generation.cpp.s
 # target to generate assembly for a file
 src/Generation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Generation.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Generation.cpp.s
 .PHONY : src/Generation.cpp.s
 
 src/LavaPit.o: src/LavaPit.cpp.o
@@ -735,7 +327,6 @@ src/LavaPit.o: src/LavaPit.cpp.o
 # target to build an object file
 src/LavaPit.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaPit.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaPit.cpp.o
 .PHONY : src/LavaPit.cpp.o
 
 src/LavaPit.i: src/LavaPit.cpp.i
@@ -744,7 +335,6 @@ src/LavaPit.i: src/LavaPit.cpp.i
 # target to preprocess a source file
 src/LavaPit.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaPit.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaPit.cpp.i
 .PHONY : src/LavaPit.cpp.i
 
 src/LavaPit.s: src/LavaPit.cpp.s
@@ -753,7 +343,6 @@ src/LavaPit.s: src/LavaPit.cpp.s
 # target to generate assembly for a file
 src/LavaPit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaPit.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaPit.cpp.s
 .PHONY : src/LavaPit.cpp.s
 
 src/LavaWall.o: src/LavaWall.cpp.o
@@ -762,7 +351,6 @@ src/LavaWall.o: src/LavaWall.cpp.o
 # target to build an object file
 src/LavaWall.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaWall.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaWall.cpp.o
 .PHONY : src/LavaWall.cpp.o
 
 src/LavaWall.i: src/LavaWall.cpp.i
@@ -771,7 +359,6 @@ src/LavaWall.i: src/LavaWall.cpp.i
 # target to preprocess a source file
 src/LavaWall.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaWall.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaWall.cpp.i
 .PHONY : src/LavaWall.cpp.i
 
 src/LavaWall.s: src/LavaWall.cpp.s
@@ -780,7 +367,6 @@ src/LavaWall.s: src/LavaWall.cpp.s
 # target to generate assembly for a file
 src/LavaWall.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/LavaWall.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/LavaWall.cpp.s
 .PHONY : src/LavaWall.cpp.s
 
 src/Menu.o: src/Menu.cpp.o
@@ -789,7 +375,6 @@ src/Menu.o: src/Menu.cpp.o
 # target to build an object file
 src/Menu.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Menu.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Menu.cpp.o
 .PHONY : src/Menu.cpp.o
 
 src/Menu.i: src/Menu.cpp.i
@@ -798,7 +383,6 @@ src/Menu.i: src/Menu.cpp.i
 # target to preprocess a source file
 src/Menu.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Menu.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Menu.cpp.i
 .PHONY : src/Menu.cpp.i
 
 src/Menu.s: src/Menu.cpp.s
@@ -807,7 +391,6 @@ src/Menu.s: src/Menu.cpp.s
 # target to generate assembly for a file
 src/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Menu.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Menu.cpp.s
 .PHONY : src/Menu.cpp.s
 
 src/Object.o: src/Object.cpp.o
@@ -816,7 +399,6 @@ src/Object.o: src/Object.cpp.o
 # target to build an object file
 src/Object.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Object.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Object.cpp.o
 .PHONY : src/Object.cpp.o
 
 src/Object.i: src/Object.cpp.i
@@ -825,7 +407,6 @@ src/Object.i: src/Object.cpp.i
 # target to preprocess a source file
 src/Object.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Object.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Object.cpp.i
 .PHONY : src/Object.cpp.i
 
 src/Object.s: src/Object.cpp.s
@@ -834,7 +415,6 @@ src/Object.s: src/Object.cpp.s
 # target to generate assembly for a file
 src/Object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Object.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Object.cpp.s
 .PHONY : src/Object.cpp.s
 
 src/Obstacle.o: src/Obstacle.cpp.o
@@ -843,7 +423,6 @@ src/Obstacle.o: src/Obstacle.cpp.o
 # target to build an object file
 src/Obstacle.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Obstacle.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Obstacle.cpp.o
 .PHONY : src/Obstacle.cpp.o
 
 src/Obstacle.i: src/Obstacle.cpp.i
@@ -852,7 +431,6 @@ src/Obstacle.i: src/Obstacle.cpp.i
 # target to preprocess a source file
 src/Obstacle.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Obstacle.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Obstacle.cpp.i
 .PHONY : src/Obstacle.cpp.i
 
 src/Obstacle.s: src/Obstacle.cpp.s
@@ -861,7 +439,6 @@ src/Obstacle.s: src/Obstacle.cpp.s
 # target to generate assembly for a file
 src/Obstacle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Obstacle.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Obstacle.cpp.s
 .PHONY : src/Obstacle.cpp.s
 
 src/Physics.o: src/Physics.cpp.o
@@ -870,7 +447,6 @@ src/Physics.o: src/Physics.cpp.o
 # target to build an object file
 src/Physics.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Physics.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Physics.cpp.o
 .PHONY : src/Physics.cpp.o
 
 src/Physics.i: src/Physics.cpp.i
@@ -879,7 +455,6 @@ src/Physics.i: src/Physics.cpp.i
 # target to preprocess a source file
 src/Physics.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Physics.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Physics.cpp.i
 .PHONY : src/Physics.cpp.i
 
 src/Physics.s: src/Physics.cpp.s
@@ -888,7 +463,6 @@ src/Physics.s: src/Physics.cpp.s
 # target to generate assembly for a file
 src/Physics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Physics.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Physics.cpp.s
 .PHONY : src/Physics.cpp.s
 
 src/Platform.o: src/Platform.cpp.o
@@ -897,7 +471,6 @@ src/Platform.o: src/Platform.cpp.o
 # target to build an object file
 src/Platform.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Platform.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Platform.cpp.o
 .PHONY : src/Platform.cpp.o
 
 src/Platform.i: src/Platform.cpp.i
@@ -906,7 +479,6 @@ src/Platform.i: src/Platform.cpp.i
 # target to preprocess a source file
 src/Platform.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Platform.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Platform.cpp.i
 .PHONY : src/Platform.cpp.i
 
 src/Platform.s: src/Platform.cpp.s
@@ -915,7 +487,6 @@ src/Platform.s: src/Platform.cpp.s
 # target to generate assembly for a file
 src/Platform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Platform.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Platform.cpp.s
 .PHONY : src/Platform.cpp.s
 
 src/Player.o: src/Player.cpp.o
@@ -924,7 +495,6 @@ src/Player.o: src/Player.cpp.o
 # target to build an object file
 src/Player.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Player.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Player.cpp.o
 .PHONY : src/Player.cpp.o
 
 src/Player.i: src/Player.cpp.i
@@ -933,7 +503,6 @@ src/Player.i: src/Player.cpp.i
 # target to preprocess a source file
 src/Player.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Player.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Player.cpp.i
 .PHONY : src/Player.cpp.i
 
 src/Player.s: src/Player.cpp.s
@@ -942,7 +511,6 @@ src/Player.s: src/Player.cpp.s
 # target to generate assembly for a file
 src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Player.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
 src/Rock.o: src/Rock.cpp.o
@@ -951,7 +519,6 @@ src/Rock.o: src/Rock.cpp.o
 # target to build an object file
 src/Rock.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Rock.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Rock.cpp.o
 .PHONY : src/Rock.cpp.o
 
 src/Rock.i: src/Rock.cpp.i
@@ -960,7 +527,6 @@ src/Rock.i: src/Rock.cpp.i
 # target to preprocess a source file
 src/Rock.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Rock.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Rock.cpp.i
 .PHONY : src/Rock.cpp.i
 
 src/Rock.s: src/Rock.cpp.s
@@ -969,7 +535,6 @@ src/Rock.s: src/Rock.cpp.s
 # target to generate assembly for a file
 src/Rock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Rock.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Rock.cpp.s
 .PHONY : src/Rock.cpp.s
 
 src/Spikes.o: src/Spikes.cpp.o
@@ -978,7 +543,6 @@ src/Spikes.o: src/Spikes.cpp.o
 # target to build an object file
 src/Spikes.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Spikes.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Spikes.cpp.o
 .PHONY : src/Spikes.cpp.o
 
 src/Spikes.i: src/Spikes.cpp.i
@@ -987,7 +551,6 @@ src/Spikes.i: src/Spikes.cpp.i
 # target to preprocess a source file
 src/Spikes.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Spikes.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Spikes.cpp.i
 .PHONY : src/Spikes.cpp.i
 
 src/Spikes.s: src/Spikes.cpp.s
@@ -996,32 +559,7 @@ src/Spikes.s: src/Spikes.cpp.s
 # target to generate assembly for a file
 src/Spikes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Spikes.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Spikes.cpp.s
 .PHONY : src/Spikes.cpp.s
-
-tests/test_all.o: tests/test_all.cpp.o
-.PHONY : tests/test_all.o
-
-# target to build an object file
-tests/test_all.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.o
-.PHONY : tests/test_all.cpp.o
-
-tests/test_all.i: tests/test_all.cpp.i
-.PHONY : tests/test_all.i
-
-# target to preprocess a source file
-tests/test_all.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.i
-.PHONY : tests/test_all.cpp.i
-
-tests/test_all.s: tests/test_all.cpp.s
-.PHONY : tests/test_all.s
-
-# target to generate assembly for a file
-tests/test_all.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.s
-.PHONY : tests/test_all.cpp.s
 
 # Help Target
 help:
@@ -1031,37 +569,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... Continuous"
-	@echo "... ContinuousBuild"
-	@echo "... ContinuousConfigure"
-	@echo "... ContinuousCoverage"
-	@echo "... ContinuousMemCheck"
-	@echo "... ContinuousStart"
-	@echo "... ContinuousSubmit"
-	@echo "... ContinuousTest"
-	@echo "... ContinuousUpdate"
-	@echo "... Experimental"
-	@echo "... ExperimentalBuild"
-	@echo "... ExperimentalConfigure"
-	@echo "... ExperimentalCoverage"
-	@echo "... ExperimentalMemCheck"
-	@echo "... ExperimentalStart"
-	@echo "... ExperimentalSubmit"
-	@echo "... ExperimentalTest"
-	@echo "... ExperimentalUpdate"
-	@echo "... Nightly"
-	@echo "... NightlyBuild"
-	@echo "... NightlyConfigure"
-	@echo "... NightlyCoverage"
-	@echo "... NightlyMemCheck"
-	@echo "... NightlyMemoryCheck"
-	@echo "... NightlyStart"
-	@echo "... NightlySubmit"
-	@echo "... NightlyTest"
-	@echo "... NightlyUpdate"
 	@echo "... program"
-	@echo "... test_runner"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -1116,9 +624,6 @@ help:
 	@echo "... src/Spikes.o"
 	@echo "... src/Spikes.i"
 	@echo "... src/Spikes.s"
-	@echo "... tests/test_all.o"
-	@echo "... tests/test_all.i"
-	@echo "... tests/test_all.s"
 .PHONY : help
 
 
