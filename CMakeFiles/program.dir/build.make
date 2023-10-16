@@ -69,19 +69,19 @@ include CMakeFiles/program.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/program.dir/flags.make
 
-CMakeFiles/program.dir/src/main.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/program.dir/src/main.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spb/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/main.cpp.o -MF CMakeFiles/program.dir/src/main.cpp.o.d -o CMakeFiles/program.dir/src/main.cpp.o -c /home/spb/oop-project/src/main.cpp
+CMakeFiles/program.dir/main.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/main.cpp.o: main.cpp
+CMakeFiles/program.dir/main.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spb/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/main.cpp.o -MF CMakeFiles/program.dir/main.cpp.o.d -o CMakeFiles/program.dir/main.cpp.o -c /home/spb/oop-project/main.cpp
 
-CMakeFiles/program.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spb/oop-project/src/main.cpp > CMakeFiles/program.dir/src/main.cpp.i
+CMakeFiles/program.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spb/oop-project/main.cpp > CMakeFiles/program.dir/main.cpp.i
 
-CMakeFiles/program.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spb/oop-project/src/main.cpp -o CMakeFiles/program.dir/src/main.cpp.s
+CMakeFiles/program.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spb/oop-project/main.cpp -o CMakeFiles/program.dir/main.cpp.s
 
 CMakeFiles/program.dir/src/Animation.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Animation.cpp.o: src/Animation.cpp
@@ -323,7 +323,7 @@ CMakeFiles/program.dir/src/Spikes.cpp.s: cmake_force
 
 # Object files for target program
 program_OBJECTS = \
-"CMakeFiles/program.dir/src/main.cpp.o" \
+"CMakeFiles/program.dir/main.cpp.o" \
 "CMakeFiles/program.dir/src/Animation.cpp.o" \
 "CMakeFiles/program.dir/src/Button.cpp.o" \
 "CMakeFiles/program.dir/src/Colision.cpp.o" \
@@ -345,7 +345,7 @@ program_OBJECTS = \
 # External object files for target program
 program_EXTERNAL_OBJECTS =
 
-program: CMakeFiles/program.dir/src/main.cpp.o
+program: CMakeFiles/program.dir/main.cpp.o
 program: CMakeFiles/program.dir/src/Animation.cpp.o
 program: CMakeFiles/program.dir/src/Button.cpp.o
 program: CMakeFiles/program.dir/src/Colision.cpp.o
