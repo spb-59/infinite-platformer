@@ -9,7 +9,10 @@
 class Generation {
  private:
   std::vector<double> probabilities;
-  int event = 100;
+  int event = 0;
+  int event2 = 0;
+  bool changed = true;
+  float add_y = 0;
 
   float base_y_cord = 500.0f;
   const float max_Yjump = 10.0f;
@@ -23,9 +26,10 @@ class Generation {
 
   void makeTerrain(std::vector<Object *> &boxes, sf::Vector2f center);
   void makeInfinite(std::vector<Object *> &boxes, sf::Vector2f center);
-  void generateTerrain(std::vector<Object *> &boxes, float x, int rand,
-                       float add_y);
+  void generateTerrain(std::vector<Object *> &boxes, int rand, float add_y);
   int generate(std::vector<double> probabilities);
+
+  void transition(std::vector<Object *> &boxes, float randomValue, float add_y);
 
   void optimize(std::vector<Object *> &boxes, sf::Vector2f center);
 
