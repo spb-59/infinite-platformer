@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/program.dir/main.cpp.o"
+  "CMakeFiles/program.dir/main.cpp.o.d"
   "CMakeFiles/program.dir/src/Animation.cpp.o"
   "CMakeFiles/program.dir/src/Animation.cpp.o.d"
   "CMakeFiles/program.dir/src/Button.cpp.o"
@@ -33,8 +35,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/program.dir/src/Rock.cpp.o.d"
   "CMakeFiles/program.dir/src/Spikes.cpp.o"
   "CMakeFiles/program.dir/src/Spikes.cpp.o.d"
-  "CMakeFiles/program.dir/src/main.cpp.o"
-  "CMakeFiles/program.dir/src/main.cpp.o.d"
   "program"
   "program.pdb"
 )

@@ -1,0 +1,5 @@
+add_test( [==[Test Generation::optimize]==] /home/spb/oop-project/test_runner [==[Test Generation::optimize]==]  )
+set_tests_properties( [==[Test Generation::optimize]==] PROPERTIES WORKING_DIRECTORY /home/spb/oop-project)
+add_test( [==[Test Generation::applyRules]==] /home/spb/oop-project/test_runner [==[Test Generation::applyRules]==]  )
+set_tests_properties( [==[Test Generation::applyRules]==] PROPERTIES WORKING_DIRECTORY /home/spb/oop-project)
+set( test_runner_TESTS [==[Test Generation::optimize]==] [==[Test Generation::applyRules]==])

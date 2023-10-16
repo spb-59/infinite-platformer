@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/spb/oop-project/main.cpp" "CMakeFiles/program.dir/main.cpp.o" "gcc" "CMakeFiles/program.dir/main.cpp.o.d"
   "/home/spb/oop-project/src/Animation.cpp" "CMakeFiles/program.dir/src/Animation.cpp.o" "gcc" "CMakeFiles/program.dir/src/Animation.cpp.o.d"
   "/home/spb/oop-project/src/Button.cpp" "CMakeFiles/program.dir/src/Button.cpp.o" "gcc" "CMakeFiles/program.dir/src/Button.cpp.o.d"
   "/home/spb/oop-project/src/Colision.cpp" "CMakeFiles/program.dir/src/Colision.cpp.o" "gcc" "CMakeFiles/program.dir/src/Colision.cpp.o.d"
@@ -25,7 +26,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spb/oop-project/src/Player.cpp" "CMakeFiles/program.dir/src/Player.cpp.o" "gcc" "CMakeFiles/program.dir/src/Player.cpp.o.d"
   "/home/spb/oop-project/src/Rock.cpp" "CMakeFiles/program.dir/src/Rock.cpp.o" "gcc" "CMakeFiles/program.dir/src/Rock.cpp.o.d"
   "/home/spb/oop-project/src/Spikes.cpp" "CMakeFiles/program.dir/src/Spikes.cpp.o" "gcc" "CMakeFiles/program.dir/src/Spikes.cpp.o.d"
-  "/home/spb/oop-project/src/main.cpp" "CMakeFiles/program.dir/src/main.cpp.o" "gcc" "CMakeFiles/program.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

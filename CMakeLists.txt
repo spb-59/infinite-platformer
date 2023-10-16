@@ -14,7 +14,6 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 # set (SFML_ROOT "/Users/Majki/Local/SFML")
 
 set (SOURCE_FILES 
-	src/main.cpp
 	src/Animation.cpp
 	src/Button.cpp
 	src/Colision.cpp
@@ -68,5 +67,25 @@ else()
 endif()
 
 # Add executable to the program
-add_executable (program ${SOURCE_FILES} ${HEADER_FILES})
+add_executable (program main.cpp ${SOURCE_FILES} ${HEADER_FILES})
 target_link_libraries(program ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+
+# Catch2
+find_package(Catch2 REQUIRED)
+
+# Define your tests
+add_executable(test_runner
+    tests/test_generation.cpp
+
+	${SOURCE_FILES}
+	
+    # Add more test source files as needed
+)
+
+# Link the tests with Catch2
+target_link_libraries(test_runner Catch2::Catch2 ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+
+# Configure CTest to run your tests
+include(CTest)
+include(Catch)
+catch_discover_tests(test_runner)
