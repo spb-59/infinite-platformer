@@ -38,6 +38,8 @@ void Game::run() {
 
   float deltaTime = 0.0f;
   sf::Clock clock;
+  Menu menu;
+
   Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &texture);
   Entity bg(sf::Vector2f(1.0f, 1.0f), 0.0f, 0.0f, &background);
   sf::View view(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
@@ -50,9 +52,17 @@ void Game::run() {
     }
 
     window.clear();
-    pl1.movement(event);
 
-    // all rendering logic here
+    menu.run(); 
+    window.clear(); 
+
+    MenuState menuState = menu.getMenuState();
+
+    // change to switch statement 
+    if (menuState==PLAY) {
+      std::cout<< "menu state is PLAY" << std::endl; 
+      
+          // all rendering logic here
     sf::Vector2f cameraPosition = view.getCenter();
     cameraPosition.x += 0.01f;
 
@@ -68,5 +78,8 @@ void Game::run() {
     pl1.render(&window);
 
     window.display();
+    }
+
+    pl1.movement(event);
   }
 }

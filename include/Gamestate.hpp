@@ -3,7 +3,7 @@
 
 class Gamestate {
  private:
-  enum state { MENU, PLAY, END };
+  enum state { MENU, PLAYING, PAUSED, END };
   state currentState;
 
  public:
