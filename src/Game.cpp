@@ -36,10 +36,11 @@ void Game::run() {
   sf::Vector2f originalCenter = view.getCenter();
   std ::cout << view.getCenter().x;
   std::vector<Object*> blocks(10, nullptr);
+  Menu menu(Window);
 
   while (Window->isOpen()) {
     sf::Event event;
-    Menu menu(Window);
+    
     // Poll events
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -68,11 +69,10 @@ void Game::run() {
         // Handle "How to play" menu state
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
-      } else {
-      }
+      } 
     }
 
-    else if (game) {
+    if (game) {
       sf::Vector2f cameraPosition;
 
       // Handle the game logic here
@@ -118,6 +118,7 @@ void Game::run() {
       pl1.set_position(100.0f, 100.0f);
       view.setCenter(originalCenter);
       Window->setView(view);
+      menu.setIsGameOver();
     }
   }
 }

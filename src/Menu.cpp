@@ -39,6 +39,7 @@ Menu::Menu(sf::RenderWindow* window) {
   buttons[2]->setSize(30);
   buttons[2]->setPosition(sf::Vector2f(1280.0 / 2, 720.0 / 2));
 
+
   setMenuState(MAIN_MENU);
 }
 
@@ -46,6 +47,20 @@ void Menu::run() {
   std::cout << "Menu is running- menu::run function" << std::endl;
   bool isButtonClicked = false;
   int selectedButton = -1;
+    if(isGameOver){
+
+
+buttons.push_back(new Button());
+
+  buttons[3]->setName("You Died");
+  buttons[3]->setFillColor(sf::Color::Red);
+  buttons[3]->setFont();
+  buttons[3]->setSize(50);
+  buttons[3]->setPosition(sf::Vector2f(800,100));
+
+
+
+  }
 
   while (menu_window->isOpen() && isMenu) {
     sf::Event event;
@@ -58,6 +73,8 @@ void Menu::run() {
 
     // counter to get button index in the loop
     int buttonIndexCounter = 0;
+
+    if(buttons.size()>4) buttons.resize(4);
 
     for (Button*& p : buttons) {
       menu_window->draw(p->getButton());
@@ -99,6 +116,11 @@ void Menu::run() {
       }
     }
   }
+}
+
+void Menu::setIsGameOver() {
+    isGameOver = true; 
+    isMenu=true;
 }
 
 void Menu::setMenuState(MenuState newState) { menuState = newState; }

@@ -15,12 +15,15 @@ class Menu {
   sf::RenderWindow* menu_window;
   sf::Font font;
   bool isMenu = true;
+  bool isGameOver = false; 
 
  public:
   Menu(sf::RenderWindow* window);
 
   void handleEvents();
   void run();
+
+  void setIsGameOver(); 
 
   MenuState getMenuState();
   void setMenuState(MenuState);
