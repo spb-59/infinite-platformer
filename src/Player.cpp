@@ -2,7 +2,15 @@
 
 Player::Player(float x_cord, float y_cord, sf::Vector2f size)
     : Entity(x_cord, y_cord, size) {
-  LocalTexture.loadFromFile("./resources/player_right.png");
+  LocalTexture.loadFromFile("./resources/playersheet_FIXED.png");
+
+  
+
+  Animation animation(&LocalTexture, )
+ 
+
+
+
   obj.setTexture(LocalTexture);
   canMove = true;
 }

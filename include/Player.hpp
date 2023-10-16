@@ -3,8 +3,10 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 #include "Entity.hpp"
+#include "Animation.hpp"
 
 class Player : public Entity {
  public:

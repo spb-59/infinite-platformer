@@ -24,4 +24,31 @@ class Animation {
   sf::IntRect getIntRect() { return this->uvRect; }
 };
 
+// class Animation {
+//   protected: 
+//     sf::Texture texture;
+//     std::vector<sf::Sprite> sprites;
+//     sf::Texture textures[2];
+//     int currentFrame;
+//     float currentTime;  
+//     sf::Clock clock; 
+
+//   public: 
+//     Animation(const std::string &textureFileName, const sf::Vector2u &numFrames);
+//     Animation(); // to test for player 
+
+//     // functions for player movement 
+//     void moveRight(sf::Sprite &sprite, float waitTime);
+//     void moveLeft(float waitTime);
+
+//   // functions for general animation
+//     void makeFrames(); 
+//     void update(float waitTime);
+//     void drawCurrent(sf::RenderWindow *window);
+
+//     ~Animation();
+
+
+// };
+
 #endif

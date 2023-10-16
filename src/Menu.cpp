@@ -45,11 +45,11 @@ Menu::Menu(sf::RenderWindow *window ) {
 
 void Menu::run() {
 
-    std::cout << "Menu is running" << std::endl; 
+    std::cout << "Menu is running- menu::run function" << std::endl; 
     bool isButtonClicked = false; 
     int selectedButton = -1;
 
-    while (menu_window->isOpen()){
+    while (menu_window->isOpen() && isMenu){
     sf::Event event;
 
     while(menu_window->pollEvent(event)) {

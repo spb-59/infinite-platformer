@@ -11,6 +11,7 @@
 #include "../include/Physics.hpp"
 #include "../include/Player.hpp"
 #include "../include/Menu.hpp"
+#include "../include/Animation.hpp"
 
 Generation Gen;
 Physics phy(0.3f);
@@ -57,11 +58,11 @@ void Game::run() {
       menu.run();
 
       if (menu.getMenuState() == MenuState::PLAY) {
+        std::cout << "PLAY selected - game::Run" << std::endl;
         inMenu = false; 
-        break;
 
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        std::cout << "How to play selected" << std::endl; 
+        std::cout << "How to play selected- game::run" << std::endl; 
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
         std::cout << "Quit has been chosen- game::run function" << std::endl; 
@@ -72,13 +73,19 @@ void Game::run() {
       // run the game 
         pl1.movement(event);
 
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+          //animation.moveLeft(0.5f);
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+          //animation.moveRight(0.5f);
+        }
+
         phy.addGravity(pl1);
 
         col.detect_collision(blocks, pl1);
 
         // Move this line outside the switch block
          cameraPosition = view.getCenter();
-        cameraPosition.x += 0.3f;
+        cameraPosition.x += 0.1f;
 
         Gen.optimize(blocks, view.getCenter());
         Gen.makeInfinite(blocks, view.getCenter());
@@ -99,7 +106,7 @@ void Game::run() {
           }
         }
 
-        //pl1.render(Window);
+        pl1.render(Window);
         Window->setView(view);
         Window->display();
         

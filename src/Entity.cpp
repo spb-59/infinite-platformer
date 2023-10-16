@@ -1,4 +1,5 @@
 #include "../include/Entity.hpp"
+#include "../include/Animation.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -11,6 +12,7 @@ Entity::Entity(float x_cord, float y_cord, sf::Vector2f size)
 }
 
 void Entity::movement(sf::Event event) {
+
   // std::cout << x_cord_ << " ";
   if (canMove) {
     switch (event.type) {
