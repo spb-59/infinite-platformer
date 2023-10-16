@@ -50,7 +50,7 @@ void Game::run() {
     col.detect_collision(blocks, pl1);
 
     sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.2f;
+    cameraPosition.x += 0.1f;
 
     Gen.optimize(blocks, view.getCenter());
     Gen.makeInfinite(blocks, view.getCenter());

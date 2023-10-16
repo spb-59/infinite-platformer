@@ -9,7 +9,7 @@ Rock::Rock(float x_cord, float y_cord, sf::Vector2f size)
 
 void Rock::render(sf::RenderWindow* window) {
   window->draw(obj);
-  obj.move(0.0f, 0.3f);
+  obj.move(0.0f, 0.1f);
 }
 
 bool Rock::get_isDeadly() { return true; }
