@@ -36,11 +36,16 @@ void Game::run() {
   // textureSize.y /= 2;
   // pl1.setTextureRect(sf::IntRect(textureSize.x*))
 
+  Menu menu(window);
+
   float deltaTime = 0.0f;
   sf::Clock clock;
   Player pl1(sf::Vector2f(1.0f, 1.0f), 10.0f, 10.0f, &texture);
   Entity bg(sf::Vector2f(1.0f, 1.0f), 0.0f, 0.0f, &background);
   sf::View view(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+  sf::Vector2f cameraPosition = view.getCenter();
+  cameraPosition.x += 0.01f;
+
   while (window.isOpen()) {
     deltaTime = clock.restart().asSeconds();
     sf::Event event;
@@ -50,23 +55,45 @@ void Game::run() {
     }
 
     window.clear();
-    pl1.movement(event);
 
-    // all rendering logic here
-    sf::Vector2f cameraPosition = view.getCenter();
-    cameraPosition.x += 0.01f;
+    // run menu 
+    menu.run();
 
-    // Update the view's center to follow the player
-    view.setCenter(cameraPosition);
+    window.clear();
 
-    // Apply the view to the window
-    window.setView(view);
-    animation.update(0, deltaTime);
+    switch(menu.getMenuState()) {
+      case PLAY:
+        pl1.movement(event);
 
-    // test render background
-    bg.render(&window);
-    pl1.render(&window);
+        // all rendering logic here
 
-    window.display();
+
+        // Update the view's center to follow the player
+        view.setCenter(cameraPosition);
+
+        // Apply the view to the window
+        window.setView(view);
+        animation.update(0, deltaTime);
+
+        // test render background
+        bg.render(&window);
+        pl1.render(&window);
+
+        window.display();
+        break;
+
+      case HOW_TO_PLAY:
+          std::cout << "You play by playing" << std::endl;
+        break;
+
+      case QUIT:
+        window.close();
+        break;
+
+      default:
+        std::cout << "Nothing happened- this should never happen" << std::endl; 
+    }
+
+
   }
 }
