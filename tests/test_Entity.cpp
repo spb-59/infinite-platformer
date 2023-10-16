@@ -4,14 +4,14 @@
 #include <catch2/catch.hpp>
 
 #include "../include/Colision.hpp"
+#include "../include/Entity.hpp"
 #include "../include/Platform.hpp"
-#include "../include/Player.hpp"
 
 // TESTING FOR CLASS  OBJECT AND INHERITED CLASSES //
 
-TEST_CASE("PLayer class tests", "[Player]") {
+TEST_CASE("Entity class tests", "[Entity]") {
   // Create an Object instance for testing
-  Player ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f));
+  Entity ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f));
 
   SECTION("Position and size getters and setters") {
     REQUIRE(ob.get_x_cord() == 10.0f);

@@ -20,8 +20,6 @@ class Object {
   float get_x_cord();
   float get_y_cord();
   void set_size(sf::Vector2f size);
-  void set_y_cord(float x_cord);
-  void set_x_cord(float y_cord);
 
   void set_position(float x_cord, float y_cord);
   void move_position(float x_cord, float y_cord);

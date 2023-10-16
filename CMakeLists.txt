@@ -75,7 +75,9 @@ find_package(Catch2 REQUIRED)
 
 # Define your tests
 add_executable(test_runner
-    tests/test_Player.cpp
+    # tests/test_Player.cpp
+	# tests/test_Collision.cpp
+	tests/test_all.cpp
 
 	${SOURCE_FILES}
 	
@@ -89,3 +91,6 @@ target_link_libraries(test_runner Catch2::Catch2  ${SFML_LIBRARIES} ${SFML_DEPEN
 include(CTest)
 include(Catch)
 catch_discover_tests(test_runner)
+
+
+

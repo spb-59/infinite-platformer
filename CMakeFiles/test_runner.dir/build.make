@@ -69,19 +69,19 @@ include CMakeFiles/test_runner.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_runner.dir/flags.make
 
-CMakeFiles/test_runner.dir/tests/test_Player.cpp.o: CMakeFiles/test_runner.dir/flags.make
-CMakeFiles/test_runner.dir/tests/test_Player.cpp.o: tests/test_Player.cpp
-CMakeFiles/test_runner.dir/tests/test_Player.cpp.o: CMakeFiles/test_runner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spb/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_runner.dir/tests/test_Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_runner.dir/tests/test_Player.cpp.o -MF CMakeFiles/test_runner.dir/tests/test_Player.cpp.o.d -o CMakeFiles/test_runner.dir/tests/test_Player.cpp.o -c /home/spb/oop-project/tests/test_Player.cpp
+CMakeFiles/test_runner.dir/tests/test_all.cpp.o: CMakeFiles/test_runner.dir/flags.make
+CMakeFiles/test_runner.dir/tests/test_all.cpp.o: tests/test_all.cpp
+CMakeFiles/test_runner.dir/tests/test_all.cpp.o: CMakeFiles/test_runner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spb/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_runner.dir/tests/test_all.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_runner.dir/tests/test_all.cpp.o -MF CMakeFiles/test_runner.dir/tests/test_all.cpp.o.d -o CMakeFiles/test_runner.dir/tests/test_all.cpp.o -c /home/spb/oop-project/tests/test_all.cpp
 
-CMakeFiles/test_runner.dir/tests/test_Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_runner.dir/tests/test_Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spb/oop-project/tests/test_Player.cpp > CMakeFiles/test_runner.dir/tests/test_Player.cpp.i
+CMakeFiles/test_runner.dir/tests/test_all.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_runner.dir/tests/test_all.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spb/oop-project/tests/test_all.cpp > CMakeFiles/test_runner.dir/tests/test_all.cpp.i
 
-CMakeFiles/test_runner.dir/tests/test_Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_runner.dir/tests/test_Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spb/oop-project/tests/test_Player.cpp -o CMakeFiles/test_runner.dir/tests/test_Player.cpp.s
+CMakeFiles/test_runner.dir/tests/test_all.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_runner.dir/tests/test_all.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spb/oop-project/tests/test_all.cpp -o CMakeFiles/test_runner.dir/tests/test_all.cpp.s
 
 CMakeFiles/test_runner.dir/src/Animation.cpp.o: CMakeFiles/test_runner.dir/flags.make
 CMakeFiles/test_runner.dir/src/Animation.cpp.o: src/Animation.cpp
@@ -323,7 +323,7 @@ CMakeFiles/test_runner.dir/src/Spikes.cpp.s: cmake_force
 
 # Object files for target test_runner
 test_runner_OBJECTS = \
-"CMakeFiles/test_runner.dir/tests/test_Player.cpp.o" \
+"CMakeFiles/test_runner.dir/tests/test_all.cpp.o" \
 "CMakeFiles/test_runner.dir/src/Animation.cpp.o" \
 "CMakeFiles/test_runner.dir/src/Button.cpp.o" \
 "CMakeFiles/test_runner.dir/src/Colision.cpp.o" \
@@ -345,7 +345,7 @@ test_runner_OBJECTS = \
 # External object files for target test_runner
 test_runner_EXTERNAL_OBJECTS =
 
-test_runner: CMakeFiles/test_runner.dir/tests/test_Player.cpp.o
+test_runner: CMakeFiles/test_runner.dir/tests/test_all.cpp.o
 test_runner: CMakeFiles/test_runner.dir/src/Animation.cpp.o
 test_runner: CMakeFiles/test_runner.dir/src/Button.cpp.o
 test_runner: CMakeFiles/test_runner.dir/src/Colision.cpp.o

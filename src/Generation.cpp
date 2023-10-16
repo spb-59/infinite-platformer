@@ -17,7 +17,7 @@ Generation::Generation() { probabilities = {0.4, 0.3, 0.2, 0.1}; }
 void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   float add_x = 0.0f;
 
-  std::cout << "Start";
+
   for (Object*& p : boxes) {
     p = new Platform();
   }

@@ -2,16 +2,18 @@
 #define CATCH_CONFIG_MAIN
 
 #include <catch2/catch.hpp>
+#include<string>
 
 #include "../include/Colision.hpp"
+#include "../include/LavaPit.hpp"
 #include "../include/Platform.hpp"
-#include "../include/Player.hpp"
 
-// TESTING FOR CLASS  OBJECT AND INHERITED CLASSES //
 
-TEST_CASE("PLayer class tests", "[Player]") {
+// TESTING FOR CLASS  LAVAPIT //
+
+TEST_CASE("LavaPit class tests", "[LavaPit]") {
   // Create an Object instance for testing
-  Player ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f));
+  LavaPit ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f));
 
   SECTION("Position and size getters and setters") {
     REQUIRE(ob.get_x_cord() == 10.0f);
@@ -33,4 +35,6 @@ TEST_CASE("PLayer class tests", "[Player]") {
     REQUIRE(ob.get_x_cord() == 20.0f);
     REQUIRE(ob.get_y_cord() == 40.0f);
   }
+
+  SECTION("Get type test") { REQUIRE(ob.get_type() == "LAVA"); }
 }

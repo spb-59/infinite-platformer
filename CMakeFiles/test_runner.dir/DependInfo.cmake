@@ -25,7 +25,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spb/oop-project/src/Player.cpp" "CMakeFiles/test_runner.dir/src/Player.cpp.o" "gcc" "CMakeFiles/test_runner.dir/src/Player.cpp.o.d"
   "/home/spb/oop-project/src/Rock.cpp" "CMakeFiles/test_runner.dir/src/Rock.cpp.o" "gcc" "CMakeFiles/test_runner.dir/src/Rock.cpp.o.d"
   "/home/spb/oop-project/src/Spikes.cpp" "CMakeFiles/test_runner.dir/src/Spikes.cpp.o" "gcc" "CMakeFiles/test_runner.dir/src/Spikes.cpp.o.d"
-  "/home/spb/oop-project/tests/test_Player.cpp" "CMakeFiles/test_runner.dir/tests/test_Player.cpp.o" "gcc" "CMakeFiles/test_runner.dir/tests/test_Player.cpp.o.d"
+  "/home/spb/oop-project/tests/test_all.cpp" "CMakeFiles/test_runner.dir/tests/test_all.cpp.o" "gcc" "CMakeFiles/test_runner.dir/tests/test_all.cpp.o.d"
   )
 
 # Targets to which this target links.

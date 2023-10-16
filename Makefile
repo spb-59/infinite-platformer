@@ -999,29 +999,29 @@ src/Spikes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/Spikes.cpp.s
 .PHONY : src/Spikes.cpp.s
 
-tests/test_Player.o: tests/test_Player.cpp.o
-.PHONY : tests/test_Player.o
+tests/test_all.o: tests/test_all.cpp.o
+.PHONY : tests/test_all.o
 
 # target to build an object file
-tests/test_Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_Player.cpp.o
-.PHONY : tests/test_Player.cpp.o
+tests/test_all.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.o
+.PHONY : tests/test_all.cpp.o
 
-tests/test_Player.i: tests/test_Player.cpp.i
-.PHONY : tests/test_Player.i
+tests/test_all.i: tests/test_all.cpp.i
+.PHONY : tests/test_all.i
 
 # target to preprocess a source file
-tests/test_Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_Player.cpp.i
-.PHONY : tests/test_Player.cpp.i
+tests/test_all.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.i
+.PHONY : tests/test_all.cpp.i
 
-tests/test_Player.s: tests/test_Player.cpp.s
-.PHONY : tests/test_Player.s
+tests/test_all.s: tests/test_all.cpp.s
+.PHONY : tests/test_all.s
 
 # target to generate assembly for a file
-tests/test_Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_Player.cpp.s
-.PHONY : tests/test_Player.cpp.s
+tests/test_all.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/tests/test_all.cpp.s
+.PHONY : tests/test_all.cpp.s
 
 # Help Target
 help:
@@ -1116,9 +1116,9 @@ help:
 	@echo "... src/Spikes.o"
 	@echo "... src/Spikes.i"
 	@echo "... src/Spikes.s"
-	@echo "... tests/test_Player.o"
-	@echo "... tests/test_Player.i"
-	@echo "... tests/test_Player.s"
+	@echo "... tests/test_all.o"
+	@echo "... tests/test_all.i"
+	@echo "... tests/test_all.s"
 .PHONY : help
 
 
