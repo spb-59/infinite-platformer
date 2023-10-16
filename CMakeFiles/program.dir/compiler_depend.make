@@ -1766,9 +1766,18 @@ CMakeFiles/program.dir/src/Game.cpp.o: src/Game.cpp \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
+  /usr/include/c++/12/chrono \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/bits/parse_numbers.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h \
   include/Animation.hpp \
   include/Colision.hpp \
   include/Object.hpp \
@@ -4499,8 +4508,6 @@ include/LavaPit.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h:
 
-/usr/include/c++/12/limits:
-
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
@@ -4520,6 +4527,12 @@ src/Gamestate.cpp:
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 include/Obstacle.hpp:
+
+/usr/include/c++/12/bits/this_thread_sleep.h:
+
+/usr/include/c++/12/bits/parse_numbers.h:
+
+/usr/include/c++/12/limits:
 
 src/LavaPit.cpp:
 
@@ -4761,6 +4774,8 @@ src/Spikes.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
+/usr/include/c++/12/bits/unique_ptr.h:
+
 /usr/include/c++/12/iterator:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
@@ -4776,6 +4791,8 @@ include/Animation.hpp:
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h:
+
+/usr/include/c++/12/bits/chrono.h:
 
 /usr/include/c++/12/clocale:
 
@@ -4796,6 +4813,8 @@ include/Animation.hpp:
 /usr/include/SFML/Graphics/Text.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
+
+/usr/include/c++/12/bits/std_thread.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
@@ -4935,6 +4954,8 @@ include/Generation.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
+/usr/include/c++/12/ratio:
+
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
 /usr/include/c++/12/bits/memoryfwd.h:
@@ -4962,6 +4983,8 @@ include/Generation.hpp:
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/c++/12/chrono:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -5118,6 +5141,8 @@ src/Rock.cpp:
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
+
+/usr/include/c++/12/thread:
 
 /usr/include/c++/12/bits/cpp_type_traits.h:
 

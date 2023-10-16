@@ -1,7 +1,9 @@
 #include "../include/Game.hpp"
 
 #include <SFML/Graphics.hpp>
+#include <chrono>
 #include <iostream>
+#include <thread>
 #include <vector>
 
 #include "../include/Animation.hpp"
@@ -25,6 +27,8 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 
 void Game::run() {
   bool inMenu = true;
+  bool game = false;
+
   // object creations and generations here
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
 
@@ -35,10 +39,8 @@ void Game::run() {
 
   while (Window->isOpen()) {
     sf::Event event;
-
     Menu menu(Window);
-    bool game = true;
-
+    // Poll events
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
         Window->close();
@@ -48,53 +50,53 @@ void Game::run() {
     Window->clear();
 
     if (inMenu) {
+      // Handle the menu here
       Window->clear();
       menu.run();
 
       if (menu.getMenuState() == MenuState::PLAY) {
-        std::cout << "PLAY selected - game::Run" << std::endl;
         inMenu = false;
         game = true;
+        // Initialize game state
         blocks.resize(10);
         Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
         pl1.set_position(100.0f, 250.0f);
         view.setCenter(originalCenter);
-
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        std::cout << "Done waiting!" << std::endl;
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        std::cout << "How to play selected- game::run" << std::endl;
-
+        // Handle "How to play" menu state
       } else if (menu.getMenuState() == MenuState::QUIT) {
-        std::cout << "Quit has been chosen- game::run function" << std::endl;
         Window->close();
+      } else {
       }
+    }
 
-    } else if (game) {
+    else if (game) {
       sf::Vector2f cameraPosition;
 
-      // run the game
+      // Handle the game logic here
+
       pl1.movement(event);
 
       phy.addGravity(pl1);
 
       col.detect_collision(blocks, pl1);
 
-      // Move this line outside the switch block
+      // Update the view's center to follow the player
       cameraPosition = view.getCenter();
       cameraPosition.x += 0.1f;
 
       Gen.optimize(blocks, view.getCenter());
       Gen.makeInfinite(blocks, view.getCenter());
 
-      // Update the view's center to follow the player
-      view.setCenter(cameraPosition);
+      view.setCenter(((((cameraPosition)))));
 
-      // Apply the view to the window
       Window->setView(view);
 
-      // all rendering logic here
-
+      // Render the game
       for (Object*& p : blocks) {
-        if (p) {  // Check if the pointer is valid (not null)
+        if (p) {
           p->render(Window);
         } else {
           std::cout << "Error ";
@@ -102,15 +104,20 @@ void Game::run() {
       }
 
       pl1.render(Window);
+    }
+
+    // Set the view and display the window
+    Window->setView(view);
+    Window->display();
+
+    if (col.get_deadlyCollision()) {
+      game = false;
+      inMenu = true;
+      blocks.resize(10);
+      Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
+      pl1.set_position(100.0f, 100.0f);
+      view.setCenter(originalCenter);
       Window->setView(view);
-      Window->display();
-      if (col.get_deadlyCollision()) {
-        game = false;
-        inMenu = true;
-        blocks.resize(10);
-        Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
-        pl1.set_position(100.0f, 100.0f);
-      }
     }
   }
 }
