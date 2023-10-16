@@ -22,8 +22,12 @@ Animation::~Animation() {}
 
 void Animation::setSwitchTime(float switchTime_) { switchTime = switchTime_; }
 
-void Animation::update(int row, float deltaTime) {
-  currentImage.y = row;
+void Animation::update(float deltaTime, bool faceRight) {
+  if (faceRight) {
+    currentImage.y = 0;
+  } else {
+    currentImage.y = 1;
+  }
   totalTime += deltaTime;
 
   if (totalTime >= switchTime && imageCount.x > 1) {

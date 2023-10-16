@@ -14,13 +14,13 @@ class Animation {
  public:
   sf::IntRect uvRect;
 
-  Animation(sf::Texture* texture_, sf::Vector2u imageCount_, float switchTime_);
+  Animation(sf::Texture* texture_, sf::Vector2u imageCount_, float switchTime_ );
   ~Animation();
 
   void setSwitchTime(float imageCount_);
   bool isForward();
 
-  void update(int row, float deltaTime);
+  void update(float deltaTime, bool faceRight);
   sf::IntRect getIntRect() { return this->uvRect; }
 };
 

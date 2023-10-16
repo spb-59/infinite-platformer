@@ -24,11 +24,20 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+  sf::Clock clock; 
+  float deltaTime = 0.0f;
 
   bool inMenu = true; 
 
+  sf::Texture player_texture; 
+  if(!player_texture.loadFromFile("./resources/playersheet_FIXED.png")) {
+    std::cout << "Error loading player sheet. " << std::endl; 
+  }
+
+  
+
   // object creations and generations here
-  Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
+  Player pl1(&player_texture,100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f), sf::Vector2u(2,2), 0.3f, 50.0f);
 
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
 
@@ -44,7 +53,7 @@ void Game::run() {
 
   while (Window->isOpen()) {
     sf::Event event;
-
+    deltaTime = clock.restart().asSeconds(); 
 
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -70,7 +79,7 @@ void Game::run() {
       }
 
     } else {
-      // run the game 
+      // run the game
         pl1.movement(event);
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
@@ -85,7 +94,7 @@ void Game::run() {
 
         // Move this line outside the switch block
          cameraPosition = view.getCenter();
-        cameraPosition.x += 0.1f;
+        cameraPosition.x += 0.0f;
 
         Gen.optimize(blocks, view.getCenter());
         Gen.makeInfinite(blocks, view.getCenter());
@@ -106,7 +115,9 @@ void Game::run() {
           }
         }
 
+        pl1.update(deltaTime);
         pl1.render(Window);
+        
         Window->setView(view);
         Window->display();
         
