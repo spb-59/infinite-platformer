@@ -12,6 +12,7 @@ class Entity : public Object {
   sf::Vector2f speed;
   int size;
   bool can_jump = true;
+  bool landed = true;
 
  public:
   bool canMove;

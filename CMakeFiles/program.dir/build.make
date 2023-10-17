@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/khanhnguyen/UNI/S2_2023/oop-project
+CMAKE_SOURCE_DIR = "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/khanhnguyen/UNI/S2_2023/oop-project
+CMAKE_BINARY_DIR = "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/program.dir/depend.make
@@ -72,254 +72,254 @@ include CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/main.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/main.cpp.o: main.cpp
 CMakeFiles/program.dir/main.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/main.cpp.o -MF CMakeFiles/program.dir/main.cpp.o.d -o CMakeFiles/program.dir/main.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/main.cpp.o -MF CMakeFiles/program.dir/main.cpp.o.d -o CMakeFiles/program.dir/main.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/main.cpp"
 
 CMakeFiles/program.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/main.cpp > CMakeFiles/program.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/main.cpp" > CMakeFiles/program.dir/main.cpp.i
 
 CMakeFiles/program.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/main.cpp -o CMakeFiles/program.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/main.cpp" -o CMakeFiles/program.dir/main.cpp.s
 
 CMakeFiles/program.dir/src/Animation.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Animation.cpp.o: src/Animation.cpp
 CMakeFiles/program.dir/src/Animation.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Animation.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Animation.cpp.o -MF CMakeFiles/program.dir/src/Animation.cpp.o.d -o CMakeFiles/program.dir/src/Animation.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Animation.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Animation.cpp.o -MF CMakeFiles/program.dir/src/Animation.cpp.o.d -o CMakeFiles/program.dir/src/Animation.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Animation.cpp"
 
 CMakeFiles/program.dir/src/Animation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Animation.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Animation.cpp > CMakeFiles/program.dir/src/Animation.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Animation.cpp" > CMakeFiles/program.dir/src/Animation.cpp.i
 
 CMakeFiles/program.dir/src/Animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Animation.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Animation.cpp -o CMakeFiles/program.dir/src/Animation.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Animation.cpp" -o CMakeFiles/program.dir/src/Animation.cpp.s
 
 CMakeFiles/program.dir/src/Button.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Button.cpp.o: src/Button.cpp
 CMakeFiles/program.dir/src/Button.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Button.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Button.cpp.o -MF CMakeFiles/program.dir/src/Button.cpp.o.d -o CMakeFiles/program.dir/src/Button.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Button.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Button.cpp.o -MF CMakeFiles/program.dir/src/Button.cpp.o.d -o CMakeFiles/program.dir/src/Button.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Button.cpp"
 
 CMakeFiles/program.dir/src/Button.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Button.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Button.cpp > CMakeFiles/program.dir/src/Button.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Button.cpp" > CMakeFiles/program.dir/src/Button.cpp.i
 
 CMakeFiles/program.dir/src/Button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Button.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Button.cpp -o CMakeFiles/program.dir/src/Button.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Button.cpp" -o CMakeFiles/program.dir/src/Button.cpp.s
 
 CMakeFiles/program.dir/src/Colision.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Colision.cpp.o: src/Colision.cpp
 CMakeFiles/program.dir/src/Colision.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Colision.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Colision.cpp.o -MF CMakeFiles/program.dir/src/Colision.cpp.o.d -o CMakeFiles/program.dir/src/Colision.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Colision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Colision.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Colision.cpp.o -MF CMakeFiles/program.dir/src/Colision.cpp.o.d -o CMakeFiles/program.dir/src/Colision.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Colision.cpp"
 
 CMakeFiles/program.dir/src/Colision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Colision.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Colision.cpp > CMakeFiles/program.dir/src/Colision.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Colision.cpp" > CMakeFiles/program.dir/src/Colision.cpp.i
 
 CMakeFiles/program.dir/src/Colision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Colision.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Colision.cpp -o CMakeFiles/program.dir/src/Colision.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Colision.cpp" -o CMakeFiles/program.dir/src/Colision.cpp.s
 
 CMakeFiles/program.dir/src/Entity.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Entity.cpp.o: src/Entity.cpp
 CMakeFiles/program.dir/src/Entity.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Entity.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Entity.cpp.o -MF CMakeFiles/program.dir/src/Entity.cpp.o.d -o CMakeFiles/program.dir/src/Entity.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Entity.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Entity.cpp.o -MF CMakeFiles/program.dir/src/Entity.cpp.o.d -o CMakeFiles/program.dir/src/Entity.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Entity.cpp"
 
 CMakeFiles/program.dir/src/Entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Entity.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Entity.cpp > CMakeFiles/program.dir/src/Entity.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Entity.cpp" > CMakeFiles/program.dir/src/Entity.cpp.i
 
 CMakeFiles/program.dir/src/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Entity.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Entity.cpp -o CMakeFiles/program.dir/src/Entity.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Entity.cpp" -o CMakeFiles/program.dir/src/Entity.cpp.s
 
 CMakeFiles/program.dir/src/Game.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Game.cpp.o: src/Game.cpp
 CMakeFiles/program.dir/src/Game.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/Game.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Game.cpp.o -MF CMakeFiles/program.dir/src/Game.cpp.o.d -o CMakeFiles/program.dir/src/Game.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/Game.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Game.cpp.o -MF CMakeFiles/program.dir/src/Game.cpp.o.d -o CMakeFiles/program.dir/src/Game.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Game.cpp"
 
 CMakeFiles/program.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Game.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Game.cpp > CMakeFiles/program.dir/src/Game.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Game.cpp" > CMakeFiles/program.dir/src/Game.cpp.i
 
 CMakeFiles/program.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Game.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Game.cpp -o CMakeFiles/program.dir/src/Game.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Game.cpp" -o CMakeFiles/program.dir/src/Game.cpp.s
 
 CMakeFiles/program.dir/src/Gamestate.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Gamestate.cpp.o: src/Gamestate.cpp
 CMakeFiles/program.dir/src/Gamestate.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/Gamestate.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Gamestate.cpp.o -MF CMakeFiles/program.dir/src/Gamestate.cpp.o.d -o CMakeFiles/program.dir/src/Gamestate.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Gamestate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/Gamestate.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Gamestate.cpp.o -MF CMakeFiles/program.dir/src/Gamestate.cpp.o.d -o CMakeFiles/program.dir/src/Gamestate.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Gamestate.cpp"
 
 CMakeFiles/program.dir/src/Gamestate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Gamestate.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Gamestate.cpp > CMakeFiles/program.dir/src/Gamestate.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Gamestate.cpp" > CMakeFiles/program.dir/src/Gamestate.cpp.i
 
 CMakeFiles/program.dir/src/Gamestate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Gamestate.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Gamestate.cpp -o CMakeFiles/program.dir/src/Gamestate.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Gamestate.cpp" -o CMakeFiles/program.dir/src/Gamestate.cpp.s
 
 CMakeFiles/program.dir/src/Generation.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Generation.cpp.o: src/Generation.cpp
 CMakeFiles/program.dir/src/Generation.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/Generation.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Generation.cpp.o -MF CMakeFiles/program.dir/src/Generation.cpp.o.d -o CMakeFiles/program.dir/src/Generation.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Generation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/Generation.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Generation.cpp.o -MF CMakeFiles/program.dir/src/Generation.cpp.o.d -o CMakeFiles/program.dir/src/Generation.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Generation.cpp"
 
 CMakeFiles/program.dir/src/Generation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Generation.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Generation.cpp > CMakeFiles/program.dir/src/Generation.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Generation.cpp" > CMakeFiles/program.dir/src/Generation.cpp.i
 
 CMakeFiles/program.dir/src/Generation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Generation.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Generation.cpp -o CMakeFiles/program.dir/src/Generation.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Generation.cpp" -o CMakeFiles/program.dir/src/Generation.cpp.s
 
 CMakeFiles/program.dir/src/LavaPit.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/LavaPit.cpp.o: src/LavaPit.cpp
 CMakeFiles/program.dir/src/LavaPit.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/LavaPit.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LavaPit.cpp.o -MF CMakeFiles/program.dir/src/LavaPit.cpp.o.d -o CMakeFiles/program.dir/src/LavaPit.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaPit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/LavaPit.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LavaPit.cpp.o -MF CMakeFiles/program.dir/src/LavaPit.cpp.o.d -o CMakeFiles/program.dir/src/LavaPit.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaPit.cpp"
 
 CMakeFiles/program.dir/src/LavaPit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/LavaPit.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaPit.cpp > CMakeFiles/program.dir/src/LavaPit.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaPit.cpp" > CMakeFiles/program.dir/src/LavaPit.cpp.i
 
 CMakeFiles/program.dir/src/LavaPit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/LavaPit.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaPit.cpp -o CMakeFiles/program.dir/src/LavaPit.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaPit.cpp" -o CMakeFiles/program.dir/src/LavaPit.cpp.s
 
 CMakeFiles/program.dir/src/LavaWall.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/LavaWall.cpp.o: src/LavaWall.cpp
 CMakeFiles/program.dir/src/LavaWall.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/program.dir/src/LavaWall.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LavaWall.cpp.o -MF CMakeFiles/program.dir/src/LavaWall.cpp.o.d -o CMakeFiles/program.dir/src/LavaWall.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaWall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/program.dir/src/LavaWall.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LavaWall.cpp.o -MF CMakeFiles/program.dir/src/LavaWall.cpp.o.d -o CMakeFiles/program.dir/src/LavaWall.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaWall.cpp"
 
 CMakeFiles/program.dir/src/LavaWall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/LavaWall.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaWall.cpp > CMakeFiles/program.dir/src/LavaWall.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaWall.cpp" > CMakeFiles/program.dir/src/LavaWall.cpp.i
 
 CMakeFiles/program.dir/src/LavaWall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/LavaWall.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/LavaWall.cpp -o CMakeFiles/program.dir/src/LavaWall.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/LavaWall.cpp" -o CMakeFiles/program.dir/src/LavaWall.cpp.s
 
 CMakeFiles/program.dir/src/Menu.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Menu.cpp.o: src/Menu.cpp
 CMakeFiles/program.dir/src/Menu.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/program.dir/src/Menu.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Menu.cpp.o -MF CMakeFiles/program.dir/src/Menu.cpp.o.d -o CMakeFiles/program.dir/src/Menu.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/program.dir/src/Menu.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Menu.cpp.o -MF CMakeFiles/program.dir/src/Menu.cpp.o.d -o CMakeFiles/program.dir/src/Menu.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Menu.cpp"
 
 CMakeFiles/program.dir/src/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Menu.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Menu.cpp > CMakeFiles/program.dir/src/Menu.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Menu.cpp" > CMakeFiles/program.dir/src/Menu.cpp.i
 
 CMakeFiles/program.dir/src/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Menu.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Menu.cpp -o CMakeFiles/program.dir/src/Menu.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Menu.cpp" -o CMakeFiles/program.dir/src/Menu.cpp.s
 
 CMakeFiles/program.dir/src/Object.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Object.cpp.o: src/Object.cpp
 CMakeFiles/program.dir/src/Object.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/program.dir/src/Object.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Object.cpp.o -MF CMakeFiles/program.dir/src/Object.cpp.o.d -o CMakeFiles/program.dir/src/Object.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/program.dir/src/Object.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Object.cpp.o -MF CMakeFiles/program.dir/src/Object.cpp.o.d -o CMakeFiles/program.dir/src/Object.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Object.cpp"
 
 CMakeFiles/program.dir/src/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Object.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Object.cpp > CMakeFiles/program.dir/src/Object.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Object.cpp" > CMakeFiles/program.dir/src/Object.cpp.i
 
 CMakeFiles/program.dir/src/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Object.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Object.cpp -o CMakeFiles/program.dir/src/Object.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Object.cpp" -o CMakeFiles/program.dir/src/Object.cpp.s
 
 CMakeFiles/program.dir/src/Obstacle.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Obstacle.cpp.o: src/Obstacle.cpp
 CMakeFiles/program.dir/src/Obstacle.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/program.dir/src/Obstacle.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Obstacle.cpp.o -MF CMakeFiles/program.dir/src/Obstacle.cpp.o.d -o CMakeFiles/program.dir/src/Obstacle.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Obstacle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/program.dir/src/Obstacle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Obstacle.cpp.o -MF CMakeFiles/program.dir/src/Obstacle.cpp.o.d -o CMakeFiles/program.dir/src/Obstacle.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Obstacle.cpp"
 
 CMakeFiles/program.dir/src/Obstacle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Obstacle.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Obstacle.cpp > CMakeFiles/program.dir/src/Obstacle.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Obstacle.cpp" > CMakeFiles/program.dir/src/Obstacle.cpp.i
 
 CMakeFiles/program.dir/src/Obstacle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Obstacle.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Obstacle.cpp -o CMakeFiles/program.dir/src/Obstacle.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Obstacle.cpp" -o CMakeFiles/program.dir/src/Obstacle.cpp.s
 
 CMakeFiles/program.dir/src/Physics.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Physics.cpp.o: src/Physics.cpp
 CMakeFiles/program.dir/src/Physics.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/program.dir/src/Physics.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Physics.cpp.o -MF CMakeFiles/program.dir/src/Physics.cpp.o.d -o CMakeFiles/program.dir/src/Physics.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Physics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/program.dir/src/Physics.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Physics.cpp.o -MF CMakeFiles/program.dir/src/Physics.cpp.o.d -o CMakeFiles/program.dir/src/Physics.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Physics.cpp"
 
 CMakeFiles/program.dir/src/Physics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Physics.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Physics.cpp > CMakeFiles/program.dir/src/Physics.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Physics.cpp" > CMakeFiles/program.dir/src/Physics.cpp.i
 
 CMakeFiles/program.dir/src/Physics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Physics.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Physics.cpp -o CMakeFiles/program.dir/src/Physics.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Physics.cpp" -o CMakeFiles/program.dir/src/Physics.cpp.s
 
 CMakeFiles/program.dir/src/Platform.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Platform.cpp.o: src/Platform.cpp
 CMakeFiles/program.dir/src/Platform.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/program.dir/src/Platform.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Platform.cpp.o -MF CMakeFiles/program.dir/src/Platform.cpp.o.d -o CMakeFiles/program.dir/src/Platform.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Platform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/program.dir/src/Platform.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Platform.cpp.o -MF CMakeFiles/program.dir/src/Platform.cpp.o.d -o CMakeFiles/program.dir/src/Platform.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Platform.cpp"
 
 CMakeFiles/program.dir/src/Platform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Platform.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Platform.cpp > CMakeFiles/program.dir/src/Platform.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Platform.cpp" > CMakeFiles/program.dir/src/Platform.cpp.i
 
 CMakeFiles/program.dir/src/Platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Platform.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Platform.cpp -o CMakeFiles/program.dir/src/Platform.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Platform.cpp" -o CMakeFiles/program.dir/src/Platform.cpp.s
 
 CMakeFiles/program.dir/src/Player.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Player.cpp.o: src/Player.cpp
 CMakeFiles/program.dir/src/Player.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/program.dir/src/Player.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Player.cpp.o -MF CMakeFiles/program.dir/src/Player.cpp.o.d -o CMakeFiles/program.dir/src/Player.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/program.dir/src/Player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Player.cpp.o -MF CMakeFiles/program.dir/src/Player.cpp.o.d -o CMakeFiles/program.dir/src/Player.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Player.cpp"
 
 CMakeFiles/program.dir/src/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Player.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Player.cpp > CMakeFiles/program.dir/src/Player.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Player.cpp" > CMakeFiles/program.dir/src/Player.cpp.i
 
 CMakeFiles/program.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Player.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Player.cpp -o CMakeFiles/program.dir/src/Player.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Player.cpp" -o CMakeFiles/program.dir/src/Player.cpp.s
 
 CMakeFiles/program.dir/src/Rock.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Rock.cpp.o: src/Rock.cpp
 CMakeFiles/program.dir/src/Rock.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/program.dir/src/Rock.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Rock.cpp.o -MF CMakeFiles/program.dir/src/Rock.cpp.o.d -o CMakeFiles/program.dir/src/Rock.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Rock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/program.dir/src/Rock.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Rock.cpp.o -MF CMakeFiles/program.dir/src/Rock.cpp.o.d -o CMakeFiles/program.dir/src/Rock.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Rock.cpp"
 
 CMakeFiles/program.dir/src/Rock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Rock.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Rock.cpp > CMakeFiles/program.dir/src/Rock.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Rock.cpp" > CMakeFiles/program.dir/src/Rock.cpp.i
 
 CMakeFiles/program.dir/src/Rock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Rock.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Rock.cpp -o CMakeFiles/program.dir/src/Rock.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Rock.cpp" -o CMakeFiles/program.dir/src/Rock.cpp.s
 
 CMakeFiles/program.dir/src/Spikes.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Spikes.cpp.o: src/Spikes.cpp
 CMakeFiles/program.dir/src/Spikes.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/program.dir/src/Spikes.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Spikes.cpp.o -MF CMakeFiles/program.dir/src/Spikes.cpp.o.d -o CMakeFiles/program.dir/src/Spikes.cpp.o -c /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Spikes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/program.dir/src/Spikes.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Spikes.cpp.o -MF CMakeFiles/program.dir/src/Spikes.cpp.o.d -o CMakeFiles/program.dir/src/Spikes.cpp.o -c "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Spikes.cpp"
 
 CMakeFiles/program.dir/src/Spikes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Spikes.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Spikes.cpp > CMakeFiles/program.dir/src/Spikes.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Spikes.cpp" > CMakeFiles/program.dir/src/Spikes.cpp.i
 
 CMakeFiles/program.dir/src/Spikes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Spikes.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/khanhnguyen/UNI/S2_2023/oop-project/src/Spikes.cpp -o CMakeFiles/program.dir/src/Spikes.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Spikes.cpp" -o CMakeFiles/program.dir/src/Spikes.cpp.s
 
 # Object files for target program
 program_OBJECTS = \
@@ -370,7 +370,7 @@ program: /opt/homebrew/lib/libsfml-graphics.dylib
 program: /opt/homebrew/lib/libsfml-network.dylib
 program: /opt/homebrew/lib/libsfml-audio.dylib
 program: CMakeFiles/program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable program"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/program.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -382,6 +382,6 @@ CMakeFiles/program.dir/clean:
 .PHONY : CMakeFiles/program.dir/clean
 
 CMakeFiles/program.dir/depend:
-	cd /Users/khanhnguyen/UNI/S2_2023/oop-project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/khanhnguyen/UNI/S2_2023/oop-project /Users/khanhnguyen/UNI/S2_2023/oop-project /Users/khanhnguyen/UNI/S2_2023/oop-project /Users/khanhnguyen/UNI/S2_2023/oop-project /Users/khanhnguyen/UNI/S2_2023/oop-project/CMakeFiles/program.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project" "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project" "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project" "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project" "/Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/CMakeFiles/program.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/program.dir/depend
 

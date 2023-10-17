@@ -9,7 +9,7 @@ void Entity::set_landed(bool landed) { this->landed = landed; };
 
 Entity::Entity(float x_cord, float y_cord, sf::Vector2f size)
     : Object(x_cord, y_cord, size) {
-  speed = sf::Vector2f(0.0f, 0.0f);
+  speed = sf::Vector2f(0.2f, 0.0f);
   can_jump = true;
 }
 
