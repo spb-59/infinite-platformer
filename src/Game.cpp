@@ -2,11 +2,13 @@
 #include "../include/Game.hpp"
 
 #include <SFML/Graphics.hpp>
+#include <chrono>
 #include <iostream>
 #include <vector>
 
 #include "../include/Colision.hpp"
 #include "../include/Entity.hpp"
+#include "../include/Gamestate.hpp"
 #include "../include/Generation.hpp"
 #include "../include/Obstacle.hpp"
 #include "../include/Physics.hpp"
@@ -15,6 +17,7 @@
 Generation Gen;
 Physics phy(0.3);
 Collision col;
+Gamestate score;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -23,6 +26,8 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+  auto startTime = std::chrono::high_resolution_clock::now();
+
   // object creations and generations here
 
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
@@ -75,6 +80,14 @@ void Game::run() {
 
     Window->display();
   }
+  auto endTime = std::chrono::high_resolution_clock::now();
+
+  // Calculate the elapsed time in seconds
+  std::chrono::duration<double> elapsedSeconds = endTime - startTime;
+
+  // Convert the elapsed time to seconds and display it
+  double elapsedSecondsDouble = elapsedSeconds.count();
+  score.calculateScore(elapsedSecondsDouble);
 }
 
 Game::~Game() { delete Window; }
