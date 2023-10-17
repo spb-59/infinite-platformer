@@ -26,3 +26,4 @@ Score: 48 points
 Score: 99 points
 Score: 141 points
 Score: 50 points
+Score: 52 points
