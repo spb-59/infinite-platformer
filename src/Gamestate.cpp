@@ -1,3 +1,4 @@
+// Include necessary headers and libraries.
 #include "../include/Gamestate.hpp"
 
 #include <chrono>
@@ -6,22 +7,29 @@
 #include <thread>
 #include <vector>
 
-Gamestate::Gamestate() { currentState = MENU; }
+// Constructor for the Gamestate class.
+Gamestate::Gamestate() {
+  // Initialize the current state to MENU.
+  currentState = MENU;
+}
 
+// Set the current state to a new state.
 void Gamestate::setState(state newState) { currentState = newState; }
 
+// Get the current state.
 Gamestate::state Gamestate::getState() const { return currentState; }
 
+// Calculate the player's score based on elapsed time and update high scores.
 void Gamestate::calculateScore(double time) {
-  // Update the score based on points per second
+  // Update the score based on points earned per second.
   currentScore = pointsPerSecond * time;
 
-  // Display the updated score
+  // Display the updated score.
   std::cout << "Score: " << currentScore << " points" << std::endl;
 
-  // Append the score to the text file
+  // Append the score to a text file.
   std::ofstream outputFile(
-      "score.txt", std::ios::app);  // Use ios::app to append to the file
+      "score.txt", std::ios::app);  // Use ios::app to append to the file.
   if (outputFile.is_open()) {
     outputFile << "Score: " << currentScore << " points" << std::endl;
     outputFile.close();
@@ -30,7 +38,7 @@ void Gamestate::calculateScore(double time) {
     std::cerr << "Unable to open the file for writing." << std::endl;
   }
 
-  // Read and display all scores from the file
+  // Read and display all scores from the file and find the highest score.
   std::ifstream inputFile("score.txt");
   if (inputFile.is_open()) {
     highestScore = 0.0;
@@ -49,6 +57,7 @@ void Gamestate::calculateScore(double time) {
     }
     inputFile.close();
 
+    // Display all scores and the highest score.
     std::cout << "All Scores:" << std::endl;
     for (const double& score : allScores) {
       std::cout << score << " points" << std::endl;
@@ -60,5 +69,8 @@ void Gamestate::calculateScore(double time) {
   }
 }
 
-int Gamestate::getHighScore() { return highestScore; };
-int Gamestate::getCurrentScore() { return currentScore; };
+// Get the highest score.
+int Gamestate::getHighScore() { return highestScore; }
+
+// Get the current score.
+int Gamestate::getCurrentScore() { return currentScore; }
