@@ -132,7 +132,7 @@ void Game::run() {
     Window->setView(view);
     Window->display();
 
-    if (col.get_deadlyCollision() || col.detect_wall_collision(w1, pl1)) {
+    if (col.get_deadlyCollision() || col.get_deadlyCollision_wall()) {
       game = false;
       inMenu = true;
       blocks.resize(10);

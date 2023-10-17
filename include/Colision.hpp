@@ -16,6 +16,8 @@ class Collision {
   bool detect_wall_collision(LavaWall &wall, Player &player);
   void set_deadlyCollision();
   bool get_deadlyCollision();
+  void set_deadlyCollision_wall();
+  bool get_deadlyCollision_wall();
 };
 
 #endif
