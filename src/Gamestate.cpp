@@ -33,7 +33,7 @@ void Gamestate::calculateScore(double time) {
   // Read and display all scores from the file
   std::ifstream inputFile("score.txt");
   if (inputFile.is_open()) {
-    double highestScore = 0.0;
+    highestScore = 0.0;
     std::string line;
     std::vector<double> allScores;
 
@@ -59,3 +59,6 @@ void Gamestate::calculateScore(double time) {
     std::cerr << "Unable to open the file for reading." << std::endl;
   }
 }
+
+int Gamestate::getHighScore() { return highestScore; };
+int Gamestate::getCurrentScore() { return currentScore; };
