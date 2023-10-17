@@ -1,44 +1,36 @@
-#ifndef BUTTON_H
-#define BUTTON_H
+#ifndef COLLISION_H
+#define COLLISION_H
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
+#include "./LavaWall.hpp"
+#include "./Object.hpp"
+#include "./Physics.hpp"
+#include "./Player.hpp"
 
-class Button {
- protected:
-  sf::Text text;   // Text element for the button
-  sf::Font font;   // Font used for the button's text
+class Collision {
+ private:
+  bool deadlyCollision = false; 
 
  public:
   // Default constructor
-  Button();
+  Collision();
 
-  // Constructor with parameters for button name, text size, and number of options
-  Button(std::string name, int size, int numOptions);
+  // Detect collisions between the player and a collection of objects (boxes)
+  bool detect_collision(std::vector<Object *> &boxes, Player &player);
 
-  // Set the position of the button
-  void setPosition(sf::Vector2f pos);
+  // Detect collisions between the player and a specific LavaWall
+  bool detect_wall_collision(LavaWall &wall, Player &player);
 
-  // Set the fill color of the button
-  void setFillColor(sf::Color color);
+  // Set the deadlyCollision flag to indicate a deadly collision occurred
+  void set_deadlyCollision();
 
-  // Set the name (text) displayed on the button
-  void setName(std::string name);
+  // Get the value of the deadlyCollision flag
+  bool get_deadlyCollision();
 
-  // Set the font for the button's text
-  void setFont();
+  // Set the deadlyCollision flag specifically for wall collisions
+  void set_deadlyCollision_wall();
 
-  // Set the text size for the button's text
-  void setSize(int size);
-
-  // Check if the mouse is over the button (within a specified RenderWindow)
-  bool mouseIsOver(sf::RenderWindow& window);
-
-  // Get the text element of the button
-  sf::Text getButton();
-
-  // Destructor for the Button class
-  ~Button();
+  // Get the value of the deadlyCollision flag for wall collisions
+  bool get_deadlyCollision_wall();
 };
 
 #endif

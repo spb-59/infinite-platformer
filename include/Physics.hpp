@@ -8,6 +8,7 @@ class Physics {
   float gravity;
 
  public:
+ //constructor for Physics 
   Physics(float gravity);
 
   void addGravity(Entity& obj);
