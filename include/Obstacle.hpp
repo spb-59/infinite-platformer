@@ -1,54 +1,28 @@
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef OBSTACLE_HPP
+#define OBSTACLE_HPP
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
+#include <SFML.Graphics.hpp>
+#include "Object.hpp"
 
-class Object {
+class Obstacle : public Object {
  protected:
- // initialise variables and elements 
-  float x_cord_;              
-  float y_cord_;               
-  sf::Vector2f size_;
-  sf::Texture global_texture;   
-  sf::Sprite obj;              
+  bool isDeadly; // A flag indicating if the obstacle is deadly
 
  public:
-  // Constructor 
-  Object(float x_cord, float y_cord, sf::Vector2f size);
+  // Default constructor for the Obstacle class
+  Obstacle();
 
-  // Default constructor 
-  Object();
+  // Constructor for the Obstacle class with specified position (x, y) and size
+  Obstacle(float x_cord, float y_cord, sf::Vector2f size);
 
-  sf::Vector2f get_size();
+  // Get whether the obstacle is deadly
+  bool get_isDeadly();
 
-  sf::Vector2f get_position();
-
-  float get_x_cord();
-
-  float get_y_cord();
-
-  void set_size(sf::Vector2f size);
-
-  void set_position(float x_cord, float y_cord);
-
-  // Move the position of the object by the specified x and y coordinates
-  void move_position(float x_cord, float y_cord);
-
-  // Get the bounding box (HitBox) of the object
-  sf::FloatRect getHitBox();
-
-  // Render the object in the provided window
-  void render(sf::RenderWindow* window);
-
-  // Check if the object is deadly (to be overridden in derived classes)
-  virtual bool get_isDeadly();
-
-  // Get the type of the object (to be implemented in derived classes)
+  // Get the type of the obstacle (to be implemented in derived classes)
   virtual std::string get_type() = 0;
 
-  // Destructor 
-  virtual ~Object();
+  // Destructor for the Obstacle class
+  ~Obstacle();
 };
 
-#endif 
+#endif // OBSTACLE_HPP
