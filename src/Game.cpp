@@ -11,6 +11,7 @@
 #include "../include/Entity.hpp"
 #include "../include/Gamestate.hpp"
 #include "../include/Generation.hpp"
+#include "../include/LavaWall.hpp"
 #include "../include/Menu.hpp"
 #include "../include/Obstacle.hpp"
 #include "../include/Physics.hpp"
@@ -33,6 +34,8 @@ void Game::run() {
   bool game = false;
 
   // object creations and generations here
+  LavaWall w1(-970.0f, 0.0f, sf::Vector2f(20.0f, 20.0f),
+              sf::Vector2f(3.0f, 0.0f));
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
 
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
@@ -94,6 +97,7 @@ void Game::run() {
       // Handle the game logic here
 
       pl1.movement(event);
+      w1.wallMovement();
 
       phy.addGravity(pl1);
 
@@ -120,6 +124,7 @@ void Game::run() {
       }
 
       pl1.render(Window);
+      w1.render(Window);
     }
 
     // Set the view and display the window
