@@ -22,22 +22,22 @@ Menu::Menu(sf::RenderWindow* window) {
   buttons[0]->setFont();
   buttons[0]->setSize(30);
   buttons[0]->setPosition(
-      sf::Vector2f(menu_window->getView().getCenter().x / 2,
-                   menu_window->getView().getCenter().y / 4));
+      sf::Vector2f(menu_window->getView().getCenter().x / 4,
+                   menu_window->getView().getCenter().y / 1.5));
 
   // make button for options
   buttons[1]->setName("How To Play");
   buttons[1]->setFillColor(sf::Color::White);
   buttons[1]->setFont();
   buttons[1]->setSize(30);
-  buttons[1]->setPosition(sf::Vector2f(1280.0 / 2, 720.0 / 2.75));
+  buttons[1]->setPosition(sf::Vector2f(menu_window->getView().getCenter().x/4,menu_window->getView().getCenter().y / 1));
 
   // make button to quit
   buttons[2]->setName("Quit");
   buttons[2]->setFillColor(sf::Color::White);
   buttons[2]->setFont();
   buttons[2]->setSize(30);
-  buttons[2]->setPosition(sf::Vector2f(1280.0 / 2, 720.0 / 2));
+  buttons[2]->setPosition(sf::Vector2f(menu_window->getView().getCenter().x/4,menu_window->getView().getCenter().y /1+100));
 
 
   setMenuState(MAIN_MENU);
@@ -52,11 +52,11 @@ void Menu::run() {
 
 buttons.push_back(new Button());
 
-  buttons[3]->setName("You Died");
+  buttons[3]->setName("You Died!!!");
   buttons[3]->setFillColor(sf::Color::Red);
   buttons[3]->setFont();
-  buttons[3]->setSize(50);
-  buttons[3]->setPosition(sf::Vector2f(800,100));
+  buttons[3]->setSize(70);
+  buttons[3]->setPosition(sf::Vector2f(500,250));
 
 
 
@@ -64,6 +64,15 @@ buttons.push_back(new Button());
 
   while (menu_window->isOpen() && isMenu) {
     sf::Event event;
+
+    // load menu texture 
+    sf::Sprite menuBG;
+    sf::Texture menu_tex;
+    if (!menu_tex.loadFromFile("../resources/menu_background.png")) {
+        std::cout << "Error loading menu background" << std::endl;
+    }
+
+    menuBG.setTexture(menu_tex);
 
     while (menu_window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -89,11 +98,14 @@ buttons.push_back(new Button());
         }
 
       } else {
-        p->setFillColor(sf::Color::White);
+        if (buttonIndexCounter == 3) {
+            p->setFillColor(sf::Color::Red);
+        } else {
+            p->setFillColor(sf::Color::White);
+        }
       }
       buttonIndexCounter++;
     }
-
     menu_window->display();
 
     if (isButtonClicked) {

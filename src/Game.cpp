@@ -53,6 +53,7 @@ void Game::run() {
     if (inMenu) {
       // Handle the menu here
       Window->clear();
+      
       menu.run();
 
       if (menu.getMenuState() == MenuState::PLAY) {
