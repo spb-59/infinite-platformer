@@ -20,6 +20,8 @@ class Entity : public Object {
   void setSpeed(sf::Vector2f speed);
   sf::Vector2f getSpeed();
   std::string get_type();
+  void setCanJump();
+  void setCantJump();
 };
 
 #endif

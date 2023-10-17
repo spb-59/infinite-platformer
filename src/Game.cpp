@@ -9,7 +9,9 @@
 #include "../include/Animation.hpp"
 #include "../include/Colision.hpp"
 #include "../include/Entity.hpp"
+#include "../include/Gamestate.hpp"
 #include "../include/Generation.hpp"
+#include "../include/LavaWall.hpp"
 #include "../include/Menu.hpp"
 #include "../include/Obstacle.hpp"
 #include "../include/Physics.hpp"
@@ -18,6 +20,7 @@
 Generation Gen;
 Physics phy(0.3f);
 Collision col;
+Gamestate score;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -26,21 +29,24 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+  auto startTime = std::chrono::high_resolution_clock::now();
   bool inMenu = true;
   bool game = false;
 
   // object creations and generations here
+  LavaWall w1(-970.0f, 0.0f, sf::Vector2f(20.0f, 20.0f),
+              sf::Vector2f(3.0f, 0.0f));
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
 
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
   sf::Vector2f originalCenter = view.getCenter();
   std ::cout << view.getCenter().x;
-  std::vector<Object*> blocks(10, nullptr);
+  std::vector<Object*> blocks(20, nullptr);
   Menu menu(Window);
 
   while (Window->isOpen()) {
     sf::Event event;
-    
+
     // Poll events
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -54,28 +60,28 @@ void Game::run() {
       // Handle the menu here
       Window->clear();
       
-      
       menu.run();
      if (menu.getMenuState() == MenuState::PLAY) {
         inMenu = false;
         game = true;
         // Initialize game state
-        blocks.resize(10);
+        blocks.resize(20);
         Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
         pl1.set_position(100.0f, 250.0f);
         view.setCenter(originalCenter);
         std::this_thread::sleep_for(std::chrono::seconds(3));
         std::cout << "Done waiting!" << std::endl;
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        std::cout << "Menu state has been chosen - game run function" << std::endl; 
-        //Handle "How to play" menu state 
+        std::cout << "Menu state has been chosen - game run function"
+                  << std::endl;
+        // Handle "How to play" menu state
         sf::Sprite howToPlay;
-        sf::Texture howToPlay_tex; 
-        // error handling 
+        sf::Texture howToPlay_tex;
+        // error handling
         if (!howToPlay_tex.loadFromFile("./resources/howToBackground.png")) {
-          std::cout << "Error loading HOWTO texture" << std::endl; 
+          std::cout << "Error loading HOWTO texture" << std::endl;
         }
-        howToPlay.setPosition(sf::Vector2f(0,0));
+        howToPlay.setPosition(sf::Vector2f(0, 0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
 
@@ -91,7 +97,7 @@ void Game::run() {
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
-      } 
+      }
     }
 
     if (game) {
@@ -100,6 +106,7 @@ void Game::run() {
       // Handle the game logic here
 
       pl1.movement(event);
+      w1.wallMovement();
 
       phy.addGravity(pl1);
 
@@ -107,7 +114,7 @@ void Game::run() {
 
       // Update the view's center to follow the player
       cameraPosition = view.getCenter();
-      cameraPosition.x += 0.1f;
+      cameraPosition.x += 0.2f;
 
       Gen.optimize(blocks, view.getCenter());
       Gen.makeInfinite(blocks, view.getCenter());
@@ -126,6 +133,7 @@ void Game::run() {
       }
 
       pl1.render(Window);
+      w1.render(Window);
     }
 
     // Set the view and display the window
