@@ -67,7 +67,13 @@ void Game::run() {
         std::this_thread::sleep_for(std::chrono::seconds(3));
         std::cout << "Done waiting!" << std::endl;
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        // Handle "How to play" menu state
+        // Handle "How to play" menu state 
+        // sf::Sprite howToPlay;
+        // sf::Texture howToPlay_tex; 
+        // howToPlay_tex.loadFromFile();//"filenamefor how to play"//);
+        // howToPlay.setTexture(howToPlay_tex);
+        // Window->draw(howToPlay);
+
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
       } 

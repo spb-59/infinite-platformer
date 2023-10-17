@@ -23,7 +23,7 @@ Menu::Menu(sf::RenderWindow* window) {
   buttons[0]->setSize(30);
   buttons[0]->setPosition(
       sf::Vector2f(menu_window->getView().getCenter().x / 4,
-                   menu_window->getView().getCenter().y / 1.5));
+                   menu_window->getView().getCenter().y / 1.5+25));
 
   // make button for options
   buttons[1]->setName("How To Play");
@@ -68,11 +68,12 @@ buttons.push_back(new Button());
     // load menu texture 
     sf::Sprite menuBG;
     sf::Texture menu_tex;
-    if (!menu_tex.loadFromFile("../resources/menu_background.png")) {
+    if (!menu_tex.loadFromFile("./resources/menu_background.png")) {
         std::cout << "Error loading menu background" << std::endl;
     }
 
     menuBG.setTexture(menu_tex);
+        menu_window->draw(menuBG);
 
     while (menu_window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -106,6 +107,7 @@ buttons.push_back(new Button());
       }
       buttonIndexCounter++;
     }
+
     menu_window->display();
 
     if (isButtonClicked) {
