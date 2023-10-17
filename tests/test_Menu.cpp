@@ -7,4 +7,6 @@
 #include "../include/Menu.hpp"
 #include "../include/Platform.hpp"
 
-// TESTING FOR CLASS  OBJECT AND INHERITED CLASSES //
+// TESTING FOR MENU
+
+Menu menu();
