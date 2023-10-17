@@ -52,6 +52,7 @@ void Menu::run() {
   int selectedButton = -1;
   bool isHowTo = false;
   if (isGameOver) {
+   // make button for died 
     buttons.push_back(new Button());
 
     buttons[3]->setName("You Died!!!");
@@ -60,6 +61,7 @@ void Menu::run() {
     buttons[3]->setSize(70);
     buttons[3]->setPosition(sf::Vector2f(500, 250));
 
+// make button for game score 
     buttons.push_back(new Button());
 
     buttons[4]->setName("Score: " + std::to_string(currentScore));
@@ -68,6 +70,7 @@ void Menu::run() {
     buttons[4]->setSize(40);
     buttons[4]->setPosition(sf::Vector2f(500, 350));
 
+  // make button for highest score 
     buttons.push_back(new Button());
 
     buttons[5]->setName("Highest: " + std::to_string(highestCore));
@@ -104,8 +107,14 @@ void Menu::run() {
     for (Button*& p : buttons) {
       menu_window->draw(p->getButton());
 
+      // change option colour if mouse hovers over it 
       if (p->mouseIsOver(*menu_window)) {
-        p->setFillColor(sf::Color::Cyan);
+        if (buttonIndexCounter == 3) {
+            p->setFillColor(sf::Color::Red);
+        } else {
+            p->setFillColor(sf::Color::Cyan);
+        }
+
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
           if (!isButtonClicked) {
             selectedButton = buttonIndexCounter;
@@ -126,6 +135,7 @@ void Menu::run() {
     menu_window->display();
 
     if (isButtonClicked) {
+      // set menu state based on which option selected 
       switch (selectedButton) {
         case 0:
           menuState = PLAY;
@@ -135,15 +145,23 @@ void Menu::run() {
         case 1:
           menuState = HOW_TO_PLAY;
           std::cout << "HOW TO PLAY has been chosen " << std::endl;
-          isMenu = false;
+          isMenu = false; 
           break;
         case 2:
+        // close menu window if menu state is quit 
           menuState = QUIT;
           std::cout << "QUIT has been chosen" << std::endl;
           menu_window->close();
           break;
       }
     }
+
+    if (isHowTo) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+            menu_window->display();
+        }
+    }
+
   }
 }
 
@@ -164,5 +182,6 @@ Menu::~Menu() {
   buttons.clear();
 }
 
+// handling scores 
 void Menu::setCurrentScore(int score) { currentScore = score; };
 void Menu::setHighestScore(int score) { highestCore = score; };
