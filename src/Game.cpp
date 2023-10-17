@@ -9,6 +9,7 @@
 #include "../include/Animation.hpp"
 #include "../include/Colision.hpp"
 #include "../include/Entity.hpp"
+#include "../include/Gamestate.hpp"
 #include "../include/Generation.hpp"
 #include "../include/Menu.hpp"
 #include "../include/Obstacle.hpp"
@@ -18,6 +19,7 @@
 Generation Gen;
 Physics phy(0.3f);
 Collision col;
+Gamestate score;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -26,6 +28,7 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+  auto startTime = std::chrono::high_resolution_clock::now();
   bool inMenu = true;
   bool game = false;
 
@@ -40,7 +43,7 @@ void Game::run() {
 
   while (Window->isOpen()) {
     sf::Event event;
-    
+
     // Poll events
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -53,7 +56,7 @@ void Game::run() {
     if (inMenu) {
       // Handle the menu here
       Window->clear();
-      
+
       menu.run();
 
       if (menu.getMenuState() == MenuState::PLAY) {
@@ -67,21 +70,22 @@ void Game::run() {
         std::this_thread::sleep_for(std::chrono::seconds(3));
         std::cout << "Done waiting!" << std::endl;
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        std::cout << "Menu state has been chosen - game run function" << std::endl; 
-        //Handle "How to play" menu state 
+        std::cout << "Menu state has been chosen - game run function"
+                  << std::endl;
+        // Handle "How to play" menu state
         sf::Sprite howToPlay;
-        sf::Texture howToPlay_tex; 
-        // error handling 
+        sf::Texture howToPlay_tex;
+        // error handling
         if (!howToPlay_tex.loadFromFile("./resources/howToBackground.png")) {
-          std::cout << "Error loading HOWTO texture" << std::endl; 
+          std::cout << "Error loading HOWTO texture" << std::endl;
         }
-        howToPlay.setPosition(sf::Vector2f(0,0));
+        howToPlay.setPosition(sf::Vector2f(0, 0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
-      } 
+      }
     }
 
     if (game) {
@@ -131,6 +135,16 @@ void Game::run() {
       view.setCenter(originalCenter);
       Window->setView(view);
       menu.setIsGameOver();
+      auto endTime = std::chrono::high_resolution_clock::now();
+
+      // Calculate the elapsed time in seconds
+      std::chrono::duration<double> elapsedSeconds = endTime - startTime;
+
+      // Convert the elapsed time to seconds and display it
+      double elapsedSecondsDouble = elapsedSeconds.count();
+      score.calculateScore(elapsedSecondsDouble);
+      menu.setCurrentScore(score.getCurrentScore());
+      menu.setHighestScore(score.getHighScore());
     }
   }
 }
