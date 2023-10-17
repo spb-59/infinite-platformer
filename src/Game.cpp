@@ -35,12 +35,12 @@ void Game::run() {
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
   sf::Vector2f originalCenter = view.getCenter();
   std ::cout << view.getCenter().x;
-  std::vector<Object*> blocks(10, nullptr);
+  std::vector<Object*> blocks(20, nullptr);
   Menu menu(Window);
 
   while (Window->isOpen()) {
     sf::Event event;
-    
+
     // Poll events
     while (Window->pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
@@ -53,35 +53,36 @@ void Game::run() {
     if (inMenu) {
       // Handle the menu here
       Window->clear();
-      
+
       menu.run();
 
       if (menu.getMenuState() == MenuState::PLAY) {
         inMenu = false;
         game = true;
         // Initialize game state
-        blocks.resize(10);
+        blocks.resize(20);
         Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
         pl1.set_position(100.0f, 250.0f);
         view.setCenter(originalCenter);
         std::this_thread::sleep_for(std::chrono::seconds(3));
         std::cout << "Done waiting!" << std::endl;
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        std::cout << "Menu state has been chosen - game run function" << std::endl; 
-        //Handle "How to play" menu state 
+        std::cout << "Menu state has been chosen - game run function"
+                  << std::endl;
+        // Handle "How to play" menu state
         sf::Sprite howToPlay;
-        sf::Texture howToPlay_tex; 
-        // error handling 
+        sf::Texture howToPlay_tex;
+        // error handling
         if (!howToPlay_tex.loadFromFile("./resources/howToBackground.png")) {
-          std::cout << "Error loading HOWTO texture" << std::endl; 
+          std::cout << "Error loading HOWTO texture" << std::endl;
         }
-        howToPlay.setPosition(sf::Vector2f(0,0));
+        howToPlay.setPosition(sf::Vector2f(0, 0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
-      } 
+      }
     }
 
     if (game) {
@@ -97,7 +98,7 @@ void Game::run() {
 
       // Update the view's center to follow the player
       cameraPosition = view.getCenter();
-      cameraPosition.x += 0.1f;
+      cameraPosition.x += 0.2f;
 
       Gen.optimize(blocks, view.getCenter());
       Gen.makeInfinite(blocks, view.getCenter());
@@ -131,6 +132,7 @@ void Game::run() {
       view.setCenter(originalCenter);
       Window->setView(view);
       menu.setIsGameOver();
+      pl1.setCanJump();
     }
   }
 }

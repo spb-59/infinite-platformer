@@ -55,6 +55,7 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
     float newY = player.get_y_cord();
 
     if (objectHitBox.intersects(nextPos)) {
+      player.setCanJump();
       collisionDetected = true;
       if (p->get_isDeadly()) set_deadlyCollision();
 
@@ -139,6 +140,8 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
         // Collided on the bottom of the object, push player up.
         newX = player.get_x_cord();
 
+        player.setCanJump();
+
         newY = objectHitBox.top + playerHitBox.height + 10;
         player.set_position(newX, newY);
 
@@ -146,22 +149,24 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
         // std::cout << player.get_x_cord() << //std::endl;
         // std::cout << player.get_y_cord() << //std::endl;
       }
+    } else {
+      player.setCantJump();
     }
   }
-  // if (collisionDetected) {
-  //   player.set_position(newX, newY);
-  //   //std::cout << "altered x: " << newX << //std::endl;
-  //   //std::cout << "altered y: " << player.get_y_cord() << //std::endl;
-
-  //   // player.set_x_cord(newX);
-  // player.set_position(player.get_x_cord(), player.get_y_cord());
-
-  // player.move_position(player.get_x_cord(), player.get_y_cord());
-  //   //std::cout << "final x: " << player.get_x_cord() << //std::endl;
-  //   //std::cout << "final y: " << player.get_y_cord() << //std::endl;
-
   return collisionDetected;
 }
+
+// if (collisionDetected) {
+//   player.set_position(newX, newY);
+//   //std::cout << "altered x: " << newX << //std::endl;
+//   //std::cout << "altered y: " << player.get_y_cord() << //std::endl;
+
+//   // player.set_x_cord(newX);
+// player.set_position(player.get_x_cord(), player.get_y_cord());
+
+// player.move_position(player.get_x_cord(), player.get_y_cord());
+//   //std::cout << "final x: " << player.get_x_cord() << //std::endl;
+//   //std::cout << "final y: " << player.get_y_cord() << //std::endl;
 
 void Collision::set_deadlyCollision() { deadlyCollision = true; }
 
