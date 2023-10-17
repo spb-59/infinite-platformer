@@ -11,7 +11,7 @@
 
 TEST_CASE("lavaWall class tests", "[lavaWall]") {
   // Create an Object instance for testing
-  LavaWall ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f));
+  LavaWall ob(10.0f, 20.0f, sf::Vector2f(2.0f, 2.0f), sf::Vector2f(2.0f, 2.0f));
 
   SECTION("Position and size getters and setters") {
     REQUIRE(ob.get_x_cord() == 10.0f);

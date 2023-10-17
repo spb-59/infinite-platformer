@@ -14,9 +14,9 @@
 
 Generation::Generation() { probabilities = {0.4, 0.3, 0.2, 0.1}; }
 
+// method to make flat land at beggining
 void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   float add_x = 0.0f;
-
 
   for (Object*& p : boxes) {
     p = new Platform();
@@ -29,6 +29,7 @@ void Generation::makeTerrain(std::vector<Object*>& boxes, sf::Vector2f center) {
   }
 }
 
+// method to make generation infinite
 void Generation::makeInfinite(std::vector<Object*>& boxes,
                               sf::Vector2f center) {
   // getting x coordinate of last object
@@ -44,31 +45,7 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
     std::vector<double> prob = {0.9, 0.1};
     rand1 = generate(prob);
 
-    // if (event > 30) {
-    //   if (event < 60 && changed) {
-    //     std::cout << "THIS RAN\n";
-
-    //     std::cout << "Value changed ";
-    //     // Seed the random number generator with the current time
-    //     std::mt19937_64 rng(std::time(0));
-
-    //     // Define a range for the random number (200 to 400)
-    //     std::uniform_real_distribution<float> dist(-200.0, 200.0);
-
-    //     // Generate a random float number within the specified range
-    //     float randomValue = dist(rng);
-
-    //     add_y = randomValue;
-    //     changed = false;
-    //   } else if (event > 60 || !(changed)) {
-    //     changed = false;
-    //     event = 0;
-    //   } else {
-    //     std::cout << "IT IS RUNNING";
-    //     changed = true;
-    //   }
-    // }
-
+    // random values for y coordinate to generate random platforms
     if (event == 30 && event2 < 50) {
       std::cout << "Value changed ";
       // Seed the random number generator with the current time
@@ -91,15 +68,19 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
     event++;
     event2++;
 
-    generateTerrain(boxes, rand1, add_y);
+    generateTerrain(boxes, rand1, add_y);  // calling method to generate terrain
+                                           // after chosing random y coordinate
   }
 }
 
+// method to transition between two y coordinates so that it is possible to
+// complete
 void Generation::transition(std::vector<Object*>& boxes, float randomValue_,
                             float add_y_) {
   float x = boxes.back()->get_x_cord();
   float add_x = 50.0f;
 
+  // ading platforms and incrementing by 50.0f as sprite is 50.0f
   boxes.push_back(new Platform(x + add_x * 1, base_y_cord + add_y_,
                                sf::Vector2f(1.0f, 1.0f)));
   boxes.push_back(new Platform(x + add_x * 2, base_y_cord + add_y_,
@@ -123,13 +104,15 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
                                  float add_y) {
   float add_x = 50.0f;
 
-  applyRules(boxes);
+  applyRules(
+      boxes);  // method that apply rules and checks if generation is possible
   float x = boxes.back()->get_x_cord();
 
   int rand = generate(probabilities);  // function returns 0,1,2
                                        // generate objects accordingly
 
   switch (rand) {
+      // adding platforms randomly by use of the method
     case 0:
 
       if (platformCounter <= 1) {
@@ -185,6 +168,7 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
   }
 }
 
+// method to generate random number
 int Generation::generate(std::vector<double> probabilities) {
   // Create a random number generator
   std::random_device rd;
@@ -194,9 +178,8 @@ int Generation::generate(std::vector<double> probabilities) {
   return dist(gen);
 }
 
+// making optimize to delete the boxes outside view
 void Generation::optimize(std::vector<Object*>& boxes, sf::Vector2f center) {
-  // std::cout << "No of Obj: " << boxes.size() << " \n";
-
   for (Object*& p : boxes) {
     if (p->get_x_cord() < center.x - 750.0f) {
       delete p;
@@ -206,6 +189,7 @@ void Generation::optimize(std::vector<Object*>& boxes, sf::Vector2f center) {
   boxes.erase(std::remove(boxes.begin(), boxes.end(), nullptr), boxes.end());
 }
 
+// checks if solving game is possible and then makes possible if not
 void Generation::applyRules(std::vector<Object*>& boxes) {
   int size = boxes.size() - 1;
 
@@ -222,8 +206,6 @@ void Generation::applyRules(std::vector<Object*>& boxes) {
         new Platform(x + add_x * 3, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
     boxes.push_back(
         new Platform(x + add_x * 4, base_y_cord, sf::Vector2f(1.0f, 1.0f)));
-
-    std::cout << "IMPOSSIBLE DETECTED \n";
   }
 }
 
