@@ -12,6 +12,7 @@ class Collision {
  public:
   Collision();
   bool detect_collision(std::vector<Object *> &boxes, Player &player);
+
   void set_deadlyCollision();
   bool get_deadlyCollision();
 };

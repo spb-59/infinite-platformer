@@ -1937,7 +1937,6 @@ CMakeFiles/program.dir/src/Colision.cpp.o: src/Colision.cpp \
   include/Colision.hpp \
   include/Entity.hpp \
   include/Object.hpp \
-  include/Physics.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2441,6 +2440,7 @@ CMakeFiles/program.dir/src/Entity.cpp.o: src/Entity.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
   include/Entity.hpp \
   include/Object.hpp \
+  include/Physics.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
