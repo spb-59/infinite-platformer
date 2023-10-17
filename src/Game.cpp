@@ -82,11 +82,13 @@ void Game::run() {
         if (!howToPlay_tex.loadFromFile("./resources/howToBackground.png")) {
           std::cout << "Error loading HOWTO texture" << std::endl;
         }
+
         howToPlay.setPosition(sf::Vector2f(0, 0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
+        // close window if quit is selected
         Window->close();
       }
     }
@@ -94,9 +96,9 @@ void Game::run() {
     if (game) {
       sf::Vector2f cameraPosition;
 
-      // Handle the game logic here
-
+      // handle initialisation and setting variables
       pl1.movement(event);
+
       w1.wallMovement();
 
       phy.addGravity(pl1);
@@ -105,8 +107,9 @@ void Game::run() {
 
       // Update the view's center to follow the player
       cameraPosition = view.getCenter();
-      cameraPosition.x += 0.1f;
+      cameraPosition.x += 0.35f;
 
+      // generation initialisation
       Gen.optimize(blocks, view.getCenter());
       Gen.makeInfinite(blocks, view.getCenter());
 
@@ -154,4 +157,5 @@ void Game::run() {
   }
 }
 
+// game deconstructor
 Game::~Game() { delete Window; }

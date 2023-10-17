@@ -6,12 +6,14 @@
 #include "../include/Button.hpp"
 
 Menu::Menu(sf::RenderWindow* window) {
+  // load font
   if (!font.loadFromFile("./resources/yoster.ttf")) {
     std::cout << "Error loading font yoster" << std::endl;
   }
 
   menu_window = window;
 
+  // append buttons to buttons vector
   buttons.push_back(new Button());
   buttons.push_back(new Button());
   buttons.push_back(new Button());
@@ -43,15 +45,20 @@ Menu::Menu(sf::RenderWindow* window) {
       sf::Vector2f(menu_window->getView().getCenter().x / 4,
                    menu_window->getView().getCenter().y + 250));
 
-  setMenuState(MAIN_MENU);
+  setMenuState(MAIN_MENU);  // initialise
 }
 
 void Menu::run() {
+  // output to see if menu run function is running
   std::cout << "Menu is running- menu::run function" << std::endl;
+
+  // initialise variables
   bool isButtonClicked = false;
   int selectedButton = -1;
   bool isHowTo = false;
+
   if (isGameOver) {
+    // append button for death message
     buttons.push_back(new Button());
 
     buttons[3]->setName("You Died!!!");
@@ -60,6 +67,7 @@ void Menu::run() {
     buttons[3]->setSize(70);
     buttons[3]->setPosition(sf::Vector2f(500, 250));
 
+    // append button for score
     buttons.push_back(new Button());
 
     buttons[4]->setName("Score: " + std::to_string(currentScore));
@@ -68,6 +76,7 @@ void Menu::run() {
     buttons[4]->setSize(40);
     buttons[4]->setPosition(sf::Vector2f(500, 350));
 
+    // spend button for highest score
     buttons.push_back(new Button());
 
     buttons[5]->setName("Highest: " + std::to_string(highestCore));
@@ -77,10 +86,11 @@ void Menu::run() {
     buttons[5]->setPosition(sf::Vector2f(500, 425));
   }
 
+  // rendering menu window
   while (menu_window->isOpen() && isMenu) {
     sf::Event event;
 
-    // load menu texture
+    // load menu texture and set to sprite
     sf::Sprite menuBG;
     sf::Texture menu_tex;
     if (!menu_tex.loadFromFile("./resources/mainMenuBackground.png")) {
@@ -104,6 +114,7 @@ void Menu::run() {
     for (Button*& p : buttons) {
       menu_window->draw(p->getButton());
 
+      // change colour of button text if mouse is hovering over
       if (p->mouseIsOver(*menu_window)) {
         p->setFillColor(sf::Color::Cyan);
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
