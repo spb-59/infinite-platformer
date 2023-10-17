@@ -69,7 +69,7 @@ void Entity::movement(sf::Event event) {
     //   speed.y -= -0.2f;
     // }
     std::cout << speed.y;
-    speed.x = 0.3f;
+    speed.x = 0.1f;
     obj.move(speed);
   }
 }
