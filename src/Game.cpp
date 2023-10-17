@@ -102,6 +102,7 @@ void Game::run() {
       phy.addGravity(pl1);
 
       col.detect_collision(blocks, pl1);
+      col.detect_wall_collision(w1, pl1);
 
       // Update the view's center to follow the player
       cameraPosition = view.getCenter();
@@ -131,7 +132,7 @@ void Game::run() {
     Window->setView(view);
     Window->display();
 
-    if (col.get_deadlyCollision()) {
+    if (col.get_deadlyCollision() || col.detect_wall_collision(w1, pl1)) {
       game = false;
       inMenu = true;
       blocks.resize(10);
