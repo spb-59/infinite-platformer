@@ -4,8 +4,8 @@
 #include "../include/Menu.hpp"
 
 Button::Button() {
-  if (!font.loadFromFile("./resources/prstart.ttf")) {
-    std::cout << "Error loading fron prstart" << std::endl;
+  if (!font.loadFromFile("./resources/yoster.ttf")) {
+    std::cout << "Error loading fron yoster" << std::endl;
   }
 
   text.setCharacterSize(30);
@@ -17,8 +17,8 @@ Button::Button() {
 }
 
 Button::Button(std::string name, int size, int numOptions) {
-  if (!font.loadFromFile("./resources/prstart.ttf")) {
-    std::cout << "Error loading fron prstart" << std::endl;
+  if (!font.loadFromFile("./resources/yoster.ttf")) {
+    std::cout << "Error loading fron yoster" << std::endl;
   }
 
   text.setCharacterSize(size);
