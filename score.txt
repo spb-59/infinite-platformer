@@ -157,3 +157,7 @@ Score: 100 points
 Score: 49 points
 Score: 95 points
 Score: 143 points
+Score: 52 points
+Score: 113 points
+Score: 51 points
+Score: 97 points
