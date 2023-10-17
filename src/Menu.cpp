@@ -88,7 +88,12 @@ buttons.push_back(new Button());
       menu_window->draw(p->getButton());
 
       if (p->mouseIsOver(*menu_window)) {
-        p->setFillColor(sf::Color::Cyan);
+        if (buttonIndexCounter == 3) {
+            p->setFillColor(sf::Color::Red);
+        } else {
+            p->setFillColor(sf::Color::Cyan);
+        }
+
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
           if (!isButtonClicked) {
             selectedButton = buttonIndexCounter;
@@ -119,6 +124,7 @@ buttons.push_back(new Button());
           menuState = HOW_TO_PLAY;
           std::cout << "HOW TO PLAY has been chosen " << std::endl;
           isMenu = false; 
+          isHowTo = true; 
           break;
         case 2:
           menuState = QUIT;
@@ -127,6 +133,13 @@ buttons.push_back(new Button());
           break;
       }
     }
+
+    if (isHowTo) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+            menu_window->display();
+        }
+    }
+
   }
 }
 

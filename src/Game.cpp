@@ -54,9 +54,9 @@ void Game::run() {
       // Handle the menu here
       Window->clear();
       
+      
       menu.run();
-
-      if (menu.getMenuState() == MenuState::PLAY) {
+     if (menu.getMenuState() == MenuState::PLAY) {
         inMenu = false;
         game = true;
         // Initialize game state
@@ -78,6 +78,16 @@ void Game::run() {
         howToPlay.setPosition(sf::Vector2f(0,0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+          menu.setMenuState(PLAY);
+          Window->clear();
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+          menu.setMenuState(QUIT);
+          Window->close();
+        }
 
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
@@ -130,6 +140,7 @@ void Game::run() {
       pl1.set_position(100.0f, 100.0f);
       view.setCenter(originalCenter);
       Window->setView(view);
+      menu.setMenuState(MAIN_MENU);
       menu.setIsGameOver();
     }
   }
