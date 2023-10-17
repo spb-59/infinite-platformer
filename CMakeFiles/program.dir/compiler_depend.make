@@ -425,7 +425,8 @@ CMakeFiles/program.dir/main.cpp.o: main.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  include/Game.hpp \
+  /Users/khanhnguyen/UNI/S2_2023/oop-project/include/Game.hpp \
+  /Users/khanhnguyen/UNI/S2_2023/oop-project/main.cpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -1931,13 +1932,14 @@ CMakeFiles/program.dir/src/Colision.cpp.o: src/Colision.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
+  include/LavaWall.hpp \
   include/Object.hpp \
   include/Physics.hpp \
   include/Player.hpp \
   include/Colision.hpp \
   include/Entity.hpp \
+  include/LavaWall.hpp \
   include/Object.hpp \
-  include/Physics.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2441,6 +2443,7 @@ CMakeFiles/program.dir/src/Entity.cpp.o: src/Entity.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
   include/Entity.hpp \
   include/Object.hpp \
+  include/Physics.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2945,6 +2948,7 @@ CMakeFiles/program.dir/src/Game.cpp.o: src/Game.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
   include/Button.hpp \
   include/Gamestate.hpp \
+  include/LavaWall.hpp \
   include/Object.hpp \
   include/Physics.hpp \
   include/Player.hpp \
@@ -8541,6 +8545,8 @@ include/Obstacle.hpp:
 
 include/Generation.hpp:
 
+include/Game.hpp:
+
 src/Entity.cpp:
 
 include/Entity.hpp:
@@ -8657,7 +8663,9 @@ include/LavaWall.hpp:
 
 /opt/homebrew/include/SFML/Graphics/BlendMode.hpp:
 
-include/Game.hpp:
+/Users/khanhnguyen/UNI/S2_2023/oop-project/main.cpp:
+
+/Users/khanhnguyen/UNI/S2_2023/oop-project/include/Game.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h:
 

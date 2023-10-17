@@ -122,11 +122,3 @@ bool Collision::detect_wall_collision(LavaWall& wall, Player& player) {
   }
   return false;
 }
-
-bool Collision::get_deadlyCollision_wall() {
-  if ((player.getHitBox()).intersects(wall.getHitBox())) {
-    std::cout << " GAME OVER";
-    deadlyCollision = true;
-  }
-  deadlyCollision = false;
-}
