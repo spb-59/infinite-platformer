@@ -926,8 +926,7 @@ CMakeFiles/program.dir/src/Animation.cpp.o: src/Animation.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Animation.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Animation.cpp \
+  include/Animation.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -1429,10 +1428,9 @@ CMakeFiles/program.dir/src/Button.cpp.o: src/Button.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Button.cpp \
+  include/Button.hpp \
+  include/Gamestate.hpp \
+  include/Menu.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -1934,15 +1932,14 @@ CMakeFiles/program.dir/src/Colision.cpp.o: src/Colision.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Colision.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Colision.cpp \
+  include/LavaWall.hpp \
+  include/Object.hpp \
+  include/Physics.hpp \
+  include/Player.hpp \
+  include/Colision.hpp \
+  include/Entity.hpp \
+  include/LavaWall.hpp \
+  include/Object.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2444,10 +2441,9 @@ CMakeFiles/program.dir/src/Entity.cpp.o: src/Entity.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Entity.cpp \
+  include/Entity.hpp \
+  include/Object.hpp \
+  include/Physics.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2950,25 +2946,24 @@ CMakeFiles/program.dir/src/Game.cpp.o: src/Game.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Animation.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Colision.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Game.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Generation.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Game.cpp \
+  include/Button.hpp \
+  include/Gamestate.hpp \
+  include/LavaWall.hpp \
+  include/Object.hpp \
+  include/Physics.hpp \
+  include/Player.hpp \
+  include/Animation.hpp \
+  include/Colision.hpp \
+  include/Entity.hpp \
+  include/Game.hpp \
+  include/Gamestate.hpp \
+  include/Generation.hpp \
+  include/LavaWall.hpp \
+  include/Menu.hpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
+  include/Physics.hpp \
+  include/Player.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -3470,8 +3465,7 @@ CMakeFiles/program.dir/src/Gamestate.cpp.o: src/Gamestate.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Gamestate.cpp
+  include/Gamestate.hpp
 
 CMakeFiles/program.dir/src/Generation.cpp.o: src/Generation.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/Availability.h \
@@ -3902,13 +3896,12 @@ CMakeFiles/program.dir/src/Generation.cpp.o: src/Generation.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Generation.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaPit.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Platform.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Spikes.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Generation.cpp \
+  include/Generation.hpp \
+  include/LavaPit.hpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
+  include/Platform.hpp \
+  include/Spikes.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -4410,10 +4403,9 @@ CMakeFiles/program.dir/src/LavaPit.cpp.o: src/LavaPit.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaPit.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/LavaPit.cpp \
+  include/LavaPit.hpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -4915,10 +4907,9 @@ CMakeFiles/program.dir/src/LavaWall.cpp.o: src/LavaWall.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/LavaWall.cpp \
+  include/Entity.hpp \
+  include/LavaWall.hpp \
+  include/Object.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -5420,11 +5411,10 @@ CMakeFiles/program.dir/src/Menu.cpp.o: src/Menu.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Menu.cpp \
+  include/Button.hpp \
+  include/Gamestate.hpp \
+  include/Button.hpp \
+  include/Menu.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -5926,8 +5916,7 @@ CMakeFiles/program.dir/src/Object.cpp.o: src/Object.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Object.cpp \
+  include/Object.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -6429,9 +6418,8 @@ CMakeFiles/program.dir/src/Obstacle.cpp.o: src/Obstacle.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Obstacle.cpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -6933,11 +6921,10 @@ CMakeFiles/program.dir/src/Physics.cpp.o: src/Physics.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Physics.cpp \
+  include/Entity.hpp \
+  include/Object.hpp \
+  include/Physics.hpp \
+  include/Player.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -7439,10 +7426,9 @@ CMakeFiles/program.dir/src/Platform.cpp.o: src/Platform.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Platform.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Platform.cpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
+  include/Platform.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -7944,10 +7930,9 @@ CMakeFiles/program.dir/src/Player.cpp.o: src/Player.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Player.cpp \
+  include/Entity.hpp \
+  include/Object.hpp \
+  include/Player.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -8025,8 +8010,7 @@ CMakeFiles/program.dir/src/Player.cpp.o: src/Player.cpp \
   /opt/homebrew/include/SFML/Window/WindowHandle.hpp \
   /opt/homebrew/include/SFML/Window/WindowStyle.hpp
 
-CMakeFiles/program.dir/src/Rock.cpp.o: src/Rock.cpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Rock.cpp
+CMakeFiles/program.dir/src/Rock.cpp.o: src/Rock.cpp
 
 CMakeFiles/program.dir/src/Spikes.cpp.o: src/Spikes.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/Availability.h \
@@ -8452,10 +8436,9 @@ CMakeFiles/program.dir/src/Spikes.cpp.o: src/Spikes.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/include/Spikes.hpp \
-  /Users/khanhnguyen/Downloads/oop-project-main/src/Spikes.cpp \
+  include/Object.hpp \
+  include/Obstacle.hpp \
+  include/Spikes.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -8534,35 +8517,19 @@ CMakeFiles/program.dir/src/Spikes.cpp.o: src/Spikes.cpp \
   /opt/homebrew/include/SFML/Window/WindowStyle.hpp
 
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Player.cpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/Platform.cpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/Physics.cpp:
-
 src/Physics.cpp:
 
 src/Obstacle.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Object.cpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/LavaWall.cpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/LavaPit.cpp:
-
 src/LavaPit.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Generation.cpp:
+include/Spikes.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Platform.hpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/LavaPit.hpp:
+include/Platform.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/math.h:
 
 src/Generation.cpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/Gamestate.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/stack:
 
@@ -8574,29 +8541,29 @@ src/Generation.cpp:
 
 src/Gamestate.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Game.hpp:
+include/Obstacle.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Entity.cpp:
+include/Generation.hpp:
+
+include/Game.hpp:
 
 src/Entity.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Colision.cpp:
+include/Entity.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp:
+include/Player.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp:
+include/Physics.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp:
+include/Object.hpp:
 
 src/Colision.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp:
+include/Menu.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Animation.cpp:
+include/Gamestate.hpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Animation.hpp:
+include/Animation.hpp:
 
 src/Animation.cpp:
 
@@ -8607,6 +8574,8 @@ src/Animation.cpp:
 /opt/homebrew/include/SFML/Window/Window.hpp:
 
 /opt/homebrew/include/SFML/Window/Vulkan.hpp:
+
+include/Colision.hpp:
 
 /opt/homebrew/include/SFML/Window/VideoMode.hpp:
 
@@ -8661,6 +8630,8 @@ src/Animation.cpp:
 /opt/homebrew/include/SFML/System.hpp:
 
 /opt/homebrew/include/SFML/Graphics/View.hpp:
+
+include/LavaWall.hpp:
 
 /opt/homebrew/include/SFML/Graphics/VertexArray.hpp:
 
@@ -8762,8 +8733,6 @@ src/Object.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_size_t.h:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arm/arch.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_pid_t.h:
@@ -8835,8 +8804,6 @@ src/Object.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cwchar:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/Colision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_rune_t.h:
 
@@ -8912,8 +8879,6 @@ src/Player.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string.h:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Menu.cpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string:
@@ -8972,8 +8937,6 @@ src/LavaWall.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ios:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Obstacle.cpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/initializer_list:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/set_union.h:
@@ -9012,8 +8975,6 @@ src/LavaWall.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__variant/monostate.h:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Game.cpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_clr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/to_underlying.h:
@@ -9035,10 +8996,6 @@ src/LavaWall.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/pair.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/move.h:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/Generation.hpp:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp:
 
 /opt/homebrew/include/SFML/Graphics/Glsl.inl:
 
@@ -9133,8 +9090,6 @@ src/Button.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/map:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/Rock.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
 
@@ -9314,8 +9269,6 @@ src/Game.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/not_fn.h:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/ostream_iterator.h:
@@ -9398,6 +9351,8 @@ src/Menu.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread:
 
+include/Button.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_int32_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
@@ -9415,8 +9370,6 @@ src/Menu.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
-
-/Users/khanhnguyen/Downloads/oop-project-main/include/Spikes.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/syslimits.h:
 
@@ -9546,8 +9499,6 @@ src/Spikes.cpp:
 
 main.cpp:
 
-/Users/khanhnguyen/Downloads/oop-project-main/src/Button.cpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blksize_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
@@ -9608,8 +9559,6 @@ main.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cctype:
 
-/Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp:
-
 /opt/homebrew/include/SFML/Graphics/RenderTarget.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
@@ -9621,8 +9570,6 @@ main.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_in_port_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_xlocale.h:
-
-/Users/khanhnguyen/Downloads/oop-project-main/src/Spikes.cpp:
 
 /opt/homebrew/include/SFML/Window/Touch.hpp:
 
@@ -9643,6 +9590,8 @@ main.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__undef_macros:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/swap_ranges.h:
+
+include/LavaPit.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/transform.h:
 

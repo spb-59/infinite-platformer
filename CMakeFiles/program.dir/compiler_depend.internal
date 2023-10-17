@@ -928,8 +928,7 @@ CMakeFiles/program.dir/src/Animation.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Animation.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Animation.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Animation.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -1432,10 +1431,9 @@ CMakeFiles/program.dir/src/Button.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Button.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Button.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Gamestate.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Menu.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -1938,15 +1936,14 @@ CMakeFiles/program.dir/src/Colision.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Colision.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Colision.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaWall.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Physics.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Player.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Colision.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaWall.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -2449,10 +2446,9 @@ CMakeFiles/program.dir/src/Entity.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Entity.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Physics.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -2956,25 +2952,24 @@ CMakeFiles/program.dir/src/Game.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Animation.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Colision.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Game.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Generation.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Game.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Button.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Gamestate.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaWall.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Physics.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Player.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Animation.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Colision.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Game.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Gamestate.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Generation.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaWall.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Menu.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Physics.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Player.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -3477,8 +3472,7 @@ CMakeFiles/program.dir/src/Gamestate.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Gamestate.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Gamestate.hpp
 
 CMakeFiles/program.dir/src/Generation.cpp.o
  /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Generation.cpp
@@ -3910,13 +3904,12 @@ CMakeFiles/program.dir/src/Generation.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Generation.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaPit.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Platform.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Spikes.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Generation.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Generation.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaPit.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Platform.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Spikes.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -4419,10 +4412,9 @@ CMakeFiles/program.dir/src/LavaPit.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaPit.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/LavaPit.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaPit.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -4925,10 +4917,9 @@ CMakeFiles/program.dir/src/LavaWall.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/LavaWall.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/LavaWall.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/LavaWall.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -5431,11 +5422,10 @@ CMakeFiles/program.dir/src/Menu.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Gamestate.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Button.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Menu.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Menu.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Button.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Gamestate.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Button.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Menu.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -5938,8 +5928,7 @@ CMakeFiles/program.dir/src/Object.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Object.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -6442,9 +6431,8 @@ CMakeFiles/program.dir/src/Obstacle.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Obstacle.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -6947,11 +6935,10 @@ CMakeFiles/program.dir/src/Physics.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Physics.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Physics.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Physics.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Player.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -7454,10 +7441,9 @@ CMakeFiles/program.dir/src/Platform.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Platform.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Platform.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Platform.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -7960,10 +7946,9 @@ CMakeFiles/program.dir/src/Player.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Entity.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Player.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Player.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Entity.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Player.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
@@ -8043,7 +8028,6 @@ CMakeFiles/program.dir/src/Player.cpp.o
 
 CMakeFiles/program.dir/src/Rock.cpp.o
  /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Rock.cpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Rock.cpp
 
 CMakeFiles/program.dir/src/Spikes.cpp.o
  /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/src/Spikes.cpp
@@ -8470,10 +8454,9 @@ CMakeFiles/program.dir/src/Spikes.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h
- /Users/khanhnguyen/Downloads/oop-project-main/include/Object.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Obstacle.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/include/Spikes.hpp
- /Users/khanhnguyen/Downloads/oop-project-main/src/Spikes.cpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Object.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Obstacle.hpp
+ /Users/khanhnguyen/UNI/S2_2023/project 2/oop-project/include/Spikes.hpp
  /opt/homebrew/include/SFML/Config.hpp
  /opt/homebrew/include/SFML/Graphics.hpp
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp
