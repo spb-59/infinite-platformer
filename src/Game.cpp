@@ -9,6 +9,7 @@
 #include "../include/Animation.hpp"
 #include "../include/Colision.hpp"
 #include "../include/Entity.hpp"
+#include "../include/Gamestate.hpp"
 #include "../include/Generation.hpp"
 #include "../include/Menu.hpp"
 #include "../include/Obstacle.hpp"
@@ -18,6 +19,7 @@
 Generation Gen;
 Physics phy(0.3f);
 Collision col;
+Gamestate score;
 
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   Window = new sf::RenderWindow(sf::VideoMode(x_dimension, y_dimension),
@@ -26,6 +28,7 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 }
 
 void Game::run() {
+  auto startTime = std::chrono::high_resolution_clock::now();
   bool inMenu = true;
   bool game = false;
 
@@ -132,7 +135,6 @@ void Game::run() {
       view.setCenter(originalCenter);
       Window->setView(view);
       menu.setIsGameOver();
-      pl1.setCanJump();
     }
   }
 }
