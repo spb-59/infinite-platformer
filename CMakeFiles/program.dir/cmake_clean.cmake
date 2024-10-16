@@ -33,6 +33,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/program.dir/src/Player.cpp.o.d"
   "CMakeFiles/program.dir/src/Rock.cpp.o"
   "CMakeFiles/program.dir/src/Rock.cpp.o.d"
+  "CMakeFiles/program.dir/src/RockPlatform.cpp.o"
+  "CMakeFiles/program.dir/src/RockPlatform.cpp.o.d"
   "CMakeFiles/program.dir/src/Spikes.cpp.o"
   "CMakeFiles/program.dir/src/Spikes.cpp.o.d"
   "program"

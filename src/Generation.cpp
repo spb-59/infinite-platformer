@@ -10,6 +10,8 @@
 #include "../include/LavaPit.hpp"
 #include "../include/Object.hpp"
 #include "../include/Platform.hpp"
+#include "../include/Rock.hpp"
+#include "../include/RockPlatform.hpp"
 #include "../include/Spikes.hpp"
 
 Generation::Generation() { probabilities = {0.4, 0.3, 0.2, 0.1}; }
@@ -34,12 +36,8 @@ void Generation::makeInfinite(std::vector<Object*>& boxes,
                               sf::Vector2f center) {
   // getting x coordinate of last object
 
-  float x = boxes.back()->get_x_cord();
-
   // condtion to limit the number of boxes rendered
   if (boxes.size() < 20 || boxes.back()->get_x_cord() - 750.0f <= center.x) {
-    float add_x = 50.0f;  // float to add to the x cord
-
     int rand1 = 0;
 
     std::vector<double> prob = {0.9, 0.1};
@@ -162,6 +160,27 @@ void Generation::generateTerrain(std::vector<Object*>& boxes, int rand1,
       }
 
       break;
+
+    case 3:
+      if (rockCounter < 1) {
+        boxes.push_back(new Platform(x + add_x, base_y_cord + add_y,
+                                     sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 2, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 3, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new RockPlatform(x + add_x * 4, base_y_cord + add_y,
+                                         sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new Rock(x + add_x * 3, base_y_cord - 500.0f + add_y,
+                                 sf::Vector2f(1.0f, 1.0f)));
+        boxes.push_back(new Platform(x + add_x * 5, base_y_cord + add_y,
+                                     sf::Vector2f(1.0f, 1.0f)));
+
+        rockCounter++;
+        lavaCounter = 0;
+        platformCounter = 0;
+        spikeCounter = 0;
+      }
 
     default:
       break;

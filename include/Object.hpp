@@ -24,7 +24,7 @@ class Object {
   void set_position(float x_cord, float y_cord);
   void move_position(float x_cord, float y_cord);
   sf::FloatRect getHitBox();
-  void render(sf::RenderWindow* window);
+  virtual void render(sf::RenderWindow* window);
   virtual bool get_isDeadly();
   virtual std::string get_type() = 0;
 

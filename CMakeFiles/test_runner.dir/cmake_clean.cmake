@@ -31,13 +31,15 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_runner.dir/src/Player.cpp.o.d"
   "CMakeFiles/test_runner.dir/src/Rock.cpp.o"
   "CMakeFiles/test_runner.dir/src/Rock.cpp.o.d"
+  "CMakeFiles/test_runner.dir/src/RockPlatform.cpp.o"
+  "CMakeFiles/test_runner.dir/src/RockPlatform.cpp.o.d"
   "CMakeFiles/test_runner.dir/src/Spikes.cpp.o"
   "CMakeFiles/test_runner.dir/src/Spikes.cpp.o.d"
   "CMakeFiles/test_runner.dir/tests/test_all.cpp.o"
   "CMakeFiles/test_runner.dir/tests/test_all.cpp.o.d"
   "test_runner"
+  "test_runner-b12d07c_tests.cmake"
   "test_runner.pdb"
-  "test_runner_tests-b12d07c.cmake"
 )
 
 # Per-language clean rules from dependency scanning.

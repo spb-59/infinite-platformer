@@ -1,5 +1,5 @@
-if(EXISTS "/home/spb/oop-project/test_runner_tests-b12d07c.cmake")
-  include("/home/spb/oop-project/test_runner_tests-b12d07c.cmake")
+if(EXISTS "/home/spb/un/test_runner_tests-b12d07c.cmake")
+  include("/home/spb/un/test_runner_tests-b12d07c.cmake")
 else()
   add_test(test_runner_NOT_BUILT-b12d07c test_runner_NOT_BUILT-b12d07c)
 endif()

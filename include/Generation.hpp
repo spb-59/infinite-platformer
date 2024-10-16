@@ -20,6 +20,7 @@ class Generation {
   int platformCounter = 0;
   int lavaCounter = 0;
   int spikeCounter = 0;
+  int rockCounter=0;
 
  public:
   Generation();

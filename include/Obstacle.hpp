@@ -1,12 +1,13 @@
 #ifndef OBSTACLE_HPP
 #define OBSTACLE_HPP
 
-#include <SFML.Graphics.hpp>
+#include <SFML/Graphics.hpp>
+
 #include "Object.hpp"
 
 class Obstacle : public Object {
  protected:
-  bool isDeadly; // A flag indicating if the obstacle is deadly
+  bool isDeadly;  // A flag indicating if the obstacle is deadly
 
  public:
   // Default constructor for the Obstacle class
@@ -25,4 +26,4 @@ class Obstacle : public Object {
   ~Obstacle();
 };
 
-#endif // OBSTACLE_HPP
+#endif  // OBSTACLE_HPP

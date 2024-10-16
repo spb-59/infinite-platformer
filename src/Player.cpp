@@ -16,3 +16,12 @@ void Player::set_position_(float x_cord, float y_cord) {
   // Set the position of the player object
   obj.setPosition(x_cord, y_cord);
 }
+
+bool Player::detectOffStage(sf::Vector2f center){
+
+if(obj.getPosition().y>1000.0f+center.y){
+  return true;
+}
+return false;
+}
+

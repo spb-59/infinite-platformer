@@ -15,10 +15,6 @@ bool Collision::detect_collision(std::vector<Object*>& boxes, Player& player) {
   // Initialize a variable to track whether a collision has been detected.
   bool collisionDetected = false;
 
-  // Get the player's current x and y positions.
-  float playerX = player.get_x_cord();
-  float playerY = player.get_y_cord();
-
   // Initialize variables to store the next position.
   sf::FloatRect nextPos;
   sf::RectangleShape nextPlayerPos;
@@ -122,3 +118,5 @@ bool Collision::detect_wall_collision(LavaWall& wall, Player& player) {
   }
   return false;
 }
+
+void Collision::set_not_deadly_collision() { deadlyCollision = false; }

@@ -24,16 +24,12 @@ void Gamestate::calculateScore(double time) {
   // Update the score based on points earned per second.
   currentScore = pointsPerSecond * time;
 
-  // Display the updated score.
-  std::cout << "Score: " << currentScore << " points" << std::endl;
-
   // Append the score to a text file.
   std::ofstream outputFile(
       "score.txt", std::ios::app);  // Use ios::app to append to the file.
   if (outputFile.is_open()) {
     outputFile << "Score: " << currentScore << " points" << std::endl;
     outputFile.close();
-    std::cout << "Score appended to score.txt" << std::endl;
   } else {
     std::cerr << "Unable to open the file for writing." << std::endl;
   }
@@ -57,13 +53,6 @@ void Gamestate::calculateScore(double time) {
     }
     inputFile.close();
 
-    // Display all scores and the highest score.
-    std::cout << "All Scores:" << std::endl;
-    for (const double& score : allScores) {
-      std::cout << score << " points" << std::endl;
-    }
-
-    std::cout << "Highest Score: " << highestScore << " points" << std::endl;
   } else {
     std::cerr << "Unable to open the file for reading." << std::endl;
   }

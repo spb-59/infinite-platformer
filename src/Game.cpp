@@ -18,12 +18,6 @@
 #include "../include/Physics.hpp"
 #include "../include/Player.hpp"
 
-// Create instances of various game components.
-Generation Gen;
-Physics phy(0.3f);
-Collision col;
-Gamestate score;
-
 // Constructor for the Game class.
 Game::Game(int x_dimension, int y_dimension, const std::string title) {
   // Create a game window with the specified dimensions and title.
@@ -34,6 +28,11 @@ Game::Game(int x_dimension, int y_dimension, const std::string title) {
 
 // Run the game loop.
 void Game::run() {
+  // Create instances of various game components.
+  Generation Gen;
+  Physics phy(0.3f);
+  Collision col;
+  Gamestate score;
   auto startTime = std::chrono::high_resolution_clock::now();
   bool inMenu = true;
   bool game = false;
@@ -44,7 +43,7 @@ void Game::run() {
   Player pl1(100.0f, 250.0f, sf::Vector2f(0.8f, 0.8f));
   sf::View view(sf::FloatRect(0, 0, Window->getSize().x, Window->getSize().y));
   sf::Vector2f originalCenter = view.getCenter();
-  std::vector<Object*> blocks(10, nullptr);
+  std::vector<Object*> blocks(30, nullptr);
   Menu menu(Window);
 
   while (Window->isOpen()) {
@@ -69,24 +68,42 @@ void Game::run() {
         game = true;
 
         // Initialize game state.
-        blocks.resize(10);
+        blocks.resize(30);
         Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
         pl1.set_position(100.0f, 250.0f);
         view.setCenter(originalCenter);
-        std::this_thread::sleep_for(std::chrono::seconds(3));
+        std::this_thread::sleep_for(std::chrono::seconds(1));
         std::cout << "Done waiting!" << std::endl;
+
       } else if (menu.getMenuState() == MenuState::HOW_TO_PLAY) {
-        // Handle "How to play" menu state.
+        std::cout << "Menu state has been chosen - game run function"
+                  << std::endl;
+        std::cout << "HOW TO PLAY chosen" << std::endl;
+        // Handle "How to play" menu state
         sf::Sprite howToPlay;
         sf::Texture howToPlay_tex;
 
-        // Error handling for loading textures.
+        // error handling
         if (!howToPlay_tex.loadFromFile("./resources/howToBackground.png")) {
           std::cout << "Error loading HOWTO texture" << std::endl;
         }
+
         howToPlay.setPosition(sf::Vector2f(0, 0));
         howToPlay.setTexture(howToPlay_tex);
         Window->draw(howToPlay);
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+          std::cout << "backspace pressed from HOWTOPLAY" << std::endl;
+          menu.setMenuState(PLAY);
+          Window->clear();
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+          std::cout << "escape pressed from HOWTO" << std::endl;
+          menu.setMenuState(QUIT);
+          Window->close();
+        }
+
       } else if (menu.getMenuState() == MenuState::QUIT) {
         Window->close();
       }
@@ -129,12 +146,18 @@ void Game::run() {
     Window->setView(view);
     Window->display();
 
-    if (col.get_deadlyCollision() || col.detect_wall_collision(w1, pl1)) {
+    if (col.get_deadlyCollision() || col.detect_wall_collision(w1, pl1)||pl1.detectOffStage(view.getCenter())) {
+      col.set_not_deadly_collision();
+      std::cout << std::endl << col.get_deadlyCollision() << std::endl;
+      std::cout << col.detect_wall_collision(w1, pl1) << std::endl;
+
+     
       game = false;
       inMenu = true;
-      blocks.resize(10);
+      blocks.resize(30);
       Gen.makeTerrain(blocks, sf::Vector2f(0.0f, 0.0f));
-      pl1.set_position(100.0f, 100.0f);
+      pl1.set_position(150.0f, 100.0f);
+      w1.set_position(-950.0f, 100.0f);
       view.setCenter(originalCenter);
       Window->setView(view);
       menu.setIsGameOver();
@@ -148,6 +171,7 @@ void Game::run() {
       score.calculateScore(elapsedSecondsDouble);
       menu.setCurrentScore(score.getCurrentScore());
       menu.setHighestScore(score.getHighScore());
+      std::cout << "stop playing" << std::endl;
     }
   }
 }

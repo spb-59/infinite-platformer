@@ -4,13 +4,15 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+
 #include "Object.hpp"
 
 class Entity : public Object {
  protected:
-  sf::Vector2f speed;  // Speed vector for entity movement
-  int size;           // Size of the entity
+  sf::Vector2f speed;    // Speed vector for entity movement
+  int size;              // Size of the entity
   bool can_jump = true;  // A flag indicating if the entity can jump
+  bool landed = false;
 
  public:
   bool canMove;  // A boolean indicating if the entity can move
@@ -25,10 +27,10 @@ class Entity : public Object {
   // Get the current speed vector of the entity
   sf::Vector2f getSpeed();
 
-  // Set whether the entity has landed 
+  // Set whether the entity has landed
   void set_landed(bool landed);
 
-  // Get the type of the entity 
+  // Get the type of the entity
   std::string get_type();
 };
 

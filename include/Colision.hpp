@@ -8,7 +8,7 @@
 
 class Collision {
  private:
-  bool deadlyCollision = false; 
+  bool deadlyCollision = false;
 
  public:
   // Default constructor
@@ -31,6 +31,8 @@ class Collision {
 
   // Get the value of the deadlyCollision flag for wall collisions
   bool get_deadlyCollision_wall();
+
+  void set_not_deadly_collision();
 };
 
 #endif
